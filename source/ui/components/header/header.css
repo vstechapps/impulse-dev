@@ -1,0 +1,57 @@
+.c{
+    top:0px;
+    position: sticky;
+    height: 70px;
+    background: #252526;
+    color: white;
+}
+
+.c .b{
+    padding:0;
+}
+
+.c .b img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.c .b i{
+    margin:5px;
+}
+
+.c .t{
+    height:45px;
+    margin: 10px 0px;
+    font-size: 30px;
+    border-right: 10px solid #252526;
+    white-space: nowrap;
+    overflow: hidden; 
+    display: inline-block;
+    font-weight: 500;
+}
+
+.c .material-icons{
+    font-size:30px
+}
+
+.a{
+    animation-name: typetext,blinkcursor;
+    animation-duration:  2s, 500ms;
+    animation-timing-function:  steps(15), steps(15);
+    animation-delay:  0.5s, 0s;
+    animation-iteration-count: 1, 8;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+
+
+@keyframes typetext{
+    from{width: 0.5rem}
+    to{width: 8.5rem}
+}
+
+@keyframes blinkcursor {
+    from{border-right-color: white;}
+    to{border-right-color: #252526;}
+}
