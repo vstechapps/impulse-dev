@@ -1,0 +1,21 @@
+{
+    "name": "app__",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "fetch": "npm install --no-bin-links",
+        "start": "node index.js",
+        "app": "node app.js",
+        "build": "node index.js --build",
+        "build-app": "electron-builder build",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@vvsk/fullstack": "^1.0.5",
+        "electron": "^34.0.2",
+        "electron-builder": "^25.1.8"
+    }
+}

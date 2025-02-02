@@ -1,0 +1,9 @@
+{
+    "name":"home",
+    "path":"",
+    "title":"Home",
+    "components":[
+        "header",
+        "home"
+    ]
+}
