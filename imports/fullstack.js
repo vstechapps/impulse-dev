@@ -12,9 +12,9 @@ const timestamp = function(){
 
 start = function(){
     compiler.compile();
+    compiler.develop();
     server.serve();
-    console.log("Serving - http://localhost:9999");
-    console.log("App Server Stared.");
+    console.log("Fullstack App Stared.");
 }
 
 build = function(){
@@ -26,7 +26,7 @@ build = function(){
 
 // Handle server shutdown
 function handleShutdown() {
-    console.log("\nApp Server Stopped.")
+    console.log("\nFullstack App Stopped.")
     compiler.clean();
     process.exit(0);
 }

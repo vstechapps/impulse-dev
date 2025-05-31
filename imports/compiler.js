@@ -61,6 +61,7 @@ bundle=function(){
     }else{
         var pages = fs.readdirSync(UI_PAGES);
         pages.forEach(page =>{
+            if(page.indexOf(".json")>-1){
             console.log("Compiler: Adding Page: "+page);
             var pf = UI_PAGES +"/"+page;
             var p = fs.existsSync(pf)?fs.readFileSync(pf, options):"";
@@ -69,6 +70,7 @@ bundle=function(){
                 p=JSON.parse(p);
                 bundle_output.pages.push(p);    
             }
+        }
         });
     }
     
@@ -88,10 +90,19 @@ watcher=function(){
     });
 }
 
+develop = function(){
+    if(fs.existsSync("imports/dev/ui/develop")){
+        copyRecursive("imports/dev/ui/develop","target/ui/develop");
+    }
+    if(fs.existsSync("imports/dev/api")){
+        copyRecursive("imports/dev/api","target/api/");
+    }
+}
+
 clean = function(){
     if (fs.existsSync(TARGET)) {
         fs.rmSync(TARGET,{recursive: true});
     }
 }
   
-module.exports = { compile, clean };
+module.exports = { compile, develop, clean };
