@@ -47,7 +47,7 @@ function goto(path) {
                 // Dynamically load the script
                 if(component.script!=undefined){
                     var script = document.createElement('script');
-                    script.innerHTML = component.script;
+                    script.text = component.script;
                     script.type = 'text/javascript';
                     c.appendChild(script);
                 }

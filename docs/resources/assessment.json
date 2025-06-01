@@ -1,0 +1,226 @@
+{
+  "title": "General Knowledge Assessment",
+  "timelimit": 600,
+  "questions": [
+    {
+      "id": 1,
+      "text": "What is the capital of France?",
+      "options": [
+        {"id": "A", "text": "Berlin"},
+        {"id": "B", "text": "Madrid"},
+        {"id": "C", "text": "Paris"},
+        {"id": "D", "text": "Rome"}
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 2,
+      "text": "Which planet is known as the Red Planet?",
+      "options": [
+        {"id": "A", "text": "Earth"},
+        {"id": "B", "text": "Mars"},
+        {"id": "C", "text": "Jupiter"},
+        {"id": "D", "text": "Saturn"}
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 3,
+      "text": "Who wrote 'Romeo and Juliet'?",
+      "options": [
+        {"id": "A", "text": "William Shakespeare"},
+        {"id": "B", "text": "Charles Dickens"},
+        {"id": "C", "text": "Jane Austen"},
+        {"id": "D", "text": "Mark Twain"}
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 4,
+      "text": "What is the largest ocean on Earth?",
+      "options": [
+        {"id": "A", "text": "Atlantic Ocean"},
+        {"id": "B", "text": "Indian Ocean"},
+        {"id": "C", "text": "Arctic Ocean"},
+        {"id": "D", "text": "Pacific Ocean"}
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 5,
+      "text": "Which element has the chemical symbol 'O'?",
+      "options": [
+        {"id": "A", "text": "Gold"},
+        {"id": "B", "text": "Oxygen"},
+        {"id": "C", "text": "Silver"},
+        {"id": "D", "text": "Iron"}
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 6,
+      "text": "Who painted the Mona Lisa?",
+      "options": [
+        {"id": "A", "text": "Vincent van Gogh"},
+        {"id": "B", "text": "Pablo Picasso"},
+        {"id": "C", "text": "Leonardo da Vinci"},
+        {"id": "D", "text": "Claude Monet"}
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 7,
+      "text": "What is the smallest prime number?",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "1"},
+        {"id": "C", "text": "2"},
+        {"id": "D", "text": "3"}
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 8,
+      "text": "Which country is known as the Land of the Rising Sun?",
+      "options": [
+        {"id": "A", "text": "China"},
+        {"id": "B", "text": "Japan"},
+        {"id": "C", "text": "Thailand"},
+        {"id": "D", "text": "South Korea"}
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 9,
+      "text": "What is the boiling point of water at sea level?",
+      "options": [
+        {"id": "A", "text": "90°C"},
+        {"id": "B", "text": "100°C"},
+        {"id": "C", "text": "110°C"},
+        {"id": "D", "text": "120°C"}
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 10,
+      "text": "Who is known as the Father of Computers?",
+      "options": [
+        {"id": "A", "text": "Alan Turing"},
+        {"id": "B", "text": "Charles Babbage"},
+        {"id": "C", "text": "Bill Gates"},
+        {"id": "D", "text": "Steve Jobs"}
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 11,
+      "text": "Which gas do plants absorb from the atmosphere?",
+      "options": [
+        {"id": "A", "text": "Oxygen"},
+        {"id": "B", "text": "Nitrogen"},
+        {"id": "C", "text": "Carbon Dioxide"},
+        {"id": "D", "text": "Hydrogen"}
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 12,
+      "text": "What is the hardest natural substance on Earth?",
+      "options": [
+        {"id": "A", "text": "Gold"},
+        {"id": "B", "text": "Iron"},
+        {"id": "C", "text": "Diamond"},
+        {"id": "D", "text": "Silver"}
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 13,
+      "text": "Which language is used to create web pages?",
+      "options": [
+        {"id": "A", "text": "HTML"},
+        {"id": "B", "text": "C++"},
+        {"id": "C", "text": "Python"},
+        {"id": "D", "text": "Java"}
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 14,
+      "text": "What is the largest planet in our solar system?",
+      "options": [
+        {"id": "A", "text": "Earth"},
+        {"id": "B", "text": "Jupiter"},
+        {"id": "C", "text": "Saturn"},
+        {"id": "D", "text": "Mars"}
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 15,
+      "text": "Who discovered penicillin?",
+      "options": [
+        {"id": "A", "text": "Marie Curie"},
+        {"id": "B", "text": "Alexander Fleming"},
+        {"id": "C", "text": "Isaac Newton"},
+        {"id": "D", "text": "Albert Einstein"}
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 16,
+      "text": "Which continent is the Sahara Desert located in?",
+      "options": [
+        {"id": "A", "text": "Asia"},
+        {"id": "B", "text": "Africa"},
+        {"id": "C", "text": "Australia"},
+        {"id": "D", "text": "Europe"}
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 17,
+      "text": "What is the chemical symbol for gold?",
+      "options": [
+        {"id": "A", "text": "Au"},
+        {"id": "B", "text": "Ag"},
+        {"id": "C", "text": "Gd"},
+        {"id": "D", "text": "Go"}
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 18,
+      "text": "Who was the first person to walk on the Moon?",
+      "options": [
+        {"id": "A", "text": "Yuri Gagarin"},
+        {"id": "B", "text": "Buzz Aldrin"},
+        {"id": "C", "text": "Neil Armstrong"},
+        {"id": "D", "text": "Michael Collins"}
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 19,
+      "text": "Which organ pumps blood throughout the human body?",
+      "options": [
+        {"id": "A", "text": "Liver"},
+        {"id": "B", "text": "Heart"},
+        {"id": "C", "text": "Lungs"},
+        {"id": "D", "text": "Kidneys"}
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 20,
+      "text": "What is the freezing point of water?",
+      "options": [
+        {"id": "A", "text": "0°C"},
+        {"id": "B", "text": "32°C"},
+        {"id": "C", "text": "100°C"},
+        {"id": "D", "text": "212°C"}
+      ],
+      "answer": "A"
+    }
+  ]
+}
