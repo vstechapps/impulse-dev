@@ -16,10 +16,8 @@
 }
 .footer-text {
     color: #00ff00;
-    font-family: 'Courier New', monospace;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-    letter-spacing: 1px;
 }
 .footer-link {
     color: #00ff00;
