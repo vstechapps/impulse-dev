@@ -5,6 +5,17 @@
     align-items: center;
     min-height: 70vh;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 20, 0, 0.95) 100%);
+    position: relative;
+}
+
+.timer {
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    color: #00ff00;
+    font-size: 1.5rem;
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
 }
 
 .assessment-content {
@@ -17,6 +28,30 @@
     box-shadow: 0 0 30px rgba(0, 255, 0, 0.1);
     position: relative;
     overflow: hidden;
+}
+
+.exit-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: #00ff00;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.exit-btn:hover {
+    background: rgba(0, 255, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
 }
 
 .title {
@@ -83,6 +118,7 @@
 
 .glow-line.bottom {
     bottom: 0;
+    animation: glow-reverse 2s linear infinite;
 }
 
 .submit-btn {
@@ -110,5 +146,14 @@
     }
     100% {
         transform: translateX(100%);
+    }
+}
+
+@keyframes glow-reverse {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }
