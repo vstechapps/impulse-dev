@@ -1,0 +1,122 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="assessments-container">
+    <div class="assessments-content">
+        <div class="glow-line top"></div>
+        <h1 class="title">Assessments</h1>
+        
+        <div class="search-container">
+            <span class="material-icons search-icon">search</span>
+            <input type="text" class="search-input" placeholder="Search assessments..." id="searchInput">
+        </div>
+
+        <div class="folders-container">
+            <!-- Java Section -->
+            <div class="folder-section">
+                <div class="folder-header">
+                    <span class="material-icons">code</span>
+                    <h2>Java</h2>
+                </div>
+                <div class="subfolders">
+                    <a href="/assessment?id=java_basics" class="subfolder">
+                        <span class="material-icons">folder</span>
+                        <span>Basics</span>
+                    </a>
+                    <a href="/assessment?id=java_datatypes" class="subfolder">
+                        <span class="material-icons">folder</span>
+                        <span>Datatypes</span>
+                    </a>
+                    <a href="/assessment?id=java_arrays" class="subfolder">
+                        <span class="material-icons">folder</span>
+                        <span>Arrays</span>
+                    </a>
+                    <a href="/assessment?id=java_strings" class="subfolder">
+                        <span class="material-icons">folder</span>
+                        <span>Strings</span>
+                    </a>
+                    <a href="/assessment?id=java_loops" class="subfolder">
+                        <span class="material-icons">folder</span>
+                        <span>Loops</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- JavaScript Section -->
+            <div class="folder-section">
+                <div class="folder-header">
+                    <span class="material-icons">javascript</span>
+                    <h2>JavaScript</h2>
+                </div>
+                <div class="subfolders">
+                    <a href="/assessment?id=js_keywords" class="subfolder">
+                        <span class="material-icons">folder</span>
+                        <span>Keywords</span>
+                    </a>
+                    <a href="/assessment?id=js_functions" class="subfolder">
+                        <span class="material-icons">folder</span>
+                        <span>Functions</span>
+                    </a>
+                    <a href="/assessment?id=js_api" class="subfolder">
+                        <span class="material-icons">folder</span>
+                        <span>API</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Angular Section -->
+            <div class="folder-section">
+                <div class="folder-header">
+                    <span class="material-icons">web</span>
+                    <h2>Angular</h2>
+                </div>
+                <div class="subfolders">
+                    <a href="/assessment?id=angular_basics" class="subfolder">
+                        <span class="material-icons">folder</span>
+                        <span>Basics</span>
+                    </a>
+                    <a href="/assessment?id=angular_components" class="subfolder">
+                        <span class="material-icons">folder</span>
+                        <span>Components</span>
+                    </a>
+                    <a href="/assessment?id=angular_directives" class="subfolder">
+                        <span class="material-icons">folder</span>
+                        <span>Directives</span>
+                    </a>
+                    <a href="/assessment?id=angular_interceptors" class="subfolder">
+                        <span class="material-icons">folder</span>
+                        <span>Interceptors</span>
+                    </a>
+                    <a href="/assessment?id=angular_guards" class="subfolder">
+                        <span class="material-icons">folder</span>
+                        <span>Guards</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="glow-line bottom"></div>
+    </div>
+</div>
+
+<script>
+document.getElementById('searchInput').addEventListener('input', function(e) {
+    const searchTerm = e.target.value.toLowerCase();
+    const subfolders = document.querySelectorAll('.subfolder');
+    
+    subfolders.forEach(subfolder => {
+        const text = subfolder.querySelector('span:last-child').textContent.toLowerCase();
+        const parentSection = subfolder.closest('.folder-section');
+        
+        if (text.includes(searchTerm)) {
+            subfolder.style.display = 'flex';
+            parentSection.style.display = 'block';
+        } else {
+            subfolder.style.display = 'none';
+        }
+        
+        // Hide empty sections
+        const visibleSubfolders = parentSection.querySelectorAll('.subfolder[style="display: flex"]');
+        if (visibleSubfolders.length === 0) {
+            parentSection.style.display = 'none';
+        }
+    });
+});
+</script>

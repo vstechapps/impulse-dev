@@ -1,0 +1,9 @@
+{
+  "name": "explore",
+  "path": "explore",
+  "components": [
+    "header",
+    "assessments",
+    "footer"
+  ]
+}

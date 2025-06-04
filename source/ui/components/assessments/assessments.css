@@ -1,0 +1,160 @@
+.assessments-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 20, 0, 0.95) 100%);
+}
+
+.assessments-content {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: clamp(1rem, 3vw, 2rem);
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 255, 153, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.title {
+    color: #00ff99;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: 2rem;
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
+}
+
+.search-container {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00ff99;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    font-size: 1.1rem;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #00ff99;
+    color: #00ff99;
+    border-radius: 4px;
+    outline: none;
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: rgba(0, 255, 153, 0.5);
+}
+
+.search-input:focus {
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.5);
+}
+
+.folders-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.folder-section {
+    text-align: left;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #00ff99;
+}
+
+.folder-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #00ff99;
+}
+
+.folder-header h2 {
+    color: #00ff99;
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.folder-header .material-icons {
+    color: #00ff99;
+    font-size: 2rem;
+}
+
+.subfolders {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.subfolder {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #00ff99;
+    border-radius: 4px;
+    color: #00ff99;
+    text-decoration: none;
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s ease;
+}
+
+.subfolder:hover {
+    background: rgba(0, 255, 153, 0.1);
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.2);
+    transform: translateY(-2px);
+}
+
+.subfolder .material-icons {
+    font-size: 1.2rem;
+}
+
+.glow-line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00ff99, transparent);
+    animation: glow 2s linear infinite;
+}
+
+.glow-line.top {
+    top: 0;
+}
+
+.glow-line.bottom {
+    bottom: 0;
+}
+
+@keyframes glow {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}

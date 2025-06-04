@@ -1,0 +1,9 @@
+{
+  "name": "login",
+  "path": "login",
+  "components": [
+    "header",
+    "login",
+    "footer"
+  ]
+}
