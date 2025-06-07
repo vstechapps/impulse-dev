@@ -29,10 +29,12 @@ class DocumentsManager {
 
     async loadCollection() {
         this.collection = this.collectionInput.value.toLowerCase();
+        Loader.show();
         this.documents = await Firebase.read(this.collection);
         this.currentPage = 1;
         this.updatePagination();
         this.renderDocuments();
+        Loader.hide();
     }
 
     changePage(delta) {
