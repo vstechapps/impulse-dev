@@ -1,0 +1,9 @@
+{
+  "name": "admin",
+  "path": "admin",
+  "components": [
+    "header",
+    "documents",
+    "footer"
+  ]
+}

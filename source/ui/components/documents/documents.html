@@ -1,0 +1,42 @@
+<div class="documents-container">
+    <div class="documents-content">
+        <div class="glow-line top"></div>
+        <h1 class="title">ADMIN KBASE</h1>
+        
+        <div class="search-container">
+            <span class="material-icons search-icon">search</span>
+            <input type="text" class="search-input" placeholder="Collection Name" id="collectionInput">
+        </div>
+
+        <div class="documents-table-container">
+            <table class="documents-table">
+                <thead>
+                    <tr>
+                        <th>REF</th>
+                        <th>ACT</th>
+                    </tr>
+                </thead>
+                <tbody id="documentsTableBody">
+                    <!-- Documents will be loaded here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            <button class="pagination-btn" id="prevPage" disabled>
+                <span class="material-icons">chevron_left</span>
+            </button>
+            <span class="page-info">
+                Page <span id="currentPage">1</span> of <span id="totalPages">1</span>
+            </span>
+            <button class="pagination-btn" id="nextPage">
+                <span class="material-icons">chevron_right</span>
+            </button>
+        </div>
+
+        <div class="loading-spinner" id="loadingSpinner">
+            <span class="material-icons">sync</span>
+        </div>
+        <div class="glow-line bottom"></div>
+    </div>
+</div>
