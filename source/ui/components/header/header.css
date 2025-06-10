@@ -23,7 +23,7 @@
 /* Floating Menu Button */
 .menu-btn {
     border: none;
-    position: fixed;
+    position: absolute;
     top: 20px;
     left: 0px;
     background-color: transparent;

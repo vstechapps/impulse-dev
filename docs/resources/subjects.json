@@ -1,0 +1,1114 @@
+[
+  {
+    "id": "metaphysics",
+    "name": "Metaphysics",
+    "topics": [
+      {
+        "name": "Ontology",
+        "content": "Study of being and existence.",
+        "theory": "Ontology explores categories of existence.",
+        "practical": "Influences fields like AI and knowledge representation.",
+        "facts": "One core debate is whether universals exist.",
+        "imgs": [
+          "metaphysics1.jpg",
+          "ontology_diagram.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Ontology",
+          "https://plato.stanford.edu/entries/ontology/"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=ynGs6OkMcEk"
+        ],
+        "assessments": [
+          "Define ontology.",
+          "Explain the difference between ontology and metaphysics."
+        ]
+      },
+      {
+        "name": "Cosmology",
+        "content": "Study of the origin and structure of the universe.",
+        "theory": "Philosophical cosmology includes arguments about the universe's existence.",
+        "practical": "Impacts how we understand time and space.",
+        "facts": "Ancient cosmology was often mythologically based.",
+        "imgs": [
+          "cosmology.jpg",
+          "universe_diagram.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Cosmology",
+          "https://plato.stanford.edu/entries/cosmology/"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=4TFrPHOjPUc"
+        ],
+        "assessments": [
+          "What is cosmology?",
+          "Discuss differences between philosophical and physical cosmology."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "epistemology",
+    "name": "Epistemology",
+    "topics": [
+      {
+        "name": "Theory of Knowledge",
+        "content": "Study of knowledge and justified belief.",
+        "theory": "Covers definitions of knowledge, such as justified true belief.",
+        "practical": "Applies to education and scientific methodology.",
+        "facts": "Gettier problems challenge classical theories of knowledge.",
+        "imgs": [
+          "epistemology_book.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Epistemology",
+          "https://plato.stanford.edu/entries/knowledge-analysis/"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=NDhZKWNqpSU"
+        ],
+        "assessments": [
+          "Define epistemology.",
+          "Explain Gettier problems."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ethics",
+    "name": "Ethics",
+    "topics": [
+      {
+        "name": "Utilitarianism",
+        "content": "Ethical theory that actions are right if they benefit the majority.",
+        "theory": "Associated with philosophers like Bentham and Mill.",
+        "practical": "Used in policy and cost-benefit analysis.",
+        "facts": "Utilitarianism faces criticism for ignoring minority rights.",
+        "imgs": [
+          "utilitarianism_chart.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Utilitarianism",
+          "https://plato.stanford.edu/entries/utilitarianism-history/"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=5MYg1E8H28A"
+        ],
+        "assessments": [
+          "Describe utilitarianism.",
+          "What are criticisms of utilitarianism?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "algebra",
+    "name": "Algebra",
+    "topics": [
+      {
+        "name": "Linear Algebra",
+        "content": "Branch of mathematics concerning linear equations and vectors.",
+        "theory": "Covers vector spaces, linear transformations, and matrices.",
+        "practical": "Used in computer graphics, machine learning, and engineering.",
+        "facts": "Many algorithms rely on solving linear equations.",
+        "imgs": [
+          "matrix_example.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Linear_algebra"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=HbJ0uAA_1CQ"
+        ],
+        "assessments": [
+          "Solve a system of linear equations.",
+          "Explain eigenvectors and eigenvalues."
+        ]
+      },
+      {
+        "name": "Abstract Algebra",
+        "content": "Study of algebraic structures like groups and rings.",
+        "theory": "Focuses on properties of mathematical structures.",
+        "practical": "Applications in cryptography and coding theory.",
+        "facts": "Group theory underpins symmetry in physics.",
+        "imgs": [
+          "group_theory_diagram.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Abstract_algebra"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=mz3l6Yl-oqc"
+        ],
+        "assessments": [
+          "Define a group.",
+          "Give an example of a ring."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "calculus",
+    "name": "Calculus",
+    "topics": [
+      {
+        "name": "Differential Calculus",
+        "content": "Study of rates of change and slopes of curves.",
+        "theory": "Based on limits, derivatives, and continuity.",
+        "practical": "Used in physics for motion, in engineering, and optimization.",
+        "facts": "Isaac Newton and Leibniz independently developed calculus.",
+        "imgs": [
+          "derivative_graph.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Differential_calculus"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=WUvTyaaNkzM"
+        ],
+        "assessments": [
+          "Differentiate a polynomial function.",
+          "Explain the concept of a limit."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "geometry",
+    "name": "Geometry",
+    "topics": [
+      {
+        "name": "Euclidean Geometry",
+        "content": "Study of plane and solid figures based on axioms.",
+        "theory": "Based on Euclid's postulates, including the parallel postulate.",
+        "practical": "Used in architecture, engineering, and computer graphics.",
+        "facts": "Non-Euclidean geometries arise when the parallel postulate is altered.",
+        "imgs": [
+          "euclid_geometry.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Euclidean_geometry"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=Wf6E4Jxc0tc"
+        ],
+        "assessments": [
+          "State Euclid's postulates.",
+          "Explain non-Euclidean geometry."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "physics",
+    "name": "Physics",
+    "topics": [
+      {
+        "name": "Classical Mechanics",
+        "content": "Branch of physics dealing with motion of bodies under forces.",
+        "theory": "Based on Newton's laws of motion and gravitation.",
+        "practical": "Used in engineering, biomechanics, and astronomy.",
+        "facts": "Newton formulated laws from which many phenomena can be predicted.",
+        "imgs": [
+          "newton_laws.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Classical_mechanics"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=pKKarw2OOGY"
+        ],
+        "assessments": [
+          "Explain Newton's second law.",
+          "Solve a kinematics problem."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chemistry",
+    "name": "Chemistry",
+    "topics": [
+      {
+        "name": "Organic Chemistry",
+        "content": "Study of carbon-containing compounds.",
+        "theory": "Covers structure, properties, and reactions of organic molecules.",
+        "practical": "Essential for pharmaceuticals, plastics, and petrochemicals.",
+        "facts": "Thousands of organic reactions are known and categorized.",
+        "imgs": [
+          "organic_molecule.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Organic_chemistry"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=0VU0rN--ZzU"
+        ],
+        "assessments": [
+          "Identify functional groups.",
+          "Explain reaction mechanisms."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "astronomy",
+    "name": "Astronomy",
+    "topics": [
+      {
+        "name": "Stellar Astronomy",
+        "content": "Study of stars, their formation and evolution.",
+        "theory": "Includes nuclear fusion processes and life cycles of stars.",
+        "practical": "Helps us understand galaxies and cosmology.",
+        "facts": "The Sun is a G-type main-sequence star.",
+        "imgs": [
+          "star_life_cycle.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Stellar_astronomy"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=ryRKZ1yeWP0"
+        ],
+        "assessments": [
+          "Describe a star's life cycle.",
+          "Explain how supernovae occur."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cellbiology",
+    "name": "Cell Biology",
+    "topics": [
+      {
+        "name": "Cell Structure",
+        "content": "Study of cell components like nucleus, mitochondria.",
+        "theory": "Cells have organelles that perform specific functions.",
+        "practical": "Understanding cells leads to advances in medicine.",
+        "facts": "The human body contains trillions of cells.",
+        "imgs": [
+          "cell_structure.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Cell_(biology)"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=URUJD5NEXC8"
+        ],
+        "assessments": [
+          "Label cell organelles.",
+          "Explain cell theory."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "genetics",
+    "name": "Genetics",
+    "topics": [
+      {
+        "name": "DNA Structure",
+        "content": "Study of the molecular structure of DNA.",
+        "theory": "DNA is a double helix composed of nucleotides.",
+        "practical": "Key to genetic engineering and understanding heredity.",
+        "facts": "DNA sequencing was first completed in 1953.",
+        "imgs": [
+          "dna_double_helix.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/DNA"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=zwibgNGe4aY"
+        ],
+        "assessments": [
+          "Describe base pairing rules.",
+          "Explain how DNA replication works."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "evolution",
+    "name": "Evolution",
+    "topics": [
+      {
+        "name": "Natural Selection",
+        "content": "Mechanism by which traits become more or less common.",
+        "theory": "Proposed by Darwin, variation and survival of the fittest drive evolution.",
+        "practical": "Explains biodiversity and guides conservation efforts.",
+        "facts": "Natural selection can lead to speciation.",
+        "imgs": [
+          "darwin_evolution.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Natural_selection"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=MpJlRjuhNoo"
+        ],
+        "assessments": [
+          "Explain natural selection.",
+          "Give an example of adaptation."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "anatomy",
+    "name": "Anatomy",
+    "topics": [
+      {
+        "name": "Human Cardiovascular System",
+        "content": "Study of the heart and blood vessels.",
+        "theory": "Heart pumps blood through circulation loops.",
+        "practical": "Critical in understanding heart diseases.",
+        "facts": "The heart beats about 100,000 times per day.",
+        "imgs": [
+          "human_heart_diagram.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Cardiovascular_system"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=3S5AKGzxXvo"
+        ],
+        "assessments": [
+          "Label heart anatomy.",
+          "Explain blood flow through the heart."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "physiology",
+    "name": "Physiology",
+    "topics": [
+      {
+        "name": "Nervous System",
+        "content": "Study of the neural mechanisms in organisms.",
+        "theory": "Includes brain, spinal cord, and nerves that transmit signals.",
+        "practical": "Foundational to neurology and psychiatry.",
+        "facts": "Nerve impulses travel at varying speeds.",
+        "imgs": [
+          "neuron_diagram.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Nervous_system"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=Q6R8gXy6Vwg"
+        ],
+        "assessments": [
+          "Describe neuron function.",
+          "Explain reflex arcs."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pharmacology",
+    "name": "Pharmacology",
+    "topics": [
+      {
+        "name": "Drug Mechanisms",
+        "content": "Study of how drugs interact with biological systems.",
+        "theory": "Includes pharmacokinetics and pharmacodynamics.",
+        "practical": "Used in developing medications and treatments.",
+        "facts": "Many drugs act as agonists or antagonists at receptors.",
+        "imgs": [
+          "drug_receptor.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Pharmacology"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=9TUIGBd_GlI"
+        ],
+        "assessments": [
+          "Explain agonist vs antagonist.",
+          "Describe drug metabolism phases."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "electricalengineering",
+    "name": "Electrical Engineering",
+    "topics": [
+      {
+        "name": "Circuit Analysis",
+        "content": "Study of how electric circuits operate.",
+        "theory": "Uses Ohm's and Kirchhoff's laws to analyze circuits.",
+        "practical": "Design of all electronic devices relies on circuit analysis.",
+        "facts": "Simple circuits consist of resistors, capacitors, and inductors.",
+        "imgs": [
+          "circuit_circuit.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Circuit_theory"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=KzG2vNw2cWE"
+        ],
+        "assessments": [
+          "Solve a resistor network.",
+          "State Kirchhoff's laws."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mechanicalengineering",
+    "name": "Mechanical Engineering",
+    "topics": [
+      {
+        "name": "Thermodynamics",
+        "content": "Study of energy, heat, and work.",
+        "theory": "Involves laws of thermodynamics and energy transfer.",
+        "practical": "Applied in engine design, HVAC systems, and more.",
+        "facts": "The second law dictates energy flows from hot to cold spontaneously.",
+        "imgs": [
+          "thermo_diagram.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Thermodynamics"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=78WgXHjnPPk"
+        ],
+        "assessments": [
+          "Explain the first law of thermodynamics.",
+          "Perform a heat engine efficiency calculation."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "civilengineering",
+    "name": "Civil Engineering",
+    "topics": [
+      {
+        "name": "Structural Analysis",
+        "content": "Study of forces and stresses on structures.",
+        "theory": "Uses mechanics of materials and static equilibrium equations.",
+        "practical": "Vital for building safe bridges and buildings.",
+        "facts": "Structures must account for live and dead loads.",
+        "imgs": [
+          "bridge_structure.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Structural_engineering"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=7mW93Yf_rSc"
+        ],
+        "assessments": [
+          "Calculate beam stresses.",
+          "Discuss factors affecting structural stability."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "algorithms",
+    "name": "Algorithms",
+    "topics": [
+      {
+        "name": "Sorting Algorithms",
+        "content": "Methods for ordering elements in a list.",
+        "theory": "Includes algorithms like quicksort, mergesort, and bubble sort.",
+        "practical": "Crucial for data processing and efficiency.",
+        "facts": "Quicksort has average-case O(n log n) complexity.",
+        "imgs": [
+          "sorting_graph.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Sorting_algorithm"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=ZZuD6iUe3Pc"
+        ],
+        "assessments": [
+          "Implement mergesort.",
+          "Compare sorting algorithm complexities."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "datastructures",
+    "name": "Data Structures",
+    "topics": [
+      {
+        "name": "Binary Trees",
+        "content": "Hierarchical data structure with nodes.",
+        "theory": "Each node has at most two children.",
+        "practical": "Used in databases, search algorithms, and file systems.",
+        "facts": "Binary search trees allow fast lookup operations.",
+        "imgs": [
+          "binary_tree_diagram.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Binary_tree"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=2Rn3dDsjHB4"
+        ],
+        "assessments": [
+          "Traverse a binary tree.",
+          "Explain tree balancing."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artificialintelligence",
+    "name": "Artificial Intelligence",
+    "topics": [
+      {
+        "name": "Machine Learning",
+        "content": "Study of algorithms that improve with data.",
+        "theory": "Includes supervised, unsupervised, and reinforcement learning.",
+        "practical": "Used in speech recognition, recommendation systems, and more.",
+        "facts": "Deep learning is a subset of machine learning using neural networks.",
+        "imgs": [
+          "ml_flowchart.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Machine_learning"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=GwIo3gDZCVQ"
+        ],
+        "assessments": [
+          "Train a simple classifier.",
+          "Explain overfitting."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "psychology",
+    "name": "Psychology",
+    "topics": [
+      {
+        "name": "Cognitive Psychology",
+        "content": "Study of mental processes like memory and perception.",
+        "theory": "Explores how people think and process information.",
+        "practical": "Applied in therapy, education, and UX design.",
+        "facts": "Memory can be divided into short-term and long-term storage.",
+        "imgs": [
+          "brain_cognition.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Cognitive_psychology"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=jz_KFH1Wwcg"
+        ],
+        "assessments": [
+          "Describe working memory.",
+          "Explain cognitive biases."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sociology",
+    "name": "Sociology",
+    "topics": [
+      {
+        "name": "Social Stratification",
+        "content": "Study of social hierarchy and inequality.",
+        "theory": "Examines class, caste, race, and gender divisions.",
+        "practical": "Helps in policy-making and understanding societies.",
+        "facts": "Systems of stratification vary widely across cultures.",
+        "imgs": [
+          "class_structure.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Social_stratification"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=0PS0tam0RnE"
+        ],
+        "assessments": [
+          "Discuss types of social stratification.",
+          "Analyze effects of inequality."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "economics",
+    "name": "Economics",
+    "topics": [
+      {
+        "name": "Microeconomics",
+        "content": "Study of individuals and businesses in the economy.",
+        "theory": "Includes supply and demand, market structures, and consumer behavior.",
+        "practical": "Used in business decisions and policy.",
+        "facts": "Adam Smith's 'invisible hand' concept comes from economics.",
+        "imgs": [
+          "supply_demand_graph.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Microeconomics"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=XJuSwYp_BCk"
+        ],
+        "assessments": [
+          "Explain supply and demand.",
+          "Analyze market equilibrium."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "history",
+    "name": "History",
+    "topics": [
+      {
+        "name": "Ancient History",
+        "content": "Study of early civilizations and their development.",
+        "theory": "Examines primary sources and archaeological evidence.",
+        "practical": "Helps understand modern societies and cultural evolution.",
+        "facts": "Writing systems developed independently in multiple regions.",
+        "imgs": [
+          "ancient_civilizations.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Ancient_history"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=8Fqz5SeMbbY"
+        ],
+        "assessments": [
+          "Compare ancient civilizations.",
+          "Analyze primary sources."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "literature",
+    "name": "Literature",
+    "topics": [
+      {
+        "name": "Shakespearean Plays",
+        "content": "Study of plays written by William Shakespeare.",
+        "theory": "Examines themes, characters, and historical context.",
+        "practical": "Important for understanding English literature and language.",
+        "facts": "Shakespeare invented many English words and phrases.",
+        "imgs": [
+          "shakespeare.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/William_Shakespeare"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=8ud-GHvxBeE"
+        ],
+        "assessments": [
+          "Analyze a monologue from Hamlet.",
+          "Discuss common themes in Shakespeare plays."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "painting",
+    "name": "Painting",
+    "topics": [
+      {
+        "name": "Impressionism",
+        "content": "Art movement emphasizing light and color.",
+        "theory": "Artists painted en plein air capturing light effects.",
+        "practical": "Influences modern art and visual design.",
+        "facts": "Claude Monet was a famous Impressionist.",
+        "imgs": [
+          "monet_waterlilies.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Impressionism"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=AGTwo5zFXHw"
+        ],
+        "assessments": [
+          "Identify impressionist techniques.",
+          "Explain the significance of light in Impressionism."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "music",
+    "name": "Music",
+    "topics": [
+      {
+        "name": "Classical Music",
+        "content": "Art music rooted in traditions of Western culture.",
+        "theory": "Includes harmony, melody, and structured compositions.",
+        "practical": "Performed in orchestras and concerts.",
+        "facts": "Beethoven and Mozart are key figures in classical music.",
+        "imgs": [
+          "orchestra.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Classical_music"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=ixw27bzFpnQ"
+        ],
+        "assessments": [
+          "Analyze a classical piece.",
+          "Discuss elements of composition."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cinema",
+    "name": "Cinema",
+    "topics": [
+      {
+        "name": "Film Noir",
+        "content": "Genre of dark, stylistic Hollywood crime films.",
+        "theory": "Features themes of moral ambiguity and use of shadow.",
+        "practical": "Influences modern cinematography and storytelling.",
+        "facts": "Popular in the 1940s and 50s in the USA.",
+        "imgs": [
+          "film_noir_scene.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Film_noir"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=SbMgoaJf77A"
+        ],
+        "assessments": [
+          "List characteristics of film noir.",
+          "Give examples of film noir movies."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "macroeconomics",
+    "name": "Macroeconomics",
+    "topics": [
+      {
+        "name": "Inflation",
+        "content": "General increase in prices and fall in currency value.",
+        "theory": "Caused by demand-pull or cost-push factors.",
+        "practical": "Central banks manage inflation through interest rates.",
+        "facts": "Hyperinflation can destabilize economies.",
+        "imgs": [
+          "inflation_chart.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Inflation"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=qZ2a5-d1dIk"
+        ],
+        "assessments": [
+          "Explain causes of inflation.",
+          "Discuss tools to control inflation."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "microeconomics",
+    "name": "Microeconomics",
+    "topics": [
+      {
+        "name": "Market Structures",
+        "content": "Different types of market organization.",
+        "theory": "Includes perfect competition, monopoly, and oligopoly.",
+        "practical": "Affects pricing and consumer choice.",
+        "facts": "Monopolies are regulated to prevent abuse.",
+        "imgs": [
+          "market_structure_chart.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Market_structure"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=5dC40LRdhDg"
+        ],
+        "assessments": [
+          "Compare market structures.",
+          "Give examples of oligopolies."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "internationaleconomics",
+    "name": "International Economics",
+    "topics": [
+      {
+        "name": "Trade Theory",
+        "content": "Study of trade between countries.",
+        "theory": "Includes concepts like comparative advantage.",
+        "practical": "Guides trade policy and agreements.",
+        "facts": "Trade can increase global welfare.",
+        "imgs": [
+          "trade_graph.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/International_trade"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=3AuAj-w3xXY"
+        ],
+        "assessments": [
+          "Explain comparative advantage.",
+          "Discuss effects of tariffs."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "criminallaw",
+    "name": "Criminal Law",
+    "topics": [
+      {
+        "name": "Felonies vs Misdemeanors",
+        "content": "Classification of crimes by severity.",
+        "theory": "Felonies are serious crimes; misdemeanors are less severe.",
+        "practical": "Affects sentencing and legal proceedings.",
+        "facts": "Penalties differ significantly between felonies and misdemeanors.",
+        "imgs": [
+          "scales_of_justice.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Criminal_law"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=Fh9aWKRpIzg"
+        ],
+        "assessments": [
+          "Define felony and misdemeanor.",
+          "Give examples of each."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "contractlaw",
+    "name": "Contract Law",
+    "topics": [
+      {
+        "name": "Elements of a Contract",
+        "content": "Requirements for a legally binding contract.",
+        "theory": "Includes offer, acceptance, consideration, capacity, and legality.",
+        "practical": "Important in business and personal agreements.",
+        "facts": "Verbal contracts can be binding but are harder to prove.",
+        "imgs": [
+          "contract_signing.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Contract"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=5cYfrXu9Pkc"
+        ],
+        "assessments": [
+          "List contract elements.",
+          "Explain breach of contract."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "intellectualproperty",
+    "name": "Intellectual Property",
+    "topics": [
+      {
+        "name": "Patent Law",
+        "content": "Legal rights for inventions and processes.",
+        "theory": "Patents grant exclusive rights for a limited time.",
+        "practical": "Encourages innovation by protecting inventors.",
+        "facts": "Patents typically last 20 years from filing.",
+        "imgs": [
+          "patent_documents.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Patent"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=ReZJC_PVOhg"
+        ],
+        "assessments": [
+          "Describe patent requirements.",
+          "Discuss patent infringements."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ecology",
+    "name": "Ecology",
+    "topics": [
+      {
+        "name": "Ecosystems",
+        "content": "Communities of organisms interacting with their environment.",
+        "theory": "Includes concepts of food chains, niches, and habitats.",
+        "practical": "Important for conservation and resource management.",
+        "facts": "Ecosystems can range from small ponds to entire forests.",
+        "imgs": [
+          "forest_ecosystem.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Ecosystem"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=5xVwF7nZjzY"
+        ],
+        "assessments": [
+          "Define ecosystem components.",
+          "Explain trophic levels."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "climatescience",
+    "name": "Climate Science",
+    "topics": [
+      {
+        "name": "Global Warming",
+        "content": "Long-term rise in Earth's average temperature.",
+        "theory": "Caused by greenhouse gas emissions from human activity.",
+        "practical": "Leads to policy changes and renewable energy adoption.",
+        "facts": "Recent years have been the warmest on record.",
+        "imgs": [
+          "climate_chart.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Global_warming"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=wReZz5IqeT0"
+        ],
+        "assessments": [
+          "Describe greenhouse effect.",
+          "Discuss mitigation strategies."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "conservation",
+    "name": "Conservation",
+    "topics": [
+      {
+        "name": "Biodiversity",
+        "content": "Variety of life in an ecosystem.",
+        "theory": "Higher biodiversity usually means more resilient ecosystems.",
+        "practical": "Conservation efforts focus on protecting species diversity.",
+        "facts": "Hotspots of biodiversity exist in tropical rainforests.",
+        "imgs": [
+          "biodiversity_rainforest.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Biodiversity"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=LCz4XyqhAts"
+        ],
+        "assessments": [
+          "Explain importance of biodiversity.",
+          "Identify threats to biodiversity."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aeronautics",
+    "name": "Aeronautics",
+    "topics": [
+      {
+        "name": "Flight Mechanics",
+        "content": "Study of forces and motion in air travel.",
+        "theory": "Involves aerodynamics, lift, drag, and stability.",
+        "practical": "Design of aircraft wings and controls.",
+        "facts": "Wright brothers made the first powered flight in 1903.",
+        "imgs": [
+          "airplane_wings.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Aerodynamics"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=Vb27-3yjDmE"
+        ],
+        "assessments": [
+          "Calculate lift for a wing.",
+          "Explain Bernoulli's principle."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "astronautics",
+    "name": "Astronautics",
+    "topics": [
+      {
+        "name": "Orbital Mechanics",
+        "content": "Study of how objects move in space under gravity.",
+        "theory": "Based on Newtonian mechanics and Kepler's laws.",
+        "practical": "Used for satellite launches and interplanetary travel.",
+        "facts": "Satellites stay in orbit by balancing gravity and inertia.",
+        "imgs": [
+          "satellite_orbit.png"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Orbital_mechanics"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=41rHIj96WHs"
+        ],
+        "assessments": [
+          "Explain orbital velocity.",
+          "Calculate geostationary orbit radius."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spacecraftengineering",
+    "name": "Spacecraft Engineering",
+    "topics": [
+      {
+        "name": "Propulsion Systems",
+        "content": "Technology that moves spacecraft.",
+        "theory": "Includes rocket engines, ion thrusters, and chemical propellants.",
+        "practical": "Essential for satellites, probes, and crewed spacecraft.",
+        "facts": "Rocket equation relates fuel mass to velocity change.",
+        "imgs": [
+          "rocket_engine.jpg"
+        ],
+        "links": [
+          "https://en.wikipedia.org/wiki/Rocket_engine"
+        ],
+        "videos": [
+          "https://www.youtube.com/watch?v=LQ9RN1U1E0Y"
+        ],
+        "assessments": [
+          "Explain Tsiolkovsky rocket equation.",
+          "Compare liquid vs solid rockets."
+        ]
+      }
+    ]
+  }
+] 

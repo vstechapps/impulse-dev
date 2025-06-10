@@ -1,0 +1,88 @@
+{
+  "domains": [
+    {
+      "name": "Philosophy",
+      "description": "Study of fundamental questions about existence, knowledge, and values",
+      "icon": "psychology",
+      "subjects": ["metaphysics", "epistemology", "ethics"]
+    },
+    {
+      "name": "Mathematics",
+      "description": "Study of numbers, quantities, shapes, and patterns",
+      "icon": "calculate",
+      "subjects": ["algebra", "calculus", "geometry"]
+    },
+    {
+      "name": "Physical Science",
+      "description": "Study of non-living systems and natural phenomena",
+      "icon": "science",
+      "subjects": ["physics", "chemistry", "astronomy"]
+    },
+    {
+      "name": "Biology",
+      "description": "Study of living organisms and their interactions",
+      "icon": "biotech",
+      "subjects": ["cellbiology", "genetics", "evolution"]
+    },
+    {
+      "name": "Medical Science",
+      "description": "Study of human health and disease",
+      "icon": "medical_services",
+      "subjects": ["anatomy", "physiology", "pharmacology"]
+    },
+    {
+      "name": "Engineering",
+      "description": "Application of scientific principles to design and build",
+      "icon": "engineering",
+      "subjects": ["electricalengineering", "mechanicalengineering", "civilengineering"]
+    },
+    {
+      "name": "Computer Science",
+      "description": "Study of computation and information processing",
+      "icon": "computer",
+      "subjects": ["algorithms", "datastructures", "artificialintelligence"]
+    },
+    {
+      "name": "Social Science",
+      "description": "Study of human society and social relationships",
+      "icon": "groups",
+      "subjects": ["psychology", "sociology", "economics"]
+    },
+    {
+      "name": "Humanity",
+      "description": "Study of human culture and expression",
+      "icon": "history_edu",
+      "subjects": ["history", "literature", "philosophy"]
+    },
+    {
+      "name": "Arts",
+      "description": "Study of creative expression and aesthetics",
+      "icon": "palette",
+      "subjects": ["painting", "music", "cinema"]
+    },
+    {
+      "name": "Economics",
+      "description": "Study of production, distribution, and consumption",
+      "icon": "trending_up",
+      "subjects": ["macroeconomics", "microeconomics", "internationaleconomics"]
+    },
+    {
+      "name": "Law",
+      "description": "Study of legal systems and principles",
+      "icon": "gavel",
+      "subjects": ["criminallaw", "contractlaw", "intellectualproperty"]
+    },
+    {
+      "name": "Environment",
+      "description": "Study of natural systems and conservation",
+      "icon": "eco",
+      "subjects": ["ecology", "climatescience", "conservation"]
+    },
+    {
+      "name": "Aerospace",
+      "description": "Study of aircraft and spacecraft",
+      "icon": "rocket",
+      "subjects": ["aeronautics", "astronautics", "spacecraftengineering"]
+    }
+  ]
+} 
