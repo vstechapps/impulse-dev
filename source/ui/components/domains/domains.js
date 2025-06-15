@@ -8,7 +8,7 @@ function createDomainSection(domain) {
             </div>
             <div class="subfolders">
                 ${domain.subjects.map(subject => `
-                    <a href="/subject?id=${subject.id}" class="subfolder">
+                    <a href="/topics?id=${domain.id}-${subject.id}" class="subfolder">
                         <span class="material-icons">folder</span>
                         <span>${subject.name}</span>
                     </a>
@@ -22,22 +22,12 @@ function createDomainSection(domain) {
 async function loadDomains() {
     try {
         // Fetch domains data
-        const domainsResponse = await fetch('/resources/domains.json');
-        const { domains } = await domainsResponse.json();
-
-        // Fetch subjects data
-        const subjectsResponse = await fetch('/resources/subjects.json');
-        const subjects = await subjectsResponse.json();
-
-        // Create a map of subjects for quick lookup
-        const subjectsMap = new Map(subjects.map(subject => [subject.id, subject]));
-
-        // Add subjects to their respective domains
-        domains.forEach(domain => {
-            domain.subjects = domain.subjects
-                .map(subjectId => subjectsMap.get(subjectId))
-                .filter(subject => subject !== undefined); // Filter out undefined subjects
-        });
+        const response = await fetch('/resources/domains.json');
+        if (!response.ok) {
+            throw new Error('Failed to load domains');
+        }
+        
+        const { domains } = await response.json();
 
         // Render domains
         const container = document.getElementById('domainsContainer');
@@ -55,7 +45,12 @@ async function loadDomains() {
         if (container) {
             container.innerHTML = `
                 <div class="error-message">
-                    Failed to load domains. Please try again later.
+                    <span class="material-icons">error_outline</span>
+                    <p>Failed to load domains. Please try again later.</p>
+                    <a href="/" class="home-button">
+                        <span class="material-icons">home</span>
+                        Return to Home
+                    </a>
                 </div>
             `;
         }

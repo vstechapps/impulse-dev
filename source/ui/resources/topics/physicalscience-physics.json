@@ -1,0 +1,936 @@
+{
+    "topics": [
+      {
+        "id": "classical-mechanics",
+        "name": "Classical Mechanics",
+        "assessments": [
+          {
+            "id": "classical-mechanics-1",
+            "name": "Classical Mechanics Basics",
+            "title": "Introduction to Classical Mechanics",
+            "level": 1,
+            "locked": false,
+            "timelimit": 600,
+            "questions": [
+              {
+                "id": 1,
+                "text": "What is Newton's First Law?",
+                "options": [
+                  {"id": "A", "text": "An object in motion stays in motion unless acted upon by an external force"},
+                  {"id": "B", "text": "Force equals mass times acceleration"},
+                  {"id": "C", "text": "For every action there is an equal and opposite reaction"},
+                  {"id": "D", "text": "Energy cannot be created or destroyed"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 2,
+                "text": "What is Newton's Second Law?",
+                "options": [
+                  {"id": "A", "text": "Force equals mass times acceleration"},
+                  {"id": "B", "text": "An object in motion stays in motion unless acted upon by an external force"},
+                  {"id": "C", "text": "For every action there is an equal and opposite reaction"},
+                  {"id": "D", "text": "Energy cannot be created or destroyed"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 3,
+                "text": "What is Newton's Third Law?",
+                "options": [
+                  {"id": "A", "text": "For every action there is an equal and opposite reaction"},
+                  {"id": "B", "text": "Force equals mass times acceleration"},
+                  {"id": "C", "text": "An object in motion stays in motion unless acted upon by an external force"},
+                  {"id": "D", "text": "Energy cannot be created or destroyed"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 4,
+                "text": "What is the law of conservation of energy?",
+                "options": [
+                  {"id": "A", "text": "Energy cannot be created or destroyed, only transformed"},
+                  {"id": "B", "text": "Energy can be created but not destroyed"},
+                  {"id": "C", "text": "Energy can be destroyed but not created"},
+                  {"id": "D", "text": "Energy can be both created and destroyed"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 5,
+                "text": "What is the law of conservation of momentum?",
+                "options": [
+                  {"id": "A", "text": "The total momentum of a closed system remains constant"},
+                  {"id": "B", "text": "The total momentum of a closed system can increase"},
+                  {"id": "C", "text": "The total momentum of a closed system can decrease"},
+                  {"id": "D", "text": "The total momentum of a closed system can change randomly"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 6,
+                "text": "What is work?",
+                "options": [
+                  {"id": "A", "text": "Force times displacement in the direction of the force"},
+                  {"id": "B", "text": "Force times time"},
+                  {"id": "C", "text": "Force times velocity"},
+                  {"id": "D", "text": "Force times acceleration"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 7,
+                "text": "What is power?",
+                "options": [
+                  {"id": "A", "text": "Work done per unit time"},
+                  {"id": "B", "text": "Force times time"},
+                  {"id": "C", "text": "Force times velocity"},
+                  {"id": "D", "text": "Force times acceleration"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 8,
+                "text": "What is kinetic energy?",
+                "options": [
+                  {"id": "A", "text": "Energy of motion"},
+                  {"id": "B", "text": "Energy of position"},
+                  {"id": "C", "text": "Energy of rest"},
+                  {"id": "D", "text": "Energy of force"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 9,
+                "text": "What is potential energy?",
+                "options": [
+                  {"id": "A", "text": "Energy of position"},
+                  {"id": "B", "text": "Energy of motion"},
+                  {"id": "C", "text": "Energy of rest"},
+                  {"id": "D", "text": "Energy of force"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 10,
+                "text": "What is mechanical energy?",
+                "options": [
+                  {"id": "A", "text": "The sum of kinetic and potential energy"},
+                  {"id": "B", "text": "The difference of kinetic and potential energy"},
+                  {"id": "C", "text": "The product of kinetic and potential energy"},
+                  {"id": "D", "text": "The quotient of kinetic and potential energy"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 11,
+                "text": "What is a conservative force?",
+                "options": [
+                  {"id": "A", "text": "A force whose work is independent of path"},
+                  {"id": "B", "text": "A force whose work depends on path"},
+                  {"id": "C", "text": "A force that conserves energy"},
+                  {"id": "D", "text": "A force that conserves momentum"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 12,
+                "text": "What is a non-conservative force?",
+                "options": [
+                  {"id": "A", "text": "A force whose work depends on path"},
+                  {"id": "B", "text": "A force whose work is independent of path"},
+                  {"id": "C", "text": "A force that doesn't conserve energy"},
+                  {"id": "D", "text": "A force that doesn't conserve momentum"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 13,
+                "text": "What is friction?",
+                "options": [
+                  {"id": "A", "text": "A force that opposes motion"},
+                  {"id": "B", "text": "A force that promotes motion"},
+                  {"id": "C", "text": "A force that has no effect on motion"},
+                  {"id": "D", "text": "A force that changes direction of motion"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 14,
+                "text": "What is static friction?",
+                "options": [
+                  {"id": "A", "text": "Friction between surfaces at rest"},
+                  {"id": "B", "text": "Friction between surfaces in motion"},
+                  {"id": "C", "text": "Friction between surfaces in free fall"},
+                  {"id": "D", "text": "Friction between surfaces in orbit"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 15,
+                "text": "What is kinetic friction?",
+                "options": [
+                  {"id": "A", "text": "Friction between surfaces in motion"},
+                  {"id": "B", "text": "Friction between surfaces at rest"},
+                  {"id": "C", "text": "Friction between surfaces in free fall"},
+                  {"id": "D", "text": "Friction between surfaces in orbit"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 16,
+                "text": "What is a simple machine?",
+                "options": [
+                  {"id": "A", "text": "A device that changes the direction or magnitude of a force"},
+                  {"id": "B", "text": "A device that creates energy"},
+                  {"id": "C", "text": "A device that destroys energy"},
+                  {"id": "D", "text": "A device that stores energy"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 17,
+                "text": "What is mechanical advantage?",
+                "options": [
+                  {"id": "A", "text": "The ratio of output force to input force"},
+                  {"id": "B", "text": "The ratio of input force to output force"},
+                  {"id": "C", "text": "The ratio of output work to input work"},
+                  {"id": "D", "text": "The ratio of input work to output work"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 18,
+                "text": "What is efficiency?",
+                "options": [
+                  {"id": "A", "text": "The ratio of output work to input work"},
+                  {"id": "B", "text": "The ratio of input work to output work"},
+                  {"id": "C", "text": "The ratio of output force to input force"},
+                  {"id": "D", "text": "The ratio of input force to output force"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 19,
+                "text": "What is a lever?",
+                "options": [
+                  {"id": "A", "text": "A rigid bar that pivots around a fulcrum"},
+                  {"id": "B", "text": "A flexible bar that bends"},
+                  {"id": "C", "text": "A rigid bar that slides"},
+                  {"id": "D", "text": "A flexible bar that stretches"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 20,
+                "text": "What is a pulley?",
+                "options": [
+                  {"id": "A", "text": "A wheel with a groove for a rope"},
+                  {"id": "B", "text": "A wheel without a groove"},
+                  {"id": "C", "text": "A wheel with a flat surface"},
+                  {"id": "D", "text": "A wheel with a rough surface"}
+                ],
+                "answer": "A"
+              }
+            ]
+          },
+          {
+            "id": "classical-mechanics-2",
+            "name": "Advanced Classical Mechanics",
+            "title": "Advanced Classical Mechanics Concepts",
+            "level": 2,
+            "locked": true,
+            "timelimit": 600,
+            "questions": [
+              {
+                "id": 1,
+                "text": "What is Lagrangian mechanics?",
+                "options": [
+                  {"id": "A", "text": "A reformulation of classical mechanics using the principle of least action"},
+                  {"id": "B", "text": "A reformulation of quantum mechanics"},
+                  {"id": "C", "text": "A reformulation of relativity"},
+                  {"id": "D", "text": "A reformulation of thermodynamics"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 2,
+                "text": "What is the Lagrangian?",
+                "options": [
+                  {"id": "A", "text": "The difference between kinetic and potential energy"},
+                  {"id": "B", "text": "The sum of kinetic and potential energy"},
+                  {"id": "C", "text": "The product of kinetic and potential energy"},
+                  {"id": "D", "text": "The quotient of kinetic and potential energy"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 3,
+                "text": "What is the principle of least action?",
+                "options": [
+                  {"id": "A", "text": "The path taken by a system is the one that minimizes the action"},
+                  {"id": "B", "text": "The path taken by a system is the one that maximizes the action"},
+                  {"id": "C", "text": "The path taken by a system is the one that has zero action"},
+                  {"id": "D", "text": "The path taken by a system is the one that has infinite action"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 4,
+                "text": "What is the action?",
+                "options": [
+                  {"id": "A", "text": "The integral of the Lagrangian over time"},
+                  {"id": "B", "text": "The derivative of the Lagrangian with respect to time"},
+                  {"id": "C", "text": "The product of the Lagrangian and time"},
+                  {"id": "D", "text": "The quotient of the Lagrangian and time"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 5,
+                "text": "What is Hamiltonian mechanics?",
+                "options": [
+                  {"id": "A", "text": "A reformulation of classical mechanics using the Hamiltonian"},
+                  {"id": "B", "text": "A reformulation of quantum mechanics"},
+                  {"id": "C", "text": "A reformulation of relativity"},
+                  {"id": "D", "text": "A reformulation of thermodynamics"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 6,
+                "text": "What is the Hamiltonian?",
+                "options": [
+                  {"id": "A", "text": "The sum of kinetic and potential energy"},
+                  {"id": "B", "text": "The difference between kinetic and potential energy"},
+                  {"id": "C", "text": "The product of kinetic and potential energy"},
+                  {"id": "D", "text": "The quotient of kinetic and potential energy"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 7,
+                "text": "What are Hamilton's equations?",
+                "options": [
+                  {"id": "A", "text": "First-order differential equations for the evolution of a system"},
+                  {"id": "B", "text": "Second-order differential equations for the evolution of a system"},
+                  {"id": "C", "text": "Third-order differential equations for the evolution of a system"},
+                  {"id": "D", "text": "Fourth-order differential equations for the evolution of a system"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 8,
+                "text": "What is a canonical transformation?",
+                "options": [
+                  {"id": "A", "text": "A transformation that preserves the form of Hamilton's equations"},
+                  {"id": "B", "text": "A transformation that changes the form of Hamilton's equations"},
+                  {"id": "C", "text": "A transformation that destroys the form of Hamilton's equations"},
+                  {"id": "D", "text": "A transformation that has no effect on Hamilton's equations"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 9,
+                "text": "What is a Poisson bracket?",
+                "options": [
+                  {"id": "A", "text": "A binary operation on functions in phase space"},
+                  {"id": "B", "text": "A unary operation on functions in phase space"},
+                  {"id": "C", "text": "A ternary operation on functions in phase space"},
+                  {"id": "D", "text": "A quaternary operation on functions in phase space"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 10,
+                "text": "What is a phase space?",
+                "options": [
+                  {"id": "A", "text": "The space of all possible states of a system"},
+                  {"id": "B", "text": "The space of all possible positions of a system"},
+                  {"id": "C", "text": "The space of all possible momenta of a system"},
+                  {"id": "D", "text": "The space of all possible energies of a system"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 11,
+                "text": "What is a phase trajectory?",
+                "options": [
+                  {"id": "A", "text": "The path of a system in phase space"},
+                  {"id": "B", "text": "The path of a system in position space"},
+                  {"id": "C", "text": "The path of a system in momentum space"},
+                  {"id": "D", "text": "The path of a system in energy space"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 12,
+                "text": "What is a phase flow?",
+                "options": [
+                  {"id": "A", "text": "The evolution of a system in phase space"},
+                  {"id": "B", "text": "The evolution of a system in position space"},
+                  {"id": "C", "text": "The evolution of a system in momentum space"},
+                  {"id": "D", "text": "The evolution of a system in energy space"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 13,
+                "text": "What is a phase portrait?",
+                "options": [
+                  {"id": "A", "text": "A plot of phase trajectories"},
+                  {"id": "B", "text": "A plot of position trajectories"},
+                  {"id": "C", "text": "A plot of momentum trajectories"},
+                  {"id": "D", "text": "A plot of energy trajectories"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 14,
+                "text": "What is a fixed point?",
+                "options": [
+                  {"id": "A", "text": "A point in phase space where the system remains stationary"},
+                  {"id": "B", "text": "A point in position space where the system remains stationary"},
+                  {"id": "C", "text": "A point in momentum space where the system remains stationary"},
+                  {"id": "D", "text": "A point in energy space where the system remains stationary"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 15,
+                "text": "What is a limit cycle?",
+                "options": [
+                  {"id": "A", "text": "A closed phase trajectory that attracts nearby trajectories"},
+                  {"id": "B", "text": "A closed position trajectory that attracts nearby trajectories"},
+                  {"id": "C", "text": "A closed momentum trajectory that attracts nearby trajectories"},
+                  {"id": "D", "text": "A closed energy trajectory that attracts nearby trajectories"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 16,
+                "text": "What is a bifurcation?",
+                "options": [
+                  {"id": "A", "text": "A qualitative change in the behavior of a system as a parameter changes"},
+                  {"id": "B", "text": "A quantitative change in the behavior of a system as a parameter changes"},
+                  {"id": "C", "text": "A change in the number of parameters of a system"},
+                  {"id": "D", "text": "A change in the type of parameters of a system"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 17,
+                "text": "What is chaos?",
+                "options": [
+                  {"id": "A", "text": "Sensitive dependence on initial conditions"},
+                  {"id": "B", "text": "Insensitive dependence on initial conditions"},
+                  {"id": "C", "text": "No dependence on initial conditions"},
+                  {"id": "D", "text": "Complete dependence on initial conditions"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 18,
+                "text": "What is a strange attractor?",
+                "options": [
+                  {"id": "A", "text": "A fractal set that attracts trajectories in a chaotic system"},
+                  {"id": "B", "text": "A regular set that attracts trajectories in a chaotic system"},
+                  {"id": "C", "text": "A fractal set that repels trajectories in a chaotic system"},
+                  {"id": "D", "text": "A regular set that repels trajectories in a chaotic system"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 19,
+                "text": "What is a Lyapunov exponent?",
+                "options": [
+                  {"id": "A", "text": "A measure of the rate of separation of nearby trajectories"},
+                  {"id": "B", "text": "A measure of the rate of convergence of nearby trajectories"},
+                  {"id": "C", "text": "A measure of the rate of rotation of nearby trajectories"},
+                  {"id": "D", "text": "A measure of the rate of oscillation of nearby trajectories"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 20,
+                "text": "What is a Poincaré map?",
+                "options": [
+                  {"id": "A", "text": "A map that shows how a system evolves between intersections with a surface"},
+                  {"id": "B", "text": "A map that shows how a system evolves continuously"},
+                  {"id": "C", "text": "A map that shows how a system evolves discretely"},
+                  {"id": "D", "text": "A map that shows how a system evolves randomly"}
+                ],
+                "answer": "A"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "quantum-mechanics",
+        "name": "Quantum Mechanics",
+        "assessments": [
+          {
+            "id": "quantum-mechanics-1",
+            "name": "Quantum Mechanics Basics",
+            "title": "Introduction to Quantum Mechanics",
+            "level": 1,
+            "locked": false,
+            "timelimit": 600,
+            "questions": [
+              {
+                "id": 1,
+                "text": "What is the wave-particle duality?",
+                "options": [
+                  {"id": "A", "text": "The property of matter to exhibit both wave and particle characteristics"},
+                  {"id": "B", "text": "The property of matter to exhibit only wave characteristics"},
+                  {"id": "C", "text": "The property of matter to exhibit only particle characteristics"},
+                  {"id": "D", "text": "The property of matter to exhibit neither wave nor particle characteristics"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 2,
+                "text": "What is the uncertainty principle?",
+                "options": [
+                  {"id": "A", "text": "The principle that certain pairs of physical properties cannot be known simultaneously"},
+                  {"id": "B", "text": "The principle that all physical properties can be known simultaneously"},
+                  {"id": "C", "text": "The principle that no physical properties can be known"},
+                  {"id": "D", "text": "The principle that physical properties can be known with certainty"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 3,
+                "text": "What is a wave function?",
+                "options": [
+                  {"id": "A", "text": "A mathematical function that describes the quantum state of a system"},
+                  {"id": "B", "text": "A mathematical function that describes the classical state of a system"},
+                  {"id": "C", "text": "A mathematical function that describes the relativistic state of a system"},
+                  {"id": "D", "text": "A mathematical function that describes the thermodynamic state of a system"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 4,
+                "text": "What is the Schrödinger equation?",
+                "options": [
+                  {"id": "A", "text": "The fundamental equation of quantum mechanics"},
+                  {"id": "B", "text": "The fundamental equation of classical mechanics"},
+                  {"id": "C", "text": "The fundamental equation of relativity"},
+                  {"id": "D", "text": "The fundamental equation of thermodynamics"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 5,
+                "text": "What is quantization?",
+                "options": [
+                  {"id": "A", "text": "The process of restricting physical quantities to discrete values"},
+                  {"id": "B", "text": "The process of allowing physical quantities to take any value"},
+                  {"id": "C", "text": "The process of measuring physical quantities"},
+                  {"id": "D", "text": "The process of calculating physical quantities"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 6,
+                "text": "What is a quantum state?",
+                "options": [
+                  {"id": "A", "text": "A state of a quantum system described by a wave function"},
+                  {"id": "B", "text": "A state of a classical system described by position and momentum"},
+                  {"id": "C", "text": "A state of a relativistic system described by energy and momentum"},
+                  {"id": "D", "text": "A state of a thermodynamic system described by temperature and pressure"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 7,
+                "text": "What is superposition?",
+                "options": [
+                  {"id": "A", "text": "The ability of a quantum system to be in multiple states simultaneously"},
+                  {"id": "B", "text": "The ability of a quantum system to be in only one state"},
+                  {"id": "C", "text": "The ability of a quantum system to be in no state"},
+                  {"id": "D", "text": "The ability of a quantum system to be in a random state"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 8,
+                "text": "What is entanglement?",
+                "options": [
+                  {"id": "A", "text": "The phenomenon where quantum states of multiple particles are correlated"},
+                  {"id": "B", "text": "The phenomenon where quantum states of multiple particles are independent"},
+                  {"id": "C", "text": "The phenomenon where quantum states of multiple particles are identical"},
+                  {"id": "D", "text": "The phenomenon where quantum states of multiple particles are opposite"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 9,
+                "text": "What is measurement in quantum mechanics?",
+                "options": [
+                  {"id": "A", "text": "The process that collapses a quantum state to an eigenstate"},
+                  {"id": "B", "text": "The process that expands a quantum state"},
+                  {"id": "C", "text": "The process that preserves a quantum state"},
+                  {"id": "D", "text": "The process that destroys a quantum state"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 10,
+                "text": "What is an observable?",
+                "options": [
+                  {"id": "A", "text": "A physical quantity that can be measured"},
+                  {"id": "B", "text": "A physical quantity that cannot be measured"},
+                  {"id": "C", "text": "A physical quantity that is always measured"},
+                  {"id": "D", "text": "A physical quantity that is never measured"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 11,
+                "text": "What is an operator?",
+                "options": [
+                  {"id": "A", "text": "A mathematical object that acts on a wave function"},
+                  {"id": "B", "text": "A mathematical object that acts on a classical state"},
+                  {"id": "C", "text": "A mathematical object that acts on a relativistic state"},
+                  {"id": "D", "text": "A mathematical object that acts on a thermodynamic state"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 12,
+                "text": "What is an eigenstate?",
+                "options": [
+                  {"id": "A", "text": "A state that is unchanged by an operator except for a scalar factor"},
+                  {"id": "B", "text": "A state that is changed by an operator"},
+                  {"id": "C", "text": "A state that is destroyed by an operator"},
+                  {"id": "D", "text": "A state that is created by an operator"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 13,
+                "text": "What is an eigenvalue?",
+                "options": [
+                  {"id": "A", "text": "The scalar factor by which an eigenstate is multiplied"},
+                  {"id": "B", "text": "The vector by which an eigenstate is multiplied"},
+                  {"id": "C", "text": "The matrix by which an eigenstate is multiplied"},
+                  {"id": "D", "text": "The tensor by which an eigenstate is multiplied"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 14,
+                "text": "What is the probability amplitude?",
+                "options": [
+                  {"id": "A", "text": "The complex number whose square gives the probability"},
+                  {"id": "B", "text": "The real number whose square gives the probability"},
+                  {"id": "C", "text": "The integer whose square gives the probability"},
+                  {"id": "D", "text": "The rational number whose square gives the probability"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 15,
+                "text": "What is the probability density?",
+                "options": [
+                  {"id": "A", "text": "The square of the absolute value of the wave function"},
+                  {"id": "B", "text": "The absolute value of the wave function"},
+                  {"id": "C", "text": "The square of the wave function"},
+                  {"id": "D", "text": "The cube of the wave function"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 16,
+                "text": "What is normalization?",
+                "options": [
+                  {"id": "A", "text": "The process of making the total probability equal to one"},
+                  {"id": "B", "text": "The process of making the total probability equal to zero"},
+                  {"id": "C", "text": "The process of making the total probability infinite"},
+                  {"id": "D", "text": "The process of making the total probability negative"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 17,
+                "text": "What is the expectation value?",
+                "options": [
+                  {"id": "A", "text": "The average value of an observable in a quantum state"},
+                  {"id": "B", "text": "The maximum value of an observable in a quantum state"},
+                  {"id": "C", "text": "The minimum value of an observable in a quantum state"},
+                  {"id": "D", "text": "The instantaneous value of an observable in a quantum state"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 18,
+                "text": "What is the standard deviation?",
+                "options": [
+                  {"id": "A", "text": "A measure of the spread of possible values of an observable"},
+                  {"id": "B", "text": "A measure of the average value of an observable"},
+                  {"id": "C", "text": "A measure of the maximum value of an observable"},
+                  {"id": "D", "text": "A measure of the minimum value of an observable"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 19,
+                "text": "What is the commutator?",
+                "options": [
+                  {"id": "A", "text": "The difference between the product of two operators in different orders"},
+                  {"id": "B", "text": "The sum of the product of two operators in different orders"},
+                  {"id": "C", "text": "The product of two operators in the same order"},
+                  {"id": "D", "text": "The quotient of two operators in the same order"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 20,
+                "text": "What is the anticommutator?",
+                "options": [
+                  {"id": "A", "text": "The sum of the product of two operators in different orders"},
+                  {"id": "B", "text": "The difference of the product of two operators in different orders"},
+                  {"id": "C", "text": "The product of two operators in the same order"},
+                  {"id": "D", "text": "The quotient of two operators in the same order"}
+                ],
+                "answer": "A"
+              }
+            ]
+          },
+          {
+            "id": "quantum-mechanics-2",
+            "name": "Advanced Quantum Mechanics",
+            "title": "Advanced Quantum Mechanics Concepts",
+            "level": 2,
+            "locked": true,
+            "timelimit": 600,
+            "questions": [
+              {
+                "id": 1,
+                "text": "What is the Heisenberg picture?",
+                "options": [
+                  {"id": "A", "text": "A formulation of quantum mechanics where operators evolve in time"},
+                  {"id": "B", "text": "A formulation where states evolve in time"},
+                  {"id": "C", "text": "A formulation where both operators and states evolve in time"},
+                  {"id": "D", "text": "A formulation where neither operators nor states evolve in time"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 2,
+                "text": "What is the Schrödinger picture?",
+                "options": [
+                  {"id": "A", "text": "A formulation of quantum mechanics where states evolve in time"},
+                  {"id": "B", "text": "A formulation where operators evolve in time"},
+                  {"id": "C", "text": "A formulation where both operators and states evolve in time"},
+                  {"id": "D", "text": "A formulation where neither operators nor states evolve in time"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 3,
+                "text": "What is the interaction picture?",
+                "options": [
+                  {"id": "A", "text": "A formulation where both operators and states evolve in time"},
+                  {"id": "B", "text": "A formulation where only operators evolve in time"},
+                  {"id": "C", "text": "A formulation where only states evolve in time"},
+                  {"id": "D", "text": "A formulation where neither operators nor states evolve in time"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 4,
+                "text": "What is perturbation theory?",
+                "options": [
+                  {"id": "A", "text": "A method for approximating solutions to problems that cannot be solved exactly"},
+                  {"id": "B", "text": "A method for finding exact solutions to problems"},
+                  {"id": "C", "text": "A method for finding numerical solutions to problems"},
+                  {"id": "D", "text": "A method for finding analytical solutions to problems"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 5,
+                "text": "What is the variational principle?",
+                "options": [
+                  {"id": "A", "text": "A principle that provides an upper bound on the ground state energy"},
+                  {"id": "B", "text": "A principle that provides a lower bound on the ground state energy"},
+                  {"id": "C", "text": "A principle that provides an exact value for the ground state energy"},
+                  {"id": "D", "text": "A principle that provides no information about the ground state energy"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 6,
+                "text": "What is the WKB approximation?",
+                "options": [
+                  {"id": "A", "text": "A method for approximating solutions to the Schrödinger equation"},
+                  {"id": "B", "text": "A method for finding exact solutions to the Schrödinger equation"},
+                  {"id": "C", "text": "A method for finding numerical solutions to the Schrödinger equation"},
+                  {"id": "D", "text": "A method for finding analytical solutions to the Schrödinger equation"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 7,
+                "text": "What is the path integral formulation?",
+                "options": [
+                  {"id": "A", "text": "A formulation of quantum mechanics using path integrals"},
+                  {"id": "B", "text": "A formulation using wave functions"},
+                  {"id": "C", "text": "A formulation using operators"},
+                  {"id": "D", "text": "A formulation using matrices"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 8,
+                "text": "What is the density matrix?",
+                "options": [
+                  {"id": "A", "text": "A matrix that describes the statistical state of a quantum system"},
+                  {"id": "B", "text": "A matrix that describes the pure state of a quantum system"},
+                  {"id": "C", "text": "A matrix that describes the classical state of a system"},
+                  {"id": "D", "text": "A matrix that describes the relativistic state of a system"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 9,
+                "text": "What is decoherence?",
+                "options": [
+                  {"id": "A", "text": "The process by which a quantum system loses its quantum properties"},
+                  {"id": "B", "text": "The process by which a quantum system gains quantum properties"},
+                  {"id": "C", "text": "The process by which a quantum system maintains quantum properties"},
+                  {"id": "D", "text": "The process by which a quantum system changes quantum properties"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 10,
+                "text": "What is the quantum Zeno effect?",
+                "options": [
+                  {"id": "A", "text": "The suppression of quantum evolution by frequent measurement"},
+                  {"id": "B", "text": "The enhancement of quantum evolution by frequent measurement"},
+                  {"id": "C", "text": "The acceleration of quantum evolution by frequent measurement"},
+                  {"id": "D", "text": "The deceleration of quantum evolution by frequent measurement"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 11,
+                "text": "What is quantum tunneling?",
+                "options": [
+                  {"id": "A", "text": "The phenomenon where a particle passes through a classically forbidden region"},
+                  {"id": "B", "text": "The phenomenon where a particle is reflected by a barrier"},
+                  {"id": "C", "text": "The phenomenon where a particle is absorbed by a barrier"},
+                  {"id": "D", "text": "The phenomenon where a particle is scattered by a barrier"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 12,
+                "text": "What is the Aharonov-Bohm effect?",
+                "options": [
+                  {"id": "A", "text": "A quantum mechanical effect where a charged particle is affected by a magnetic field in a region where the field is zero"},
+                  {"id": "B", "text": "A quantum mechanical effect where a charged particle is affected by an electric field in a region where the field is zero"},
+                  {"id": "C", "text": "A quantum mechanical effect where a charged particle is affected by a gravitational field in a region where the field is zero"},
+                  {"id": "D", "text": "A quantum mechanical effect where a charged particle is affected by a nuclear field in a region where the field is zero"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 13,
+                "text": "What is the EPR paradox?",
+                "options": [
+                  {"id": "A", "text": "A thought experiment that demonstrates the incompleteness of quantum mechanics"},
+                  {"id": "B", "text": "A thought experiment that demonstrates the completeness of quantum mechanics"},
+                  {"id": "C", "text": "A thought experiment that demonstrates the correctness of quantum mechanics"},
+                  {"id": "D", "text": "A thought experiment that demonstrates the incorrectness of quantum mechanics"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 14,
+                "text": "What is Bell's inequality?",
+                "options": [
+                  {"id": "A", "text": "An inequality that must be satisfied by any local hidden variable theory"},
+                  {"id": "B", "text": "An inequality that must be satisfied by any non-local hidden variable theory"},
+                  {"id": "C", "text": "An inequality that must be satisfied by any quantum mechanical theory"},
+                  {"id": "D", "text": "An inequality that must be satisfied by any classical theory"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 15,
+                "text": "What is the quantum eraser experiment?",
+                "options": [
+                  {"id": "A", "text": "An experiment that demonstrates the wave-particle duality of light"},
+                  {"id": "B", "text": "An experiment that demonstrates the particle nature of light"},
+                  {"id": "C", "text": "An experiment that demonstrates the wave nature of light"},
+                  {"id": "D", "text": "An experiment that demonstrates the classical nature of light"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 16,
+                "text": "What is the Stern-Gerlach experiment?",
+                "options": [
+                  {"id": "A", "text": "An experiment that demonstrates the quantization of angular momentum"},
+                  {"id": "B", "text": "An experiment that demonstrates the quantization of linear momentum"},
+                  {"id": "C", "text": "An experiment that demonstrates the quantization of energy"},
+                  {"id": "D", "text": "An experiment that demonstrates the quantization of charge"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 17,
+                "text": "What is the double-slit experiment?",
+                "options": [
+                  {"id": "A", "text": "An experiment that demonstrates the wave-particle duality of matter"},
+                  {"id": "B", "text": "An experiment that demonstrates the particle nature of matter"},
+                  {"id": "C", "text": "An experiment that demonstrates the wave nature of matter"},
+                  {"id": "D", "text": "An experiment that demonstrates the classical nature of matter"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 18,
+                "text": "What is the quantum harmonic oscillator?",
+                "options": [
+                  {"id": "A", "text": "A system that exhibits quantized energy levels"},
+                  {"id": "B", "text": "A system that exhibits continuous energy levels"},
+                  {"id": "C", "text": "A system that exhibits random energy levels"},
+                  {"id": "D", "text": "A system that exhibits no energy levels"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 19,
+                "text": "What is the hydrogen atom?",
+                "options": [
+                  {"id": "A", "text": "A system that can be solved exactly in quantum mechanics"},
+                  {"id": "B", "text": "A system that cannot be solved in quantum mechanics"},
+                  {"id": "C", "text": "A system that can only be solved numerically in quantum mechanics"},
+                  {"id": "D", "text": "A system that can only be solved approximately in quantum mechanics"}
+                ],
+                "answer": "A"
+              },
+              {
+                "id": 20,
+                "text": "What is the Zeeman effect?",
+                "options": [
+                  {"id": "A", "text": "The splitting of spectral lines in a magnetic field"},
+                  {"id": "B", "text": "The splitting of spectral lines in an electric field"},
+                  {"id": "C", "text": "The splitting of spectral lines in a gravitational field"},
+                  {"id": "D", "text": "The splitting of spectral lines in a nuclear field"}
+                ],
+                "answer": "A"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  } 

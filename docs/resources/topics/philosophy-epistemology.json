@@ -1,0 +1,496 @@
+{
+  "topics": [
+    {
+      "id": "knowledge-theory",
+      "name": "Theory of Knowledge",
+      "assessments": [
+        {
+          "id": "knowledge-theory-1",
+          "name": "Introduction to Epistemology",
+          "title": "Basic Epistemology Concepts",
+          "level": 1,
+          "locked": false,
+          "timelimit": 600,
+          "questions": [
+            {
+              "id": 1,
+              "text": "What is the primary focus of epistemology?",
+              "options": [
+                {"id": "A", "text": "Study of knowledge and belief"},
+                {"id": "B", "text": "Study of being and existence"},
+                {"id": "C", "text": "Study of ethics"},
+                {"id": "D", "text": "Study of logic"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 2,
+              "text": "Which philosopher is most associated with epistemology?",
+              "options": [
+                {"id": "A", "text": "Descartes"},
+                {"id": "B", "text": "Plato"},
+                {"id": "C", "text": "Aristotle"},
+                {"id": "D", "text": "Kant"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 3,
+              "text": "What is the study of knowledge called?",
+              "options": [
+                {"id": "A", "text": "Epistemology"},
+                {"id": "B", "text": "Metaphysics"},
+                {"id": "C", "text": "Ontology"},
+                {"id": "D", "text": "Ethics"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 4,
+              "text": "Which of these is a fundamental question in epistemology?",
+              "options": [
+                {"id": "A", "text": "What is knowledge?"},
+                {"id": "B", "text": "What exists?"},
+                {"id": "C", "text": "What is good?"},
+                {"id": "D", "text": "What is real?"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 5,
+              "text": "What is the term for justified true belief?",
+              "options": [
+                {"id": "A", "text": "Knowledge"},
+                {"id": "B", "text": "Opinion"},
+                {"id": "C", "text": "Faith"},
+                {"id": "D", "text": "Intuition"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 6,
+              "text": "Which of these is NOT a source of knowledge according to traditional epistemology?",
+              "options": [
+                {"id": "A", "text": "Reason"},
+                {"id": "B", "text": "Experience"},
+                {"id": "C", "text": "Intuition"},
+                {"id": "D", "text": "Magic"}
+              ],
+              "answer": "D"
+            },
+            {
+              "id": 7,
+              "text": "What is the study of knowledge called?",
+              "options": [
+                {"id": "A", "text": "Epistemology"},
+                {"id": "B", "text": "Metaphysics"},
+                {"id": "C", "text": "Ontology"},
+                {"id": "D", "text": "Ethics"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 8,
+              "text": "Which of these is a central concept in epistemology?",
+              "options": [
+                {"id": "A", "text": "Knowledge"},
+                {"id": "B", "text": "Existence"},
+                {"id": "C", "text": "Goodness"},
+                {"id": "D", "text": "Beauty"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 9,
+              "text": "What is the study of knowledge called?",
+              "options": [
+                {"id": "A", "text": "Epistemology"},
+                {"id": "B", "text": "Metaphysics"},
+                {"id": "C", "text": "Ontology"},
+                {"id": "D", "text": "Ethics"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 10,
+              "text": "Which of these is a fundamental epistemological question?",
+              "options": [
+                {"id": "A", "text": "What is knowledge?"},
+                {"id": "B", "text": "What exists?"},
+                {"id": "C", "text": "What is good?"},
+                {"id": "D", "text": "What is real?"}
+              ],
+              "answer": "A"
+            }
+          ]
+        },
+        {
+          "id": "knowledge-theory-2",
+          "name": "Sources of Knowledge",
+          "title": "Advanced Epistemology Concepts",
+          "level": 2,
+          "locked": true,
+          "timelimit": 600,
+          "questions": [
+            {
+              "id": 1,
+              "text": "What is the main difference between rationalism and empiricism?",
+              "options": [
+                {"id": "A", "text": "Rationalism emphasizes reason, empiricism emphasizes experience"},
+                {"id": "B", "text": "Rationalism is ancient, empiricism is modern"},
+                {"id": "C", "text": "Rationalism is theoretical, empiricism is practical"},
+                {"id": "D", "text": "There is no difference"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 2,
+              "text": "Which philosopher is most associated with rationalism?",
+              "options": [
+                {"id": "A", "text": "Descartes"},
+                {"id": "B", "text": "Locke"},
+                {"id": "C", "text": "Hume"},
+                {"id": "D", "text": "Kant"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 3,
+              "text": "What is the primary source of knowledge according to empiricism?",
+              "options": [
+                {"id": "A", "text": "Sense experience"},
+                {"id": "B", "text": "Reason"},
+                {"id": "C", "text": "Intuition"},
+                {"id": "D", "text": "Faith"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 4,
+              "text": "Which of these is a question in epistemology?",
+              "options": [
+                {"id": "A", "text": "How do we acquire knowledge?"},
+                {"id": "B", "text": "What exists?"},
+                {"id": "C", "text": "What is good?"},
+                {"id": "D", "text": "What is real?"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 5,
+              "text": "What is the primary source of knowledge according to rationalism?",
+              "options": [
+                {"id": "A", "text": "Reason"},
+                {"id": "B", "text": "Experience"},
+                {"id": "C", "text": "Intuition"},
+                {"id": "D", "text": "Faith"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 6,
+              "text": "Which of these is a question in epistemology?",
+              "options": [
+                {"id": "A", "text": "What is the nature of knowledge?"},
+                {"id": "B", "text": "What exists?"},
+                {"id": "C", "text": "What is good?"},
+                {"id": "D", "text": "What is real?"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 7,
+              "text": "What is the primary source of knowledge according to empiricism?",
+              "options": [
+                {"id": "A", "text": "Sense experience"},
+                {"id": "B", "text": "Reason"},
+                {"id": "C", "text": "Intuition"},
+                {"id": "D", "text": "Faith"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 8,
+              "text": "Which of these is a question in epistemology?",
+              "options": [
+                {"id": "A", "text": "How do we acquire knowledge?"},
+                {"id": "B", "text": "What exists?"},
+                {"id": "C", "text": "What is good?"},
+                {"id": "D", "text": "What is real?"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 9,
+              "text": "What is the primary source of knowledge according to rationalism?",
+              "options": [
+                {"id": "A", "text": "Reason"},
+                {"id": "B", "text": "Experience"},
+                {"id": "C", "text": "Intuition"},
+                {"id": "D", "text": "Faith"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 10,
+              "text": "Which of these is a question in epistemology?",
+              "options": [
+                {"id": "A", "text": "What is the nature of knowledge?"},
+                {"id": "B", "text": "What exists?"},
+                {"id": "C", "text": "What is good?"},
+                {"id": "D", "text": "What is real?"}
+              ],
+              "answer": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skepticism",
+      "name": "Skepticism",
+      "assessments": [
+        {
+          "id": "skepticism-1",
+          "name": "Skepticism Basics",
+          "title": "Introduction to Skepticism",
+          "level": 1,
+          "locked": false,
+          "timelimit": 600,
+          "questions": [
+            {
+              "id": 1,
+              "text": "What is skepticism in philosophy?",
+              "options": [
+                {"id": "A", "text": "Doubt about knowledge claims"},
+                {"id": "B", "text": "Belief in nothing"},
+                {"id": "C", "text": "Rejection of all knowledge"},
+                {"id": "D", "text": "Denial of reality"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 2,
+              "text": "Which philosopher is most associated with skepticism?",
+              "options": [
+                {"id": "A", "text": "Sextus Empiricus"},
+                {"id": "B", "text": "Plato"},
+                {"id": "C", "text": "Aristotle"},
+                {"id": "D", "text": "Descartes"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 3,
+              "text": "What is the main goal of skepticism?",
+              "options": [
+                {"id": "A", "text": "Suspension of judgment"},
+                {"id": "B", "text": "Absolute certainty"},
+                {"id": "C", "text": "Complete knowledge"},
+                {"id": "D", "text": "Final truth"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 4,
+              "text": "Which of these is a skeptical question?",
+              "options": [
+                {"id": "A", "text": "How can we be certain?"},
+                {"id": "B", "text": "What exists?"},
+                {"id": "C", "text": "What is good?"},
+                {"id": "D", "text": "What is real?"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 5,
+              "text": "What is the term for doubt about knowledge claims?",
+              "options": [
+                {"id": "A", "text": "Skepticism"},
+                {"id": "B", "text": "Dogmatism"},
+                {"id": "C", "text": "Rationalism"},
+                {"id": "D", "text": "Empiricism"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 6,
+              "text": "Which of these is NOT a form of skepticism?",
+              "options": [
+                {"id": "A", "text": "Academic skepticism"},
+                {"id": "B", "text": "Pyrrhonian skepticism"},
+                {"id": "C", "text": "Cartesian skepticism"},
+                {"id": "D", "text": "Absolute skepticism"}
+              ],
+              "answer": "D"
+            },
+            {
+              "id": 7,
+              "text": "What is the main goal of skepticism?",
+              "options": [
+                {"id": "A", "text": "Suspension of judgment"},
+                {"id": "B", "text": "Absolute certainty"},
+                {"id": "C", "text": "Complete knowledge"},
+                {"id": "D", "text": "Final truth"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 8,
+              "text": "Which of these is a skeptical question?",
+              "options": [
+                {"id": "A", "text": "How can we be certain?"},
+                {"id": "B", "text": "What exists?"},
+                {"id": "C", "text": "What is good?"},
+                {"id": "D", "text": "What is real?"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 9,
+              "text": "What is the term for doubt about knowledge claims?",
+              "options": [
+                {"id": "A", "text": "Skepticism"},
+                {"id": "B", "text": "Dogmatism"},
+                {"id": "C", "text": "Rationalism"},
+                {"id": "D", "text": "Empiricism"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 10,
+              "text": "Which of these is NOT a form of skepticism?",
+              "options": [
+                {"id": "A", "text": "Academic skepticism"},
+                {"id": "B", "text": "Pyrrhonian skepticism"},
+                {"id": "C", "text": "Cartesian skepticism"},
+                {"id": "D", "text": "Absolute skepticism"}
+              ],
+              "answer": "D"
+            }
+          ]
+        },
+        {
+          "id": "skepticism-2",
+          "name": "Forms of Skepticism",
+          "title": "Advanced Skepticism Concepts",
+          "level": 3,
+          "locked": true,
+          "timelimit": 600,
+          "questions": [
+            {
+              "id": 1,
+              "text": "What is the main difference between Academic and Pyrrhonian skepticism?",
+              "options": [
+                {"id": "A", "text": "Academic skeptics claim knowledge is impossible, Pyrrhonians suspend judgment"},
+                {"id": "B", "text": "Academic skeptics are ancient, Pyrrhonians are modern"},
+                {"id": "C", "text": "Academic skeptics are theoretical, Pyrrhonians are practical"},
+                {"id": "D", "text": "There is no difference"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 2,
+              "text": "Which of these is a form of skepticism?",
+              "options": [
+                {"id": "A", "text": "Cartesian skepticism"},
+                {"id": "B", "text": "Absolute skepticism"},
+                {"id": "C", "text": "Complete skepticism"},
+                {"id": "D", "text": "Total skepticism"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 3,
+              "text": "What is the primary focus of Cartesian skepticism?",
+              "options": [
+                {"id": "A", "text": "Methodological doubt"},
+                {"id": "B", "text": "Absolute certainty"},
+                {"id": "C", "text": "Complete knowledge"},
+                {"id": "D", "text": "Final truth"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 4,
+              "text": "Which of these is a question in skepticism?",
+              "options": [
+                {"id": "A", "text": "How can we be certain?"},
+                {"id": "B", "text": "What exists?"},
+                {"id": "C", "text": "What is good?"},
+                {"id": "D", "text": "What is real?"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 5,
+              "text": "What is the primary focus of Pyrrhonian skepticism?",
+              "options": [
+                {"id": "A", "text": "Suspension of judgment"},
+                {"id": "B", "text": "Absolute certainty"},
+                {"id": "C", "text": "Complete knowledge"},
+                {"id": "D", "text": "Final truth"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 6,
+              "text": "Which of these is a question in skepticism?",
+              "options": [
+                {"id": "A", "text": "How can we be certain?"},
+                {"id": "B", "text": "What exists?"},
+                {"id": "C", "text": "What is good?"},
+                {"id": "D", "text": "What is real?"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 7,
+              "text": "What is the primary focus of Cartesian skepticism?",
+              "options": [
+                {"id": "A", "text": "Methodological doubt"},
+                {"id": "B", "text": "Absolute certainty"},
+                {"id": "C", "text": "Complete knowledge"},
+                {"id": "D", "text": "Final truth"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 8,
+              "text": "Which of these is a question in skepticism?",
+              "options": [
+                {"id": "A", "text": "How can we be certain?"},
+                {"id": "B", "text": "What exists?"},
+                {"id": "C", "text": "What is good?"},
+                {"id": "D", "text": "What is real?"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 9,
+              "text": "What is the primary focus of Pyrrhonian skepticism?",
+              "options": [
+                {"id": "A", "text": "Suspension of judgment"},
+                {"id": "B", "text": "Absolute certainty"},
+                {"id": "C", "text": "Complete knowledge"},
+                {"id": "D", "text": "Final truth"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 10,
+              "text": "Which of these is a question in skepticism?",
+              "options": [
+                {"id": "A", "text": "How can we be certain?"},
+                {"id": "B", "text": "What exists?"},
+                {"id": "C", "text": "What is good?"},
+                {"id": "D", "text": "What is real?"}
+              ],
+              "answer": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+} 

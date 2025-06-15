@@ -1,0 +1,944 @@
+{
+  "domain":{
+    "id":"mathematics",
+    "name":"Mathematics"
+  },
+  "subject":{
+    "id":"algebra",
+    "name":"Algebra"
+  },
+  "topics": [
+    {
+      "id": "linear-algebra",
+      "name": "Linear Algebra",
+      "assessments": [
+        {
+          "id": "linear-algebra-1",
+          "name": "Linear Algebra Basics",
+          "title": "Introduction to Linear Algebra",
+          "level": 1,
+          "locked": false,
+          "timelimit": 600,
+          "questions": [
+            {
+              "id": 1,
+              "text": "What is a vector space?",
+              "options": [
+                {"id": "A", "text": "A set of vectors closed under addition and scalar multiplication"},
+                {"id": "B", "text": "A set of numbers"},
+                {"id": "C", "text": "A set of matrices"},
+                {"id": "D", "text": "A set of functions"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 2,
+              "text": "What is a matrix?",
+              "options": [
+                {"id": "A", "text": "A rectangular array of numbers"},
+                {"id": "B", "text": "A single number"},
+                {"id": "C", "text": "A vector"},
+                {"id": "D", "text": "A function"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 3,
+              "text": "What is the determinant of a matrix?",
+              "options": [
+                {"id": "A", "text": "A scalar value that can be computed from a square matrix"},
+                {"id": "B", "text": "A vector"},
+                {"id": "C", "text": "A matrix"},
+                {"id": "D", "text": "A function"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 4,
+              "text": "What is an eigenvector?",
+              "options": [
+                {"id": "A", "text": "A vector that only changes in magnitude when a linear transformation is applied"},
+                {"id": "B", "text": "A vector that changes direction"},
+                {"id": "C", "text": "A vector that becomes zero"},
+                {"id": "D", "text": "A vector that remains unchanged"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 5,
+              "text": "What is an eigenvalue?",
+              "options": [
+                {"id": "A", "text": "A scalar that represents how much an eigenvector is stretched"},
+                {"id": "B", "text": "A vector"},
+                {"id": "C", "text": "A matrix"},
+                {"id": "D", "text": "A function"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 6,
+              "text": "What is a linear transformation?",
+              "options": [
+                {"id": "A", "text": "A function that preserves vector addition and scalar multiplication"},
+                {"id": "B", "text": "A function that changes vectors"},
+                {"id": "C", "text": "A function that maps vectors to scalars"},
+                {"id": "D", "text": "A function that maps scalars to vectors"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 7,
+              "text": "What is a basis?",
+              "options": [
+                {"id": "A", "text": "A set of linearly independent vectors that span a vector space"},
+                {"id": "B", "text": "A set of vectors"},
+                {"id": "C", "text": "A set of matrices"},
+                {"id": "D", "text": "A set of functions"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 8,
+              "text": "What is the rank of a matrix?",
+              "options": [
+                {"id": "A", "text": "The dimension of the vector space spanned by its columns"},
+                {"id": "B", "text": "The number of rows"},
+                {"id": "C", "text": "The number of columns"},
+                {"id": "D", "text": "The number of elements"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 9,
+              "text": "What is a null space?",
+              "options": [
+                {"id": "A", "text": "The set of vectors that map to zero under a linear transformation"},
+                {"id": "B", "text": "The set of all vectors"},
+                {"id": "C", "text": "The set of non-zero vectors"},
+                {"id": "D", "text": "The empty set"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 10,
+              "text": "What is a linear combination?",
+              "options": [
+                {"id": "A", "text": "A sum of vectors multiplied by scalars"},
+                {"id": "B", "text": "A product of vectors"},
+                {"id": "C", "text": "A difference of vectors"},
+                {"id": "D", "text": "A quotient of vectors"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 11,
+              "text": "What is linear independence?",
+              "options": [
+                {"id": "A", "text": "When no vector in a set can be written as a linear combination of others"},
+                {"id": "B", "text": "When vectors are parallel"},
+                {"id": "C", "text": "When vectors are perpendicular"},
+                {"id": "D", "text": "When vectors are equal"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 12,
+              "text": "What is a subspace?",
+              "options": [
+                {"id": "A", "text": "A subset of a vector space that is itself a vector space"},
+                {"id": "B", "text": "A set of vectors"},
+                {"id": "C", "text": "A set of matrices"},
+                {"id": "D", "text": "A set of functions"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 13,
+              "text": "What is an inner product?",
+              "options": [
+                {"id": "A", "text": "A function that takes two vectors and returns a scalar"},
+                {"id": "B", "text": "A function that takes two scalars and returns a vector"},
+                {"id": "C", "text": "A function that takes two matrices and returns a vector"},
+                {"id": "D", "text": "A function that takes two functions and returns a scalar"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 14,
+              "text": "What is orthogonality?",
+              "options": [
+                {"id": "A", "text": "When two vectors have an inner product of zero"},
+                {"id": "B", "text": "When two vectors are parallel"},
+                {"id": "C", "text": "When two vectors are equal"},
+                {"id": "D", "text": "When two vectors are opposite"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 15,
+              "text": "What is a projection?",
+              "options": [
+                {"id": "A", "text": "A linear transformation that maps a vector to its closest point in a subspace"},
+                {"id": "B", "text": "A function that maps a vector to a scalar"},
+                {"id": "C", "text": "A function that maps a scalar to a vector"},
+                {"id": "D", "text": "A function that maps a matrix to a vector"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 16,
+              "text": "What is a diagonal matrix?",
+              "options": [
+                {"id": "A", "text": "A matrix where all non-diagonal elements are zero"},
+                {"id": "B", "text": "A matrix where all elements are zero"},
+                {"id": "C", "text": "A matrix where all elements are one"},
+                {"id": "D", "text": "A matrix where all elements are equal"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 17,
+              "text": "What is a symmetric matrix?",
+              "options": [
+                {"id": "A", "text": "A matrix that equals its transpose"},
+                {"id": "B", "text": "A matrix that equals its inverse"},
+                {"id": "C", "text": "A matrix that equals its conjugate"},
+                {"id": "D", "text": "A matrix that equals its determinant"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 18,
+              "text": "What is a positive definite matrix?",
+              "options": [
+                {"id": "A", "text": "A symmetric matrix where all eigenvalues are positive"},
+                {"id": "B", "text": "A matrix where all elements are positive"},
+                {"id": "C", "text": "A matrix where all elements are non-negative"},
+                {"id": "D", "text": "A matrix where all elements are non-zero"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 19,
+              "text": "What is a singular matrix?",
+              "options": [
+                {"id": "A", "text": "A matrix with determinant zero"},
+                {"id": "B", "text": "A matrix with determinant one"},
+                {"id": "C", "text": "A matrix with determinant negative"},
+                {"id": "D", "text": "A matrix with determinant positive"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 20,
+              "text": "What is a unitary matrix?",
+              "options": [
+                {"id": "A", "text": "A matrix whose conjugate transpose equals its inverse"},
+                {"id": "B", "text": "A matrix whose transpose equals its inverse"},
+                {"id": "C", "text": "A matrix whose conjugate equals its inverse"},
+                {"id": "D", "text": "A matrix whose determinant equals its inverse"}
+              ],
+              "answer": "A"
+            }
+          ]
+        },
+        {
+          "id": "linear-algebra-2",
+          "name": "Advanced Linear Algebra",
+          "title": "Advanced Linear Algebra Concepts",
+          "level": 2,
+          "locked": true,
+          "timelimit": 600,
+          "questions": [
+            {
+              "id": 1,
+              "text": "What is the Jordan canonical form?",
+              "options": [
+                {"id": "A", "text": "A special form of a matrix that is almost diagonal"},
+                {"id": "B", "text": "A diagonal matrix"},
+                {"id": "C", "text": "A triangular matrix"},
+                {"id": "D", "text": "A symmetric matrix"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 2,
+              "text": "What is the singular value decomposition?",
+              "options": [
+                {"id": "A", "text": "A factorization of a matrix into three matrices"},
+                {"id": "B", "text": "A factorization into two matrices"},
+                {"id": "C", "text": "A factorization into four matrices"},
+                {"id": "D", "text": "A factorization into one matrix"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 3,
+              "text": "What is the QR decomposition?",
+              "options": [
+                {"id": "A", "text": "A factorization of a matrix into an orthogonal and upper triangular matrix"},
+                {"id": "B", "text": "A factorization into two diagonal matrices"},
+                {"id": "C", "text": "A factorization into two symmetric matrices"},
+                {"id": "D", "text": "A factorization into two unitary matrices"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 4,
+              "text": "What is the LU decomposition?",
+              "options": [
+                {"id": "A", "text": "A factorization of a matrix into lower and upper triangular matrices"},
+                {"id": "B", "text": "A factorization into two diagonal matrices"},
+                {"id": "C", "text": "A factorization into two symmetric matrices"},
+                {"id": "D", "text": "A factorization into two unitary matrices"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 5,
+              "text": "What is the Cholesky decomposition?",
+              "options": [
+                {"id": "A", "text": "A factorization of a positive definite matrix into a lower triangular matrix and its transpose"},
+                {"id": "B", "text": "A factorization into two diagonal matrices"},
+                {"id": "C", "text": "A factorization into two symmetric matrices"},
+                {"id": "D", "text": "A factorization into two unitary matrices"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 6,
+              "text": "What is the spectral theorem?",
+              "options": [
+                {"id": "A", "text": "A theorem about the diagonalization of symmetric matrices"},
+                {"id": "B", "text": "A theorem about the diagonalization of any matrix"},
+                {"id": "C", "text": "A theorem about the triangularization of matrices"},
+                {"id": "D", "text": "A theorem about the factorization of matrices"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 7,
+              "text": "What is the Cayley-Hamilton theorem?",
+              "options": [
+                {"id": "A", "text": "A theorem stating that a matrix satisfies its own characteristic equation"},
+                {"id": "B", "text": "A theorem about matrix multiplication"},
+                {"id": "C", "text": "A theorem about matrix addition"},
+                {"id": "D", "text": "A theorem about matrix inversion"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 8,
+              "text": "What is the Perron-Frobenius theorem?",
+              "options": [
+                {"id": "A", "text": "A theorem about the eigenvalues of positive matrices"},
+                {"id": "B", "text": "A theorem about the eigenvalues of any matrix"},
+                {"id": "C", "text": "A theorem about the eigenvectors of any matrix"},
+                {"id": "D", "text": "A theorem about the determinant of any matrix"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 9,
+              "text": "What is the Gershgorin circle theorem?",
+              "options": [
+                {"id": "A", "text": "A theorem about the location of eigenvalues of a matrix"},
+                {"id": "B", "text": "A theorem about the location of eigenvectors of a matrix"},
+                {"id": "C", "text": "A theorem about the location of singular values of a matrix"},
+                {"id": "D", "text": "A theorem about the location of the determinant of a matrix"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 10,
+              "text": "What is the Courant-Fischer theorem?",
+              "options": [
+                {"id": "A", "text": "A theorem about the characterization of eigenvalues of a symmetric matrix"},
+                {"id": "B", "text": "A theorem about the characterization of eigenvectors of a symmetric matrix"},
+                {"id": "C", "text": "A theorem about the characterization of singular values of a matrix"},
+                {"id": "D", "text": "A theorem about the characterization of the determinant of a matrix"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 11,
+              "text": "What is the Weyl's inequality?",
+              "options": [
+                {"id": "A", "text": "An inequality relating the eigenvalues of two symmetric matrices"},
+                {"id": "B", "text": "An inequality relating the eigenvectors of two symmetric matrices"},
+                {"id": "C", "text": "An inequality relating the singular values of two matrices"},
+                {"id": "D", "text": "An inequality relating the determinants of two matrices"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 12,
+              "text": "What is the Hoffman-Wielandt theorem?",
+              "options": [
+                {"id": "A", "text": "A theorem about the distance between eigenvalues of two normal matrices"},
+                {"id": "B", "text": "A theorem about the distance between eigenvectors of two normal matrices"},
+                {"id": "C", "text": "A theorem about the distance between singular values of two matrices"},
+                {"id": "D", "text": "A theorem about the distance between determinants of two matrices"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 13,
+              "text": "What is the Schur decomposition?",
+              "options": [
+                {"id": "A", "text": "A decomposition of a matrix into a unitary and upper triangular matrix"},
+                {"id": "B", "text": "A decomposition into two diagonal matrices"},
+                {"id": "C", "text": "A decomposition into two symmetric matrices"},
+                {"id": "D", "text": "A decomposition into two unitary matrices"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 14,
+              "text": "What is the polar decomposition?",
+              "options": [
+                {"id": "A", "text": "A decomposition of a matrix into a unitary and positive semidefinite matrix"},
+                {"id": "B", "text": "A decomposition into two diagonal matrices"},
+                {"id": "C", "text": "A decomposition into two symmetric matrices"},
+                {"id": "D", "text": "A decomposition into two unitary matrices"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 15,
+              "text": "What is the Takagi factorization?",
+              "options": [
+                {"id": "A", "text": "A factorization of a complex symmetric matrix"},
+                {"id": "B", "text": "A factorization of a real symmetric matrix"},
+                {"id": "C", "text": "A factorization of a complex Hermitian matrix"},
+                {"id": "D", "text": "A factorization of a real Hermitian matrix"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 16,
+              "text": "What is the Schur complement?",
+              "options": [
+                {"id": "A", "text": "A matrix that appears in the block matrix inversion formula"},
+                {"id": "B", "text": "A matrix that appears in the matrix multiplication formula"},
+                {"id": "C", "text": "A matrix that appears in the matrix addition formula"},
+                {"id": "D", "text": "A matrix that appears in the matrix subtraction formula"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 17,
+              "text": "What is the matrix exponential?",
+              "options": [
+                {"id": "A", "text": "A matrix function defined by a power series"},
+                {"id": "B", "text": "A matrix function defined by a product"},
+                {"id": "C", "text": "A matrix function defined by a sum"},
+                {"id": "D", "text": "A matrix function defined by a difference"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 18,
+              "text": "What is the matrix logarithm?",
+              "options": [
+                {"id": "A", "text": "The inverse function of the matrix exponential"},
+                {"id": "B", "text": "The inverse function of the matrix multiplication"},
+                {"id": "C", "text": "The inverse function of the matrix addition"},
+                {"id": "D", "text": "The inverse function of the matrix subtraction"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 19,
+              "text": "What is the matrix sine?",
+              "options": [
+                {"id": "A", "text": "A matrix function defined by a power series"},
+                {"id": "B", "text": "A matrix function defined by a product"},
+                {"id": "C", "text": "A matrix function defined by a sum"},
+                {"id": "D", "text": "A matrix function defined by a difference"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 20,
+              "text": "What is the matrix cosine?",
+              "options": [
+                {"id": "A", "text": "A matrix function defined by a power series"},
+                {"id": "B", "text": "A matrix function defined by a product"},
+                {"id": "C", "text": "A matrix function defined by a sum"},
+                {"id": "D", "text": "A matrix function defined by a difference"}
+              ],
+              "answer": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abstract-algebra",
+      "name": "Abstract Algebra",
+      "assessments": [
+        {
+          "id": "abstract-algebra-1",
+          "name": "Abstract Algebra Basics",
+          "title": "Introduction to Abstract Algebra",
+          "level": 1,
+          "locked": false,
+          "timelimit": 600,
+          "questions": [
+            {
+              "id": 1,
+              "text": "What is a group?",
+              "options": [
+                {"id": "A", "text": "A set with an operation satisfying closure, associativity, identity, and inverse"},
+                {"id": "B", "text": "A set with an operation"},
+                {"id": "C", "text": "A set with a relation"},
+                {"id": "D", "text": "A set with a function"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 2,
+              "text": "What is a ring?",
+              "options": [
+                {"id": "A", "text": "A set with two operations satisfying certain properties"},
+                {"id": "B", "text": "A set with one operation"},
+                {"id": "C", "text": "A set with three operations"},
+                {"id": "D", "text": "A set with no operations"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 3,
+              "text": "What is a field?",
+              "options": [
+                {"id": "A", "text": "A ring where every non-zero element has a multiplicative inverse"},
+                {"id": "B", "text": "A ring where every element has a multiplicative inverse"},
+                {"id": "C", "text": "A ring where every element has an additive inverse"},
+                {"id": "D", "text": "A ring where every element has both inverses"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 4,
+              "text": "What is a homomorphism?",
+              "options": [
+                {"id": "A", "text": "A function that preserves the algebraic structure"},
+                {"id": "B", "text": "A function that preserves the order"},
+                {"id": "C", "text": "A function that preserves the distance"},
+                {"id": "D", "text": "A function that preserves the size"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 5,
+              "text": "What is an isomorphism?",
+              "options": [
+                {"id": "A", "text": "A bijective homomorphism"},
+                {"id": "B", "text": "A surjective homomorphism"},
+                {"id": "C", "text": "An injective homomorphism"},
+                {"id": "D", "text": "A homomorphism"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 6,
+              "text": "What is a subgroup?",
+              "options": [
+                {"id": "A", "text": "A subset of a group that is itself a group"},
+                {"id": "B", "text": "A subset of a group"},
+                {"id": "C", "text": "A superset of a group"},
+                {"id": "D", "text": "A disjoint set from a group"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 7,
+              "text": "What is a normal subgroup?",
+              "options": [
+                {"id": "A", "text": "A subgroup that is invariant under conjugation"},
+                {"id": "B", "text": "A subgroup that is not invariant under conjugation"},
+                {"id": "C", "text": "A subgroup that is invariant under addition"},
+                {"id": "D", "text": "A subgroup that is invariant under multiplication"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 8,
+              "text": "What is a quotient group?",
+              "options": [
+                {"id": "A", "text": "A group formed by the cosets of a normal subgroup"},
+                {"id": "B", "text": "A group formed by the elements of a group"},
+                {"id": "C", "text": "A group formed by the subgroups of a group"},
+                {"id": "D", "text": "A group formed by the homomorphisms of a group"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 9,
+              "text": "What is a cyclic group?",
+              "options": [
+                {"id": "A", "text": "A group generated by a single element"},
+                {"id": "B", "text": "A group generated by two elements"},
+                {"id": "C", "text": "A group generated by three elements"},
+                {"id": "D", "text": "A group generated by four elements"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 10,
+              "text": "What is a permutation group?",
+              "options": [
+                {"id": "A", "text": "A group of bijections from a set to itself"},
+                {"id": "B", "text": "A group of injections from a set to itself"},
+                {"id": "C", "text": "A group of surjections from a set to itself"},
+                {"id": "D", "text": "A group of functions from a set to itself"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 11,
+              "text": "What is a symmetric group?",
+              "options": [
+                {"id": "A", "text": "The group of all permutations of a finite set"},
+                {"id": "B", "text": "The group of all injections of a finite set"},
+                {"id": "C", "text": "The group of all surjections of a finite set"},
+                {"id": "D", "text": "The group of all functions of a finite set"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 12,
+              "text": "What is an alternating group?",
+              "options": [
+                {"id": "A", "text": "The group of even permutations of a finite set"},
+                {"id": "B", "text": "The group of odd permutations of a finite set"},
+                {"id": "C", "text": "The group of all permutations of a finite set"},
+                {"id": "D", "text": "The group of no permutations of a finite set"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 13,
+              "text": "What is a dihedral group?",
+              "options": [
+                {"id": "A", "text": "The group of symmetries of a regular polygon"},
+                {"id": "B", "text": "The group of symmetries of a circle"},
+                {"id": "C", "text": "The group of symmetries of a sphere"},
+                {"id": "D", "text": "The group of symmetries of a cube"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 14,
+              "text": "What is a free group?",
+              "options": [
+                {"id": "A", "text": "A group with no relations between its generators"},
+                {"id": "B", "text": "A group with some relations between its generators"},
+                {"id": "C", "text": "A group with all relations between its generators"},
+                {"id": "D", "text": "A group with no generators"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 15,
+              "text": "What is a presentation of a group?",
+              "options": [
+                {"id": "A", "text": "A description of a group by generators and relations"},
+                {"id": "B", "text": "A description of a group by elements"},
+                {"id": "C", "text": "A description of a group by subgroups"},
+                {"id": "D", "text": "A description of a group by homomorphisms"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 16,
+              "text": "What is a simple group?",
+              "options": [
+                {"id": "A", "text": "A group with no non-trivial normal subgroups"},
+                {"id": "B", "text": "A group with no normal subgroups"},
+                {"id": "C", "text": "A group with no subgroups"},
+                {"id": "D", "text": "A group with no elements"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 17,
+              "text": "What is a solvable group?",
+              "options": [
+                {"id": "A", "text": "A group with a subnormal series with abelian quotients"},
+                {"id": "B", "text": "A group with a normal series with abelian quotients"},
+                {"id": "C", "text": "A group with a subnormal series with cyclic quotients"},
+                {"id": "D", "text": "A group with a normal series with cyclic quotients"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 18,
+              "text": "What is a nilpotent group?",
+              "options": [
+                {"id": "A", "text": "A group with a central series"},
+                {"id": "B", "text": "A group with a normal series"},
+                {"id": "C", "text": "A group with a subnormal series"},
+                {"id": "D", "text": "A group with no series"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 19,
+              "text": "What is a p-group?",
+              "options": [
+                {"id": "A", "text": "A group where every element has order a power of p"},
+                {"id": "B", "text": "A group where every element has order p"},
+                {"id": "C", "text": "A group where every element has order 1"},
+                {"id": "D", "text": "A group where every element has order 0"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 20,
+              "text": "What is a Sylow p-subgroup?",
+              "options": [
+                {"id": "A", "text": "A maximal p-subgroup of a finite group"},
+                {"id": "B", "text": "A minimal p-subgroup of a finite group"},
+                {"id": "C", "text": "A normal p-subgroup of a finite group"},
+                {"id": "D", "text": "A trivial p-subgroup of a finite group"}
+              ],
+              "answer": "A"
+            }
+          ]
+        },
+        {
+          "id": "abstract-algebra-2",
+          "name": "Advanced Abstract Algebra",
+          "title": "Advanced Abstract Algebra Concepts",
+          "level": 2,
+          "locked": true,
+          "timelimit": 600,
+          "questions": [
+            {
+              "id": 1,
+              "text": "What is Galois theory?",
+              "options": [
+                {"id": "A", "text": "The study of field extensions and their automorphisms"},
+                {"id": "B", "text": "The study of group extensions and their automorphisms"},
+                {"id": "C", "text": "The study of ring extensions and their automorphisms"},
+                {"id": "D", "text": "The study of module extensions and their automorphisms"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 2,
+              "text": "What is a Galois group?",
+              "options": [
+                {"id": "A", "text": "The group of automorphisms of a field extension"},
+                {"id": "B", "text": "The group of automorphisms of a group extension"},
+                {"id": "C", "text": "The group of automorphisms of a ring extension"},
+                {"id": "D", "text": "The group of automorphisms of a module extension"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 3,
+              "text": "What is a Galois extension?",
+              "options": [
+                {"id": "A", "text": "A field extension that is normal and separable"},
+                {"id": "B", "text": "A field extension that is normal"},
+                {"id": "C", "text": "A field extension that is separable"},
+                {"id": "D", "text": "A field extension that is neither normal nor separable"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 4,
+              "text": "What is the fundamental theorem of Galois theory?",
+              "options": [
+                {"id": "A", "text": "A theorem relating subgroups of the Galois group to intermediate fields"},
+                {"id": "B", "text": "A theorem relating subgroups of the Galois group to subfields"},
+                {"id": "C", "text": "A theorem relating subgroups of the Galois group to subrings"},
+                {"id": "D", "text": "A theorem relating subgroups of the Galois group to submodules"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 5,
+              "text": "What is a solvable extension?",
+              "options": [
+                {"id": "A", "text": "A field extension with solvable Galois group"},
+                {"id": "B", "text": "A field extension with abelian Galois group"},
+                {"id": "C", "text": "A field extension with cyclic Galois group"},
+                {"id": "D", "text": "A field extension with trivial Galois group"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 6,
+              "text": "What is a radical extension?",
+              "options": [
+                {"id": "A", "text": "A field extension obtained by adjoining roots"},
+                {"id": "B", "text": "A field extension obtained by adjoining squares"},
+                {"id": "C", "text": "A field extension obtained by adjoining cubes"},
+                {"id": "D", "text": "A field extension obtained by adjoining fourth powers"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 7,
+              "text": "What is the Abel-Ruffini theorem?",
+              "options": [
+                {"id": "A", "text": "A theorem about the insolvability of the general quintic equation"},
+                {"id": "B", "text": "A theorem about the solvability of the general quintic equation"},
+                {"id": "C", "text": "A theorem about the insolvability of the general quartic equation"},
+                {"id": "D", "text": "A theorem about the solvability of the general quartic equation"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 8,
+              "text": "What is a cyclotomic field?",
+              "options": [
+                {"id": "A", "text": "A field obtained by adjoining roots of unity"},
+                {"id": "B", "text": "A field obtained by adjoining squares of unity"},
+                {"id": "C", "text": "A field obtained by adjoining cubes of unity"},
+                {"id": "D", "text": "A field obtained by adjoining fourth powers of unity"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 9,
+              "text": "What is a cyclotomic polynomial?",
+              "options": [
+                {"id": "A", "text": "The minimal polynomial of a primitive root of unity"},
+                {"id": "B", "text": "The minimal polynomial of a root of unity"},
+                {"id": "C", "text": "The minimal polynomial of a square root of unity"},
+                {"id": "D", "text": "The minimal polynomial of a cube root of unity"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 10,
+              "text": "What is a Kummer extension?",
+              "options": [
+                {"id": "A", "text": "A field extension obtained by adjoining nth roots"},
+                {"id": "B", "text": "A field extension obtained by adjoining squares"},
+                {"id": "C", "text": "A field extension obtained by adjoining cubes"},
+                {"id": "D", "text": "A field extension obtained by adjoining fourth powers"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 11,
+              "text": "What is a Kummer theory?",
+              "options": [
+                {"id": "A", "text": "A theory about abelian extensions of fields containing nth roots of unity"},
+                {"id": "B", "text": "A theory about abelian extensions of fields containing squares of unity"},
+                {"id": "C", "text": "A theory about abelian extensions of fields containing cubes of unity"},
+                {"id": "D", "text": "A theory about abelian extensions of fields containing fourth powers of unity"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 12,
+              "text": "What is a Hilbert class field?",
+              "options": [
+                {"id": "A", "text": "The maximal unramified abelian extension of a number field"},
+                {"id": "B", "text": "The maximal ramified abelian extension of a number field"},
+                {"id": "C", "text": "The maximal unramified non-abelian extension of a number field"},
+                {"id": "D", "text": "The maximal ramified non-abelian extension of a number field"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 13,
+              "text": "What is a class field theory?",
+              "options": [
+                {"id": "A", "text": "A theory about abelian extensions of number fields"},
+                {"id": "B", "text": "A theory about non-abelian extensions of number fields"},
+                {"id": "C", "text": "A theory about abelian extensions of function fields"},
+                {"id": "D", "text": "A theory about non-abelian extensions of function fields"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 14,
+              "text": "What is a local field?",
+              "options": [
+                {"id": "A", "text": "A field that is complete with respect to a discrete valuation"},
+                {"id": "B", "text": "A field that is incomplete with respect to a discrete valuation"},
+                {"id": "C", "text": "A field that is complete with respect to a non-discrete valuation"},
+                {"id": "D", "text": "A field that is incomplete with respect to a non-discrete valuation"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 15,
+              "text": "What is a global field?",
+              "options": [
+                {"id": "A", "text": "A number field or a function field of one variable over a finite field"},
+                {"id": "B", "text": "A number field or a function field of one variable over an infinite field"},
+                {"id": "C", "text": "A number field or a function field of two variables over a finite field"},
+                {"id": "D", "text": "A number field or a function field of two variables over an infinite field"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 16,
+              "text": "What is a valuation?",
+              "options": [
+                {"id": "A", "text": "A function from a field to a totally ordered group"},
+                {"id": "B", "text": "A function from a field to a partially ordered group"},
+                {"id": "C", "text": "A function from a field to a totally ordered set"},
+                {"id": "D", "text": "A function from a field to a partially ordered set"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 17,
+              "text": "What is a discrete valuation?",
+              "options": [
+                {"id": "A", "text": "A valuation whose value group is isomorphic to the integers"},
+                {"id": "B", "text": "A valuation whose value group is isomorphic to the rationals"},
+                {"id": "C", "text": "A valuation whose value group is isomorphic to the reals"},
+                {"id": "D", "text": "A valuation whose value group is isomorphic to the complex numbers"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 18,
+              "text": "What is a valuation ring?",
+              "options": [
+                {"id": "A", "text": "A subring of a field consisting of elements with non-negative valuation"},
+                {"id": "B", "text": "A subring of a field consisting of elements with non-positive valuation"},
+                {"id": "C", "text": "A subring of a field consisting of elements with zero valuation"},
+                {"id": "D", "text": "A subring of a field consisting of elements with non-zero valuation"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 19,
+              "text": "What is a place?",
+              "options": [
+                {"id": "A", "text": "An equivalence class of valuations"},
+                {"id": "B", "text": "A valuation"},
+                {"id": "C", "text": "A valuation ring"},
+                {"id": "D", "text": "A value group"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 20,
+              "text": "What is a prime?",
+              "options": [
+                {"id": "A", "text": "A place of a global field"},
+                {"id": "B", "text": "A valuation of a global field"},
+                {"id": "C", "text": "A valuation ring of a global field"},
+                {"id": "D", "text": "A value group of a global field"}
+              ],
+              "answer": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+} 

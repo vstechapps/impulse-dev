@@ -1,0 +1,936 @@
+{
+  "topics": [
+    {
+      "id": "ontology",
+      "name": "Ontology",
+      "assessments": [
+        {
+          "id": "ontology-1",
+          "name": "Introduction to Ontology",
+          "title": "Basic Ontology Concepts",
+          "level": 1,
+          "locked": false,
+          "timelimit": 600,
+          "questions": [
+            {
+              "id": 1,
+              "text": "What is the primary focus of ontology?",
+              "options": [
+                {"id": "A", "text": "Study of being and existence"},
+                {"id": "B", "text": "Study of knowledge"},
+                {"id": "C", "text": "Study of ethics"},
+                {"id": "D", "text": "Study of logic"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 2,
+              "text": "Which philosopher is most associated with ontology?",
+              "options": [
+                {"id": "A", "text": "Aristotle"},
+                {"id": "B", "text": "Plato"},
+                {"id": "C", "text": "Descartes"},
+                {"id": "D", "text": "Kant"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 3,
+              "text": "What is the study of categories of being called?",
+              "options": [
+                {"id": "A", "text": "Epistemology"},
+                {"id": "B", "text": "Metaphysics"},
+                {"id": "C", "text": "Categorical ontology"},
+                {"id": "D", "text": "Ethics"}
+              ],
+              "answer": "C"
+            },
+            {
+              "id": 4,
+              "text": "Which of these is a fundamental question in ontology?",
+              "options": [
+                {"id": "A", "text": "What is knowledge?"},
+                {"id": "B", "text": "What exists?"},
+                {"id": "C", "text": "What is good?"},
+                {"id": "D", "text": "What is true?"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 5,
+              "text": "What is the term for the study of being qua being?",
+              "options": [
+                {"id": "A", "text": "Epistemology"},
+                {"id": "B", "text": "Ontology"},
+                {"id": "C", "text": "Ethics"},
+                {"id": "D", "text": "Logic"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 6,
+              "text": "Which of these is NOT a category in Aristotle's ontology?",
+              "options": [
+                {"id": "A", "text": "Substance"},
+                {"id": "B", "text": "Quantity"},
+                {"id": "C", "text": "Time"},
+                {"id": "D", "text": "Color"}
+              ],
+              "answer": "D"
+            },
+            {
+              "id": 7,
+              "text": "What is the term for the study of existence?",
+              "options": [
+                {"id": "A", "text": "Epistemology"},
+                {"id": "B", "text": "Ontology"},
+                {"id": "C", "text": "Ethics"},
+                {"id": "D", "text": "Logic"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 8,
+              "text": "Which of these is a central concept in ontology?",
+              "options": [
+                {"id": "A", "text": "Truth"},
+                {"id": "B", "text": "Existence"},
+                {"id": "C", "text": "Knowledge"},
+                {"id": "D", "text": "Goodness"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 9,
+              "text": "What is the study of being in itself called?",
+              "options": [
+                {"id": "A", "text": "Epistemology"},
+                {"id": "B", "text": "Ontology"},
+                {"id": "C", "text": "Ethics"},
+                {"id": "D", "text": "Logic"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 10,
+              "text": "Which of these is a fundamental ontological question?",
+              "options": [
+                {"id": "A", "text": "What is knowledge?"},
+                {"id": "B", "text": "What is good?"},
+                {"id": "C", "text": "What is real?"},
+                {"id": "D", "text": "What is true?"}
+              ],
+              "answer": "C"
+            },
+            {
+              "id": 11,
+              "text": "What is the term for the study of being as being?",
+              "options": [
+                {"id": "A", "text": "Epistemology"},
+                {"id": "B", "text": "Ontology"},
+                {"id": "C", "text": "Ethics"},
+                {"id": "D", "text": "Logic"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 12,
+              "text": "Which of these is a category in ontology?",
+              "options": [
+                {"id": "A", "text": "Truth"},
+                {"id": "B", "text": "Existence"},
+                {"id": "C", "text": "Knowledge"},
+                {"id": "D", "text": "Goodness"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 13,
+              "text": "What is the study of being qua being called?",
+              "options": [
+                {"id": "A", "text": "Epistemology"},
+                {"id": "B", "text": "Ontology"},
+                {"id": "C", "text": "Ethics"},
+                {"id": "D", "text": "Logic"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 14,
+              "text": "Which of these is a fundamental ontological question?",
+              "options": [
+                {"id": "A", "text": "What is knowledge?"},
+                {"id": "B", "text": "What is good?"},
+                {"id": "C", "text": "What is real?"},
+                {"id": "D", "text": "What is true?"}
+              ],
+              "answer": "C"
+            },
+            {
+              "id": 15,
+              "text": "What is the term for the study of being as being?",
+              "options": [
+                {"id": "A", "text": "Epistemology"},
+                {"id": "B", "text": "Ontology"},
+                {"id": "C", "text": "Ethics"},
+                {"id": "D", "text": "Logic"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 16,
+              "text": "Which of these is a category in ontology?",
+              "options": [
+                {"id": "A", "text": "Truth"},
+                {"id": "B", "text": "Existence"},
+                {"id": "C", "text": "Knowledge"},
+                {"id": "D", "text": "Goodness"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 17,
+              "text": "What is the study of being qua being called?",
+              "options": [
+                {"id": "A", "text": "Epistemology"},
+                {"id": "B", "text": "Ontology"},
+                {"id": "C", "text": "Ethics"},
+                {"id": "D", "text": "Logic"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 18,
+              "text": "Which of these is a fundamental ontological question?",
+              "options": [
+                {"id": "A", "text": "What is knowledge?"},
+                {"id": "B", "text": "What is good?"},
+                {"id": "C", "text": "What is real?"},
+                {"id": "D", "text": "What is true?"}
+              ],
+              "answer": "C"
+            },
+            {
+              "id": 19,
+              "text": "What is the term for the study of being as being?",
+              "options": [
+                {"id": "A", "text": "Epistemology"},
+                {"id": "B", "text": "Ontology"},
+                {"id": "C", "text": "Ethics"},
+                {"id": "D", "text": "Logic"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 20,
+              "text": "Which of these is a category in ontology?",
+              "options": [
+                {"id": "A", "text": "Truth"},
+                {"id": "B", "text": "Existence"},
+                {"id": "C", "text": "Knowledge"},
+                {"id": "D", "text": "Goodness"}
+              ],
+              "answer": "B"
+            }
+          ]
+        },
+        {
+          "id": "ontology-2",
+          "name": "Ontology vs Metaphysics",
+          "title": "Advanced Ontology Concepts",
+          "level": 2,
+          "locked": true,
+          "timelimit": 600,
+          "questions": [
+            {
+              "id": 1,
+              "text": "What is the main difference between ontology and metaphysics?",
+              "options": [
+                {"id": "A", "text": "Ontology studies being, metaphysics studies reality"},
+                {"id": "B", "text": "Ontology is theoretical, metaphysics is practical"},
+                {"id": "C", "text": "Ontology is ancient, metaphysics is modern"},
+                {"id": "D", "text": "There is no difference"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 2,
+              "text": "Which philosopher first distinguished ontology from metaphysics?",
+              "options": [
+                {"id": "A", "text": "Aristotle"},
+                {"id": "B", "text": "Plato"},
+                {"id": "C", "text": "Descartes"},
+                {"id": "D", "text": "Kant"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 3,
+              "text": "What is the relationship between ontology and metaphysics?",
+              "options": [
+                {"id": "A", "text": "They are identical"},
+                {"id": "B", "text": "Ontology is a branch of metaphysics"},
+                {"id": "C", "text": "Metaphysics is a branch of ontology"},
+                {"id": "D", "text": "They are completely separate"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 4,
+              "text": "Which of these is a metaphysical question?",
+              "options": [
+                {"id": "A", "text": "What exists?"},
+                {"id": "B", "text": "What is the nature of reality?"},
+                {"id": "C", "text": "What is being?"},
+                {"id": "D", "text": "What is knowledge?"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 5,
+              "text": "What is the primary focus of metaphysics?",
+              "options": [
+                {"id": "A", "text": "Study of being"},
+                {"id": "B", "text": "Study of reality"},
+                {"id": "C", "text": "Study of knowledge"},
+                {"id": "D", "text": "Study of ethics"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 6,
+              "text": "Which of these is an ontological question?",
+              "options": [
+                {"id": "A", "text": "What is the nature of reality?"},
+                {"id": "B", "text": "What exists?"},
+                {"id": "C", "text": "What is knowledge?"},
+                {"id": "D", "text": "What is good?"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 7,
+              "text": "What is the term for the study of being qua being?",
+              "options": [
+                {"id": "A", "text": "Epistemology"},
+                {"id": "B", "text": "Ontology"},
+                {"id": "C", "text": "Ethics"},
+                {"id": "D", "text": "Logic"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 8,
+              "text": "Which of these is a central concept in ontology?",
+              "options": [
+                {"id": "A", "text": "Truth"},
+                {"id": "B", "text": "Existence"},
+                {"id": "C", "text": "Knowledge"},
+                {"id": "D", "text": "Goodness"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 9,
+              "text": "What is the study of being in itself called?",
+              "options": [
+                {"id": "A", "text": "Epistemology"},
+                {"id": "B", "text": "Ontology"},
+                {"id": "C", "text": "Ethics"},
+                {"id": "D", "text": "Logic"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 10,
+              "text": "Which of these is a fundamental ontological question?",
+              "options": [
+                {"id": "A", "text": "What is knowledge?"},
+                {"id": "B", "text": "What is good?"},
+                {"id": "C", "text": "What is real?"},
+                {"id": "D", "text": "What is true?"}
+              ],
+              "answer": "C"
+            },
+            {
+              "id": 11,
+              "text": "What is the term for the study of being as being?",
+              "options": [
+                {"id": "A", "text": "Epistemology"},
+                {"id": "B", "text": "Ontology"},
+                {"id": "C", "text": "Ethics"},
+                {"id": "D", "text": "Logic"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 12,
+              "text": "Which of these is a category in ontology?",
+              "options": [
+                {"id": "A", "text": "Truth"},
+                {"id": "B", "text": "Existence"},
+                {"id": "C", "text": "Knowledge"},
+                {"id": "D", "text": "Goodness"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 13,
+              "text": "What is the study of being qua being called?",
+              "options": [
+                {"id": "A", "text": "Epistemology"},
+                {"id": "B", "text": "Ontology"},
+                {"id": "C", "text": "Ethics"},
+                {"id": "D", "text": "Logic"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 14,
+              "text": "Which of these is a fundamental ontological question?",
+              "options": [
+                {"id": "A", "text": "What is knowledge?"},
+                {"id": "B", "text": "What is good?"},
+                {"id": "C", "text": "What is real?"},
+                {"id": "D", "text": "What is true?"}
+              ],
+              "answer": "C"
+            },
+            {
+              "id": 15,
+              "text": "What is the term for the study of being as being?",
+              "options": [
+                {"id": "A", "text": "Epistemology"},
+                {"id": "B", "text": "Ontology"},
+                {"id": "C", "text": "Ethics"},
+                {"id": "D", "text": "Logic"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 16,
+              "text": "Which of these is a category in ontology?",
+              "options": [
+                {"id": "A", "text": "Truth"},
+                {"id": "B", "text": "Existence"},
+                {"id": "C", "text": "Knowledge"},
+                {"id": "D", "text": "Goodness"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 17,
+              "text": "What is the study of being qua being called?",
+              "options": [
+                {"id": "A", "text": "Epistemology"},
+                {"id": "B", "text": "Ontology"},
+                {"id": "C", "text": "Ethics"},
+                {"id": "D", "text": "Logic"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 18,
+              "text": "Which of these is a fundamental ontological question?",
+              "options": [
+                {"id": "A", "text": "What is knowledge?"},
+                {"id": "B", "text": "What is good?"},
+                {"id": "C", "text": "What is real?"},
+                {"id": "D", "text": "What is true?"}
+              ],
+              "answer": "C"
+            },
+            {
+              "id": 19,
+              "text": "What is the term for the study of being as being?",
+              "options": [
+                {"id": "A", "text": "Epistemology"},
+                {"id": "B", "text": "Ontology"},
+                {"id": "C", "text": "Ethics"},
+                {"id": "D", "text": "Logic"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 20,
+              "text": "Which of these is a category in ontology?",
+              "options": [
+                {"id": "A", "text": "Truth"},
+                {"id": "B", "text": "Existence"},
+                {"id": "C", "text": "Knowledge"},
+                {"id": "D", "text": "Goodness"}
+              ],
+              "answer": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cosmology",
+      "name": "Cosmology",
+      "assessments": [
+        {
+          "id": "cosmology-1",
+          "name": "Cosmology Basics",
+          "title": "Introduction to Cosmology",
+          "level": 1,
+          "locked": false,
+          "timelimit": 600,
+          "questions": [
+            {
+              "id": 1,
+              "text": "What is cosmology?",
+              "options": [
+                {"id": "A", "text": "Study of the universe"},
+                {"id": "B", "text": "Study of stars"},
+                {"id": "C", "text": "Study of planets"},
+                {"id": "D", "text": "Study of galaxies"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 2,
+              "text": "Which of these is a cosmological question?",
+              "options": [
+                {"id": "A", "text": "What is the nature of the universe?"},
+                {"id": "B", "text": "What is the nature of knowledge?"},
+                {"id": "C", "text": "What is the nature of good?"},
+                {"id": "D", "text": "What is the nature of truth?"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 3,
+              "text": "What is the study of the origin of the universe called?",
+              "options": [
+                {"id": "A", "text": "Cosmology"},
+                {"id": "B", "text": "Astronomy"},
+                {"id": "C", "text": "Physics"},
+                {"id": "D", "text": "Biology"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 4,
+              "text": "Which of these is a cosmological question?",
+              "options": [
+                {"id": "A", "text": "What is the nature of the universe?"},
+                {"id": "B", "text": "What is the nature of knowledge?"},
+                {"id": "C", "text": "What is the nature of good?"},
+                {"id": "D", "text": "What is the nature of truth?"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 5,
+              "text": "What is the study of the origin of the universe called?",
+              "options": [
+                {"id": "A", "text": "Cosmology"},
+                {"id": "B", "text": "Astronomy"},
+                {"id": "C", "text": "Physics"},
+                {"id": "D", "text": "Biology"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 6,
+              "text": "Which of these is a cosmological question?",
+              "options": [
+                {"id": "A", "text": "What is the nature of the universe?"},
+                {"id": "B", "text": "What is the nature of knowledge?"},
+                {"id": "C", "text": "What is the nature of good?"},
+                {"id": "D", "text": "What is the nature of truth?"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 7,
+              "text": "What is the study of the origin of the universe called?",
+              "options": [
+                {"id": "A", "text": "Cosmology"},
+                {"id": "B", "text": "Astronomy"},
+                {"id": "C", "text": "Physics"},
+                {"id": "D", "text": "Biology"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 8,
+              "text": "Which of these is a cosmological question?",
+              "options": [
+                {"id": "A", "text": "What is the nature of the universe?"},
+                {"id": "B", "text": "What is the nature of knowledge?"},
+                {"id": "C", "text": "What is the nature of good?"},
+                {"id": "D", "text": "What is the nature of truth?"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 9,
+              "text": "What is the study of the origin of the universe called?",
+              "options": [
+                {"id": "A", "text": "Cosmology"},
+                {"id": "B", "text": "Astronomy"},
+                {"id": "C", "text": "Physics"},
+                {"id": "D", "text": "Biology"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 10,
+              "text": "Which of these is a cosmological question?",
+              "options": [
+                {"id": "A", "text": "What is the nature of the universe?"},
+                {"id": "B", "text": "What is the nature of knowledge?"},
+                {"id": "C", "text": "What is the nature of good?"},
+                {"id": "D", "text": "What is the nature of truth?"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 11,
+              "text": "What is the study of the origin of the universe called?",
+              "options": [
+                {"id": "A", "text": "Cosmology"},
+                {"id": "B", "text": "Astronomy"},
+                {"id": "C", "text": "Physics"},
+                {"id": "D", "text": "Biology"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 12,
+              "text": "Which of these is a cosmological question?",
+              "options": [
+                {"id": "A", "text": "What is the nature of the universe?"},
+                {"id": "B", "text": "What is the nature of knowledge?"},
+                {"id": "C", "text": "What is the nature of good?"},
+                {"id": "D", "text": "What is the nature of truth?"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 13,
+              "text": "What is the study of the origin of the universe called?",
+              "options": [
+                {"id": "A", "text": "Cosmology"},
+                {"id": "B", "text": "Astronomy"},
+                {"id": "C", "text": "Physics"},
+                {"id": "D", "text": "Biology"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 14,
+              "text": "Which of these is a cosmological question?",
+              "options": [
+                {"id": "A", "text": "What is the nature of the universe?"},
+                {"id": "B", "text": "What is the nature of knowledge?"},
+                {"id": "C", "text": "What is the nature of good?"},
+                {"id": "D", "text": "What is the nature of truth?"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 15,
+              "text": "What is the study of the origin of the universe called?",
+              "options": [
+                {"id": "A", "text": "Cosmology"},
+                {"id": "B", "text": "Astronomy"},
+                {"id": "C", "text": "Physics"},
+                {"id": "D", "text": "Biology"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 16,
+              "text": "Which of these is a cosmological question?",
+              "options": [
+                {"id": "A", "text": "What is the nature of the universe?"},
+                {"id": "B", "text": "What is the nature of knowledge?"},
+                {"id": "C", "text": "What is the nature of good?"},
+                {"id": "D", "text": "What is the nature of truth?"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 17,
+              "text": "What is the study of the origin of the universe called?",
+              "options": [
+                {"id": "A", "text": "Cosmology"},
+                {"id": "B", "text": "Astronomy"},
+                {"id": "C", "text": "Physics"},
+                {"id": "D", "text": "Biology"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 18,
+              "text": "Which of these is a cosmological question?",
+              "options": [
+                {"id": "A", "text": "What is the nature of the universe?"},
+                {"id": "B", "text": "What is the nature of knowledge?"},
+                {"id": "C", "text": "What is the nature of good?"},
+                {"id": "D", "text": "What is the nature of truth?"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 19,
+              "text": "What is the study of the origin of the universe called?",
+              "options": [
+                {"id": "A", "text": "Cosmology"},
+                {"id": "B", "text": "Astronomy"},
+                {"id": "C", "text": "Physics"},
+                {"id": "D", "text": "Biology"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 20,
+              "text": "Which of these is a cosmological question?",
+              "options": [
+                {"id": "A", "text": "What is the nature of the universe?"},
+                {"id": "B", "text": "What is the nature of knowledge?"},
+                {"id": "C", "text": "What is the nature of good?"},
+                {"id": "D", "text": "What is the nature of truth?"}
+              ],
+              "answer": "A"
+            }
+          ]
+        },
+        {
+          "id": "cosmology-2",
+          "name": "Philosophical vs Physical Cosmology",
+          "title": "Advanced Cosmology Concepts",
+          "level": 3,
+          "locked": true,
+          "timelimit": 600,
+          "questions": [
+            {
+              "id": 1,
+              "text": "What is the main difference between philosophical and physical cosmology?",
+              "options": [
+                {"id": "A", "text": "Philosophical cosmology is theoretical, physical cosmology is empirical"},
+                {"id": "B", "text": "Philosophical cosmology is ancient, physical cosmology is modern"},
+                {"id": "C", "text": "Philosophical cosmology is qualitative, physical cosmology is quantitative"},
+                {"id": "D", "text": "There is no difference"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 2,
+              "text": "Which of these is a question in philosophical cosmology?",
+              "options": [
+                {"id": "A", "text": "What is the nature of the universe?"},
+                {"id": "B", "text": "What is the age of the universe?"},
+                {"id": "C", "text": "What is the size of the universe?"},
+                {"id": "D", "text": "What is the composition of the universe?"}
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 3,
+              "text": "What is the primary focus of physical cosmology?",
+              "options": [
+                {"id": "A", "text": "Theoretical understanding"},
+                {"id": "B", "text": "Empirical observation"},
+                {"id": "C", "text": "Philosophical speculation"},
+                {"id": "D", "text": "Religious interpretation"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 4,
+              "text": "Which of these is a question in physical cosmology?",
+              "options": [
+                {"id": "A", "text": "What is the nature of the universe?"},
+                {"id": "B", "text": "What is the age of the universe?"},
+                {"id": "C", "text": "What is the purpose of the universe?"},
+                {"id": "D", "text": "What is the meaning of the universe?"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 5,
+              "text": "What is the primary focus of philosophical cosmology?",
+              "options": [
+                {"id": "A", "text": "Empirical observation"},
+                {"id": "B", "text": "Theoretical understanding"},
+                {"id": "C", "text": "Mathematical modeling"},
+                {"id": "D", "text": "Experimental verification"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 6,
+              "text": "Which of these is a question in philosophical cosmology?",
+              "options": [
+                {"id": "A", "text": "What is the age of the universe?"},
+                {"id": "B", "text": "What is the nature of the universe?"},
+                {"id": "C", "text": "What is the size of the universe?"},
+                {"id": "D", "text": "What is the composition of the universe?"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 7,
+              "text": "What is the primary focus of physical cosmology?",
+              "options": [
+                {"id": "A", "text": "Theoretical understanding"},
+                {"id": "B", "text": "Empirical observation"},
+                {"id": "C", "text": "Philosophical speculation"},
+                {"id": "D", "text": "Religious interpretation"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 8,
+              "text": "Which of these is a question in physical cosmology?",
+              "options": [
+                {"id": "A", "text": "What is the nature of the universe?"},
+                {"id": "B", "text": "What is the age of the universe?"},
+                {"id": "C", "text": "What is the purpose of the universe?"},
+                {"id": "D", "text": "What is the meaning of the universe?"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 9,
+              "text": "What is the primary focus of philosophical cosmology?",
+              "options": [
+                {"id": "A", "text": "Empirical observation"},
+                {"id": "B", "text": "Theoretical understanding"},
+                {"id": "C", "text": "Mathematical modeling"},
+                {"id": "D", "text": "Experimental verification"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 10,
+              "text": "Which of these is a question in philosophical cosmology?",
+              "options": [
+                {"id": "A", "text": "What is the age of the universe?"},
+                {"id": "B", "text": "What is the nature of the universe?"},
+                {"id": "C", "text": "What is the size of the universe?"},
+                {"id": "D", "text": "What is the composition of the universe?"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 11,
+              "text": "What is the primary focus of physical cosmology?",
+              "options": [
+                {"id": "A", "text": "Theoretical understanding"},
+                {"id": "B", "text": "Empirical observation"},
+                {"id": "C", "text": "Philosophical speculation"},
+                {"id": "D", "text": "Religious interpretation"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 12,
+              "text": "Which of these is a question in physical cosmology?",
+              "options": [
+                {"id": "A", "text": "What is the nature of the universe?"},
+                {"id": "B", "text": "What is the age of the universe?"},
+                {"id": "C", "text": "What is the purpose of the universe?"},
+                {"id": "D", "text": "What is the meaning of the universe?"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 13,
+              "text": "What is the primary focus of philosophical cosmology?",
+              "options": [
+                {"id": "A", "text": "Empirical observation"},
+                {"id": "B", "text": "Theoretical understanding"},
+                {"id": "C", "text": "Mathematical modeling"},
+                {"id": "D", "text": "Experimental verification"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 14,
+              "text": "Which of these is a question in philosophical cosmology?",
+              "options": [
+                {"id": "A", "text": "What is the age of the universe?"},
+                {"id": "B", "text": "What is the nature of the universe?"},
+                {"id": "C", "text": "What is the size of the universe?"},
+                {"id": "D", "text": "What is the composition of the universe?"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 15,
+              "text": "What is the primary focus of physical cosmology?",
+              "options": [
+                {"id": "A", "text": "Theoretical understanding"},
+                {"id": "B", "text": "Empirical observation"},
+                {"id": "C", "text": "Philosophical speculation"},
+                {"id": "D", "text": "Religious interpretation"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 16,
+              "text": "Which of these is a question in physical cosmology?",
+              "options": [
+                {"id": "A", "text": "What is the nature of the universe?"},
+                {"id": "B", "text": "What is the age of the universe?"},
+                {"id": "C", "text": "What is the purpose of the universe?"},
+                {"id": "D", "text": "What is the meaning of the universe?"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 17,
+              "text": "What is the primary focus of philosophical cosmology?",
+              "options": [
+                {"id": "A", "text": "Empirical observation"},
+                {"id": "B", "text": "Theoretical understanding"},
+                {"id": "C", "text": "Mathematical modeling"},
+                {"id": "D", "text": "Experimental verification"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 18,
+              "text": "Which of these is a question in philosophical cosmology?",
+              "options": [
+                {"id": "A", "text": "What is the age of the universe?"},
+                {"id": "B", "text": "What is the nature of the universe?"},
+                {"id": "C", "text": "What is the size of the universe?"},
+                {"id": "D", "text": "What is the composition of the universe?"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 19,
+              "text": "What is the primary focus of physical cosmology?",
+              "options": [
+                {"id": "A", "text": "Theoretical understanding"},
+                {"id": "B", "text": "Empirical observation"},
+                {"id": "C", "text": "Philosophical speculation"},
+                {"id": "D", "text": "Religious interpretation"}
+              ],
+              "answer": "B"
+            },
+            {
+              "id": 20,
+              "text": "Which of these is a question in physical cosmology?",
+              "options": [
+                {"id": "A", "text": "What is the nature of the universe?"},
+                {"id": "B", "text": "What is the age of the universe?"},
+                {"id": "C", "text": "What is the purpose of the universe?"},
+                {"id": "D", "text": "What is the meaning of the universe?"}
+              ],
+              "answer": "B"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+} 

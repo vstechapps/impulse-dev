@@ -1,88 +1,158 @@
 {
   "domains": [
     {
+      "id": "philosophy",
       "name": "Philosophy",
       "description": "Study of fundamental questions about existence, knowledge, and values",
       "icon": "psychology",
-      "subjects": ["metaphysics", "epistemology", "ethics"]
+      "subjects": [
+        { "id": "metaphysics", "name": "Metaphysics" },
+        { "id": "epistemology", "name": "Epistemology" },
+        { "id": "ethics", "name": "Ethics" }
+      ]
     },
     {
+      "id": "mathematics",
       "name": "Mathematics",
       "description": "Study of numbers, quantities, shapes, and patterns",
       "icon": "calculate",
-      "subjects": ["algebra", "calculus", "geometry"]
+      "subjects": [
+        { "id": "algebra", "name": "Algebra" },
+        { "id": "calculus", "name": "Calculus" },
+        { "id": "geometry", "name": "Geometry" }
+      ]
     },
     {
+      "id": "physicalscience",
       "name": "Physical Science",
       "description": "Study of non-living systems and natural phenomena",
       "icon": "science",
-      "subjects": ["physics", "chemistry", "astronomy"]
+      "subjects": [
+        { "id": "physics", "name": "Physics" },
+        { "id": "chemistry", "name": "Chemistry" },
+        { "id": "astronomy", "name": "Astronomy" }
+      ]
     },
     {
+      "id": "biology",
       "name": "Biology",
       "description": "Study of living organisms and their interactions",
       "icon": "biotech",
-      "subjects": ["cellbiology", "genetics", "evolution"]
+      "subjects": [
+        { "id": "cellbiology", "name": "Cell Biology" },
+        { "id": "genetics", "name": "Genetics" },
+        { "id": "evolution", "name": "Evolution" }
+      ]
     },
     {
+      "id": "medicalscience",
       "name": "Medical Science",
       "description": "Study of human health and disease",
       "icon": "medical_services",
-      "subjects": ["anatomy", "physiology", "pharmacology"]
+      "subjects": [
+        { "id": "anatomy", "name": "Anatomy" },
+        { "id": "physiology", "name": "Physiology" },
+        { "id": "pharmacology", "name": "Pharmacology" }
+      ]
     },
     {
+      "id": "engineering",
       "name": "Engineering",
       "description": "Application of scientific principles to design and build",
       "icon": "engineering",
-      "subjects": ["electricalengineering", "mechanicalengineering", "civilengineering"]
+      "subjects": [
+        { "id": "electricalengineering", "name": "Electrical Engineering" },
+        { "id": "mechanicalengineering", "name": "Mechanical Engineering" },
+        { "id": "civilengineering", "name": "Civil Engineering" }
+      ]
     },
     {
+      "id": "computerscience",
       "name": "Computer Science",
       "description": "Study of computation and information processing",
       "icon": "computer",
-      "subjects": ["algorithms", "datastructures", "artificialintelligence"]
+      "subjects": [
+        { "id": "algorithms", "name": "Algorithms" },
+        { "id": "datastructures", "name": "Data Structures" },
+        { "id": "artificialintelligence", "name": "Artificial Intelligence" }
+      ]
     },
     {
+      "id": "socialscience",
       "name": "Social Science",
       "description": "Study of human society and social relationships",
       "icon": "groups",
-      "subjects": ["psychology", "sociology", "economics"]
+      "subjects": [
+        { "id": "psychology", "name": "Psychology" },
+        { "id": "sociology", "name": "Sociology" },
+        { "id": "economics", "name": "Economics" }
+      ]
     },
     {
+      "id": "humanity",
       "name": "Humanity",
       "description": "Study of human culture and expression",
       "icon": "history_edu",
-      "subjects": ["history", "literature", "philosophy"]
+      "subjects": [
+        { "id": "history", "name": "History" },
+        { "id": "literature", "name": "Literature" },
+        { "id": "philosophy", "name": "Philosophy" }
+      ]
     },
     {
+      "id": "arts",
       "name": "Arts",
       "description": "Study of creative expression and aesthetics",
       "icon": "palette",
-      "subjects": ["painting", "music", "cinema"]
+      "subjects": [
+        { "id": "painting", "name": "Painting" },
+        { "id": "music", "name": "Music" },
+        { "id": "cinema", "name": "Cinema" }
+      ]
     },
     {
+      "id": "economics",
       "name": "Economics",
       "description": "Study of production, distribution, and consumption",
       "icon": "trending_up",
-      "subjects": ["macroeconomics", "microeconomics", "internationaleconomics"]
+      "subjects": [
+        { "id": "macroeconomics", "name": "Macroeconomics" },
+        { "id": "microeconomics", "name": "Microeconomics" },
+        { "id": "internationaleconomics", "name": "International Economics" }
+      ]
     },
     {
+      "id": "law",
       "name": "Law",
       "description": "Study of legal systems and principles",
       "icon": "gavel",
-      "subjects": ["criminallaw", "contractlaw", "intellectualproperty"]
+      "subjects": [
+        { "id": "criminallaw", "name": "Criminal Law" },
+        { "id": "contractlaw", "name": "Contract Law" },
+        { "id": "intellectualproperty", "name": "Intellectual Property" }
+      ]
     },
     {
+      "id": "environment",
       "name": "Environment",
       "description": "Study of natural systems and conservation",
       "icon": "eco",
-      "subjects": ["ecology", "climatescience", "conservation"]
+      "subjects": [
+        { "id": "ecology", "name": "Ecology" },
+        { "id": "climatescience", "name": "Climate Science" },
+        { "id": "conservation", "name": "Conservation" }
+      ]
     },
     {
+      "id": "aerospace",
       "name": "Aerospace",
       "description": "Study of aircraft and spacecraft",
       "icon": "rocket",
-      "subjects": ["aeronautics", "astronautics", "spacecraftengineering"]
+      "subjects": [
+        { "id": "aeronautics", "name": "Aeronautics" },
+        { "id": "astronautics", "name": "Astronautics" },
+        { "id": "spacecraftengineering", "name": "Spacecraft Engineering" }
+      ]
     }
   ]
 } 

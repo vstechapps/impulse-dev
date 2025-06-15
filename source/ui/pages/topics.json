@@ -1,0 +1,9 @@
+{
+  "name": "topics",
+  "path": "topics",
+  "components": [
+    "header",
+    "topics",
+    "footer"
+  ]
+}

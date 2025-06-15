@@ -1,0 +1,334 @@
+.topics-container {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: #000;
+    padding: 1rem;
+}
+
+.topics-content {
+    width: 100%;
+    max-width: 1200px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #00ff99;
+    border-radius: 8px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.2);
+}
+
+.title {
+    color: #00ff99;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00ff99;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #00ff99;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
+}
+
+.topic-section {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #00ff99;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.topic-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.3);
+}
+
+.topic-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 255, 153, 0.3);
+}
+
+.topic-header .material-icons {
+    color: #00ff99;
+    font-size: 2rem;
+}
+
+.topic-header h2 {
+    color: #00ff99;
+    margin: 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.topic-content {
+    color: #fff;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.topic-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.topic-detail {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 255, 153, 0.2);
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.topic-detail h3 {
+    color: #00ff99;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.topic-detail p {
+    color: #fff;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.topic-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.topic-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 255, 153, 0.2);
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.topic-link:hover {
+    background: rgba(0, 255, 153, 0.1);
+    border-color: #00ff99;
+    transform: translateX(5px);
+}
+
+.topic-link .material-icons {
+    color: #00ff99;
+    font-size: 1.2rem;
+}
+
+.assessments-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.assessment-item {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 255, 153, 0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.assessment-item:hover {
+    transform: translateX(5px);
+    border-color: #00ff99;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.2);
+}
+
+.assessment-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.assessment-header .material-icons {
+    color: #00ff99;
+    font-size: 1.5rem;
+}
+
+.assessment-header h3 {
+    color: #00ff99;
+    margin: 0;
+    font-size: 1.2rem;
+    flex-grow: 1;
+}
+
+.level-badge {
+    background: rgba(0, 255, 153, 0.1);
+    color: #00ff99;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid #00ff99;
+}
+
+.assessment-details {
+    margin-bottom: 1rem;
+}
+
+.assessment-details p {
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+}
+
+.assessment-meta {
+    display: flex;
+    gap: 1rem;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.assessment-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.assessment-meta .material-icons {
+    font-size: 1.1rem;
+}
+
+.start-assessment-btn, .locked-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.start-assessment-btn {
+    background: #00ff99;
+    color: #000;
+    text-decoration: none;
+}
+
+.start-assessment-btn:hover {
+    background: #00cc7a;
+    transform: translateY(-2px);
+}
+
+.locked-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: #666;
+    cursor: not-allowed;
+}
+
+.error-message {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid #ff0000;
+    border-radius: 8px;
+    color: #ff0000;
+}
+
+.error-message .material-icons {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.error-message p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.home-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+}
+
+.glow-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #00ff99 20%, 
+        #00ff99 80%, 
+        transparent 100%
+    );
+    box-shadow: 0 0 10px #00ff99;
+}
+
+.glow-line.top {
+    top: 0;
+}
+
+.glow-line.bottom {
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .topics-content {
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .assessment-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
