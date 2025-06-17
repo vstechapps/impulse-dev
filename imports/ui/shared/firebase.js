@@ -1,6 +1,6 @@
 // Import Firebase modules from Google CDN
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getFirestore, doc, getDoc, setDoc, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+import { getFirestore, doc, getDoc, setDoc, collection, getDocs, query, limit, startAfter, startAt, where } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 (function (global) {
 
@@ -24,17 +24,69 @@ import { getFirestore, doc, getDoc, setDoc, collection, getDocs } from "https://
     /**
      * Read data from Firestore
      * @param {string} collectionName - Firestore collection name
-     * @param {string} docId - (Optional) Document ID to fetch
-     * @returns {Promise<Object>} - Returns document data or all collection documents
-    */
-    async function read(collectionName, docId = null) {
-        if (docId) {
-            const docRef = doc(this.db, collectionName, docId);
+     * @param {Object} [options] - Query options
+     * @param {string} [options.docId] - Document ID to fetch a single document
+     * @param {number} [options.size=20] - Number of documents per page when fetching collection
+     * @param {Object} [options.lastDoc] - Last document from previous page for pagination
+     * @param {Object} [options.search] - Search options
+     * @param {string} [options.search.key] - Field name to search in
+     * @param {any} [options.search.value] - Value to search for
+     * @returns {Promise<{data: Array<{id: string, [key: string]: any}>, hasMore: boolean, lastDoc: Object}>} Returns paginated data with the following properties:
+     * - data: Array of documents with their IDs and data
+     * - hasMore: Indicates if there are more documents available
+     * - lastDoc: Last document from current page for pagination
+     */
+    async function read(collectionName, options = {docId: null, size: 20, lastDoc: null, search: { key: null, value: null }}) {
+        if (options.docId) {
+            const docRef = doc(this.db, collectionName, options.docId);
             const docSnap = await getDoc(docRef);
-            return docSnap.exists() ? docSnap.data() : null;
-        } else {
-            const querySnapshot = await getDocs(collection(this.db, collectionName));
-            return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            const docData = docSnap.exists() ? { id: docSnap.id, ...docSnap.data() } : null;
+            return {
+                data: docData ? [docData] : [],
+                hasMore: false,
+                lastDoc: docData
+            };
+        } 
+        else {
+            const collectionRef = collection(this.db, collectionName);
+            const pageSize = Math.max(1, Math.min(options.size, 100)); // Limit page size between 1 and 100
+            
+            let q;
+            if (!options.lastDoc) {
+                // First page
+                if (options.search?.key && options.search?.value !== null) {
+                    q = query(collectionRef, 
+                        where(options.search.key, '==', options.search.value),
+                        limit(pageSize + 1)
+                    );
+                } else {
+                    q = query(collectionRef, limit(pageSize + 1));
+                }
+            } else {
+                // Subsequent pages using the last document as cursor
+                if (options.search?.key && options.search?.value !== null) {
+                    q = query(collectionRef, 
+                        where(options.search.key, '==', options.search.value),
+                        startAfter(options.lastDoc),
+                        limit(pageSize + 1)
+                    );
+                } else {
+                    q = query(collectionRef, 
+                        startAfter(options.lastDoc),
+                        limit(pageSize + 1)
+                    );
+                }
+            }
+            
+            const querySnapshot = await getDocs(q);
+            const docs = querySnapshot.docs.slice(0, pageSize);
+            const hasMore = querySnapshot.docs.length > pageSize;
+            
+            return {
+                data: docs.map(doc => ({ id: doc.id, ...doc.data() })),
+                hasMore,
+                lastDoc: docs[docs.length - 1] || null
+            };
         }
     }
 
