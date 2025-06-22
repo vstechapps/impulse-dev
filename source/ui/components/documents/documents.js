@@ -95,7 +95,7 @@ class DocumentsManager {
                 <tr>
                     <td>${docName}</td>
                     <td>
-                        <button class="action-btn edit" onclick="window.location.href='/document/${doc.id}/edit'">
+                        <button class="action-btn edit" onclick="documentsManager.editDocument('${doc.id}')">
                             <span class="material-icons">edit</span>
                         </button>
                         <button class="action-btn delete" onclick="documentsManager.deleteDocument('${doc.id}')">
@@ -123,10 +123,121 @@ class DocumentsManager {
         }
     }
 
+    async editDocument(docId) {
+        try {
+            Loader.show();
+            // Fetch the document data
+            const result = await Firebase.read(this.collection, { docId });
+            const doc = result.data && result.data[0];
+            if (!doc) {
+                this.showError('Document not found');
+                Loader.hide();
+                return;
+            }
+            // Remove id from editable content
+            const { id, ...docContent } = doc;
+            // Fill textarea with pretty JSON
+            const textarea = document.getElementById('editDocumentTextarea');
+            textarea.value = JSON.stringify(docContent, null, 2);
+            // Set modal title to EDIT {document id}
+            const title = document.getElementById('editDocumentModalLabel');
+            if (title) title.textContent = `EDIT ${docId}`;
+            // Store current docId for update
+            this._editingDocId = docId;
+            // Show modal (custom JS)
+            this.showEditModal();
+        } catch (error) {
+            console.error('Error loading document for edit:', error);
+            this.showError('Failed to load document');
+        } finally {
+            Loader.hide();
+        }
+    }
+
+    // Minimal modal show/hide logic
+    showEditModal() {
+        const modal = document.getElementById('editDocumentModal');
+        const backdrop = document.getElementById('editModalBackdrop');
+        modal.classList.add('show');
+        modal.style.display = 'block';
+        modal.removeAttribute('inert');
+        modal.removeAttribute('aria-hidden');
+        // Focus textarea for accessibility
+        const textarea = document.getElementById('editDocumentTextarea');
+        if (textarea) textarea.focus();
+        if (backdrop) {
+            backdrop.classList.add('show');
+            backdrop.style.display = 'block';
+        }
+    }
+    hideEditModal() {
+        const modal = document.getElementById('editDocumentModal');
+        const backdrop = document.getElementById('editModalBackdrop');
+        modal.classList.remove('show');
+        modal.style.display = 'none';
+        modal.setAttribute('inert', '');
+        modal.setAttribute('aria-hidden', 'true');
+        // Move focus to body to avoid focus on hidden element
+        document.body.focus();
+        if (backdrop) {
+            backdrop.classList.remove('show');
+            backdrop.style.display = 'none';
+        }
+    }
+
     showError(message) {
         // Implement error notification
         console.error(message);
     }
 }
 
-new DocumentsManager();
+window.documentsManager = new DocumentsManager();
+
+// Attach update and modal close handlers after DOMContentLoaded
+load = function() {
+    const updateBtn = document.getElementById('updateDocumentBtn');
+    const closeBtn = document.getElementById('closeEditModalBtn');
+    const cancelBtn = document.getElementById('cancelEditModalBtn');
+    const backdrop = document.getElementById('editModalBackdrop');
+    if (updateBtn) {
+        updateBtn.onclick = async () => {
+            const textarea = document.getElementById('editDocumentTextarea');
+            let json;
+            try {
+                json = JSON.parse(textarea.value);
+            } catch (e) {
+                alert('Invalid JSON!');
+                return;
+            }
+            if (!documentsManager._editingDocId || !documentsManager.collection) {
+                alert('Missing document or collection info.');
+                return;
+            }
+            Loader.show();
+            try {
+                await Firebase.write(documentsManager.collection, documentsManager._editingDocId, json);
+                // Hide modal
+                documentsManager.hideEditModal();
+                // Refresh documents list
+                await documentsManager.loadCollection();
+            } catch (err) {
+                alert('Failed to update document.');
+                console.error(err);
+            } finally {
+                Loader.hide();
+            }
+        };
+    }
+    // Close/cancel/backdrop click handlers
+    const closeModal = () => documentsManager.hideEditModal();
+    if (closeBtn) closeBtn.onclick = closeModal;
+    if (cancelBtn) cancelBtn.onclick = closeModal;
+    if (backdrop) backdrop.onclick = closeModal;
+    // Optional: ESC key closes modal
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') documentsManager.hideEditModal();
+    });
+    
+};
+
+load();

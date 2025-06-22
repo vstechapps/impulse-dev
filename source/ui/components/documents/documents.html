@@ -40,3 +40,23 @@
         <div class="glow-line bottom"></div>
     </div>
 </div>
+
+<!-- Edit Document Modal (Custom JS, no Bootstrap JS) -->
+<div id="editDocumentModal" class="modal" tabindex="-1" aria-labelledby="editDocumentModalLabel" style="display:none;">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editDocumentModalLabel">Edit Document</h5>
+        <button type="button" class="btn-close" id="closeEditModalBtn" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="height:60vh; display:flex; flex-direction:column;">
+        <textarea id="editDocumentTextarea" style="flex:1 1 auto; width:100%; resize:vertical; min-height:200px; max-height:50vh; overflow:auto;" class="form-control" spellcheck="false"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="cancelEditModalBtn">Cancel</button>
+        <button type="button" class="btn btn-primary" id="updateDocumentBtn" style="min-width:100px;">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop" id="editModalBackdrop" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:1040;"></div>
