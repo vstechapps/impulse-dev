@@ -44,20 +44,3 @@
         <div class="glow-line bottom"></div>
     </div>
 </div>
-
-<script>
-function handleGoogleLogin() {
-    // Implement Google OAuth login
-    window.location.href = '/auth/google';
-}
-
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const remember = document.getElementById('remember').checked;
-    
-    // Implement traditional login logic here
-    console.log('Login attempt:', { email, password, remember });
-});
-</script>

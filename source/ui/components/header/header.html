@@ -8,15 +8,23 @@
             <span class="material-icons">close</span>
         </button>
     </div>
-    <div class="menu-items-container">
+    <div class="menu-items-container" id="menuItemsContainer">
+        <div id="userInfo" style="display:none; align-items:center; gap:0.5rem; margin-bottom:1rem;">
+            <img id="userImage" src="" alt="User" style="width:32px; height:32px; border-radius:50%; border:1px solid #00ff99; background:#111;">
+            <span id="userName" style="color:#00ff99; font-family:'Courier New',monospace;"></span>
+        </div>
         <a href="/explore" class="menu-item">
             <span class="material-icons">folder</span>
             <span>Explore</span>
         </a>
-        <a href="/login" class="menu-item">
+        <a href="/login" class="menu-item" id="loginMenuItem">
             <span class="material-icons">login</span>
             <span>Login</span>
         </a>
+        <button class="menu-item" id="logoutMenuItem" style="display:none; background:none; border:none; cursor:pointer; align-items:center;">
+            <span class="material-icons">logout</span>
+            <span>Logout</span>
+        </button>
     </div>
 </div>
 
@@ -25,3 +33,5 @@
         <img src="resources/image.png" alt="IMPULSE Logo" class="header-logo-responsive d-inline-block" />
     </div>
 </header>
+
+<script src="header.js"></script>
