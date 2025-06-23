@@ -27,7 +27,7 @@ import { getAnalytics, logEvent as firebaseLogEvent } from "https://www.gstatic.
                     console.log("Auth state: user and email present", user.email);
                     // Fetch user object from Firestore 'users' collection by email
                     try {
-                        const userDocRef = doc(this.db, 'users', user.email);
+                        const userDocRef = doc(this.db, 'users', user.uid);
                         const userDocSnap = await getDoc(userDocRef);
                         if (userDocSnap.exists()) {
                             this.userData = { id: userDocSnap.id, ...userDocSnap.data() };
@@ -35,7 +35,7 @@ import { getAnalytics, logEvent as firebaseLogEvent } from "https://www.gstatic.
                         } else {
                             // Create user object if it doesn't exist
                             const newUser = {
-                                id: user.email,
+                                id: user.uid,
                                 email: user.email,
                                 name: user.displayName || '',
                                 image: user.photoURL || '',
