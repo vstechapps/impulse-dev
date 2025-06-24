@@ -64,24 +64,34 @@ function initializeSearch() {
 
     searchInput.addEventListener('input', function(e) {
         const searchTerm = e.target.value.toLowerCase();
-        const subfolders = document.querySelectorAll('.subfolder');
-        
-        subfolders.forEach(subfolder => {
-            const text = subfolder.querySelector('span:last-child')?.textContent.toLowerCase() || '';
-            const parentSection = subfolder.closest('.folder-section');
-            
-            if (text.includes(searchTerm)) {
-                subfolder.style.display = 'flex';
-                parentSection.style.display = 'block';
+        const folderSections = document.querySelectorAll('.folder-section');
+
+        folderSections.forEach(section => {
+            const domainName = section.querySelector('.folder-header h2')?.textContent.toLowerCase() || '';
+            const subfolders = section.querySelectorAll('.subfolder');
+            let anyVisible = false;
+
+            // If domain name matches, show all subfolders
+            if (domainName.includes(searchTerm) && searchTerm.length > 0) {
+                subfolders.forEach(subfolder => {
+                    subfolder.style.display = 'flex';
+                });
+                anyVisible = true;
             } else {
-                subfolder.style.display = 'none';
+                // Otherwise, show only matching subfolders
+                subfolders.forEach(subfolder => {
+                    const text = subfolder.querySelector('span:last-child')?.textContent.toLowerCase() || '';
+                    if (text.includes(searchTerm)) {
+                        subfolder.style.display = 'flex';
+                        anyVisible = true;
+                    } else {
+                        subfolder.style.display = 'none';
+                    }
+                });
             }
-            
-            // Hide empty sections
-            const visibleSubfolders = parentSection.querySelectorAll('.subfolder[style="display: flex"]');
-            if (visibleSubfolders.length === 0) {
-                parentSection.style.display = 'none';
-            }
+
+            // Show section if any subfolder is visible, otherwise hide
+            section.style.display = anyVisible ? 'block' : 'none';
         });
     });
 }

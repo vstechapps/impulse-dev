@@ -1,3 +1,23 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #050d05 0%, #001a0a 100%);
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+#home {
+    min-height: 100vh;
+    width: 100vw;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .assessment-container {
     padding: 1rem;
     display: flex;
@@ -19,15 +39,7 @@
 }
 
 .assessment-content {
-    text-align: center;
-    width: 100%;
-    max-width: 500px;
-    padding: clamp(1rem, 3vw, 2rem);
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 8px;
-    box-shadow: 0 0 30px rgba(0, 255, 0, 0.1);
-    position: relative;
-    overflow: hidden;
+    display: none;
 }
 
 .exit-btn {
@@ -156,5 +168,89 @@
     }
     100% {
         transform: translateX(-100%);
+    }
+}
+
+/* Layout for two main sections */
+.main-sections {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 3rem 1rem;
+    flex-wrap: wrap;
+}
+
+/* Main section containers */
+.kbase-section, .assessment-section {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 20, 0, 0.95) 100%);
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.15);
+    padding: 2.5rem 2rem;
+    min-width: 320px;
+    max-width: 400px;
+    flex: 1 1 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+/* .section-content is used for both sections */
+.section-content {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.section-title {
+    color: #00ff99;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.section-description {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.5;
+}
+
+.explore-btn {
+    background: transparent;
+    border: 2px solid #00ff99;
+    color: #00ff99;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.15);
+}
+
+.explore-btn:hover {
+    background: rgba(0, 255, 0, 0.08);
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+}
+
+/* Responsive remains the same */
+@media (max-width: 900px) {
+    .main-sections {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    .kbase-section, .assessment-section {
+        max-width: 95vw;
+        min-width: 0;
     }
 }

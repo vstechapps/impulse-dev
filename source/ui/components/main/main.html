@@ -1,11 +1,21 @@
-<div id="home"><div class="assessment-container">
-    <div class="assessment-content">
-        <div class="glow-line top"></div>
-        <h1 class="title">Assessment Portal</h1>
+<div id="home">
+  <div class="main-sections">
+    <div class="kbase-section">
+      <div class="section-content">
+        <h1 class="section-title">Knowledge Base</h1>
+        <p class="section-description">Explore curated domains, subjects, and topics to expand your understanding.</p>
+        <button class="explore-btn" onclick="window.location.href='/explore'">Explore</button>
+      </div>
+    </div>
+    <div class="assessment-section">
+      <div class="section-content">
+        <h1 class="section-title">Assessment Portal</h1>
+        <p class="section-description">Enter your Assessment ID to begin your evaluation.</p>
         <div class="digital-input-wrapper">
-            <input type="text" id="assessmentId" class="digital-input" placeholder="Assessment ID">
+          <input type="text" id="assessmentId" class="digital-input" placeholder="Assessment ID">
         </div>
         <button class="submit-btn" onclick="window.location.href='/test'">START</button>
-        <div class="glow-line bottom"></div>
+      </div>
     </div>
+  </div>
 </div>
