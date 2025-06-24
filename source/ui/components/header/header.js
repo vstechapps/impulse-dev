@@ -35,16 +35,18 @@ function handleLogout() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+load = function() {
     updateMenuForUser();
     const logoutMenuItem = document.getElementById('logoutMenuItem');
     if (logoutMenuItem) {
         logoutMenuItem.onclick = handleLogout;
     }
-    // Listen for auth state changes to update menu
-    if (window.Firebase && Firebase.auth) {
-        Firebase.auth.onAuthStateChanged(() => {
+    // Listen for USER_REFRESH events from Firebase publish
+    window.addEventListener('message', function(event) {
+        if (event && event.data && event.data.type === 'USER_REFRESH') {
             updateMenuForUser();
-        });
-    }
-});
+        }
+    });
+};
+
+load();

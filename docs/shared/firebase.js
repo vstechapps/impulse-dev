@@ -2,9 +2,42 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getFirestore, doc, getDoc, setDoc, collection, getDocs, query, limit, startAfter, startAt, where } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-import { getAnalytics, logEvent as firebaseLogEvent } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
 
 (function (global) {
+
+    /**
+     * Event types for user authentication
+     */
+    const USER_EVENTS = {
+        LOGIN: 'USER_LOGIN',
+        LOGOUT: 'USER_LOGOUT',
+        REGISTER: 'USER_REGISTER',
+        REFRESH: 'USER_REFRESH'
+    };
+
+    /**
+     * Publish user event to all components
+     * @param {string} event - Type of event
+     * @param {Object} data - User data object
+     */
+    function publish(event, data={}) {
+        const message = {
+            type: event,
+            timestamp: Date.now(),
+            ...data
+        };
+
+        // Broadcast to parent window (if in iframe)
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage(message, '*');
+        }
+
+        // Broadcast to current window
+        window.postMessage(message, window.location.origin);
+
+        console.log(`Broadcasted user event: ${event}`, message);
+    }
 
     /**
      * Initializes the firebase using firebase config
@@ -27,15 +60,17 @@ import { getAnalytics, logEvent as firebaseLogEvent } from "https://www.gstatic.
                     console.log("Auth state: user and email present", user.email);
                     // Fetch user object from Firestore 'users' collection by email
                     try {
-                        const userDocRef = doc(this.db, 'users', user.email);
+                        const userDocRef = doc(this.db, 'users', user.uid);
                         const userDocSnap = await getDoc(userDocRef);
                         if (userDocSnap.exists()) {
                             this.userData = { id: userDocSnap.id, ...userDocSnap.data() };
-                            logEvent('USER_LOGIN', { email: user.email });
+                            this.log('USER_LOGIN', { email: user.email });
+                            // Broadcast user login event
+                            this.publish(USER_EVENTS.REFRESH, this.userData);
                         } else {
                             // Create user object if it doesn't exist
                             const newUser = {
-                                id: user.email,
+                                id: user.uid,
                                 email: user.email,
                                 name: user.displayName || '',
                                 image: user.photoURL || '',
@@ -45,7 +80,10 @@ import { getAnalytics, logEvent as firebaseLogEvent } from "https://www.gstatic.
                             await setDoc(userDocRef, newUser);
                             this.userData = newUser;
                             console.log("Created new user in Firestore:", newUser);
-                            logEvent('USER_REGISTER', { email: user.email });
+                            this.log(USER_EVENTS.REGISTER, this.userData);
+                            // Broadcast user registration event
+                            this.publish(USER_EVENTS.REFRESH, this.userData);
+                           
                         }
                         console.log("User signed in:", user, "User data:", this.userData);
                     } catch (err) {
@@ -53,8 +91,11 @@ import { getAnalytics, logEvent as firebaseLogEvent } from "https://www.gstatic.
                         console.error("Failed to fetch or create user data from Firestore:", err);
                     }
                 } else {
+                    this.log(USER_EVENTS.LOGOUT, this.userData);
                     this.userData = null;
                     console.log("User signed out");
+                    // Broadcast logout event
+                    this.publish(USER_EVENTS.REFRESH, null);
                 }
             });
             console.log("Loaded Database: ",this.db);
@@ -82,7 +123,19 @@ import { getAnalytics, logEvent as firebaseLogEvent } from "https://www.gstatic.
         }
     }
 
-    
+    /**
+     * Logout user
+     */
+    async function logout() {
+        if (!this.auth) throw new Error("Firebase Auth not initialized");
+        try {
+            await signOut(this.auth);
+            // Logout event will be handled by onAuthStateChanged
+        } catch (err) {
+            console.error("Logout failed", err);
+            throw err;
+        }
+    }
 
     /**
      * Get the current user data object from Firestore
@@ -175,9 +228,9 @@ import { getAnalytics, logEvent as firebaseLogEvent } from "https://www.gstatic.
     /**
      * Log an event to Firebase Analytics
      */
-    function logEvent(eventName, params) {
+    function log(eventName, params) {
         if (this.analytics) {
-            firebaseLogEvent(this.analytics, eventName, params);
+            logEvent(this.analytics, eventName, params);
         } else {
             console.warn('Analytics not initialized');
         }
@@ -189,8 +242,10 @@ import { getAnalytics, logEvent as firebaseLogEvent } from "https://www.gstatic.
         read,
         write,
         loginWithGoogle,
+        logout,
         getUser,
-        logEvent
+        log,
+        publish
     };
 
 })(window);
