@@ -1,15 +1,54 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href="/components/topics/topics.css" rel="stylesheet">
+<template id="topic-section-template">
+    <div class="topic-section">
+        <div class="topic-header">
+            <span class="material-icons">school</span>
+            <h2 class="topic-name"></h2>
+        </div>
+        <div class="topic-content">
+            <div class="assessments-list"></div>
+        </div>
+    </div>
+</template>
+<template id="assessment-item-template">
+    <div class="assessment-item">
+        <div class="assessment-header">
+            <span class="material-icons assessment-icon"></span>
+            <h3 class="assessment-name"></h3>
+            <span class="level-badge"></span>
+        </div>
+        <div class="assessment-details">
+            <p class="assessment-title"></p>
+            <div class="assessment-meta">
+                <span class="time-limit">
+                    <span class="material-icons">timer</span>
+                    <span class="time-value"></span>
+                </span>
+                <span class="questions-count">
+                    <span class="material-icons">help_outline</span>
+                    <span class="questions-value"></span>
+                </span>
+            </div>
+        </div>
+        <div class="assessment-action"></div>
+    </div>
+</template>
+<template id="error-message-template">
+    <div class="error-message">
+        <span class="material-icons">error_outline</span>
+        <p class="error-text"></p>
+        <a href="/" class="home-button">
+            <span class="material-icons">home</span>
+            Return to Home
+        </a>
+    </div>
+</template>
 <div class="topics-container">
     <div class="topics-content">
         <div class="glow-line top"></div>
         <h1 class="title">__VOID__</h1>
         
-        <div class="search-container">
-            <span class="material-icons search-icon">search</span>
-            <input type="text" class="search-input" placeholder="Quantum Search" id="searchInput">
-        </div>
-
         <div class="topics-container" id="topicsContainer">
             <!-- Topics will be dynamically loaded here -->
         </div>

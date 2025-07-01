@@ -1,4 +1,29 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<template id="domain-section-template">
+    <div class="folder-section">
+        <div class="folder-header">
+            <span class="material-icons domain-icon"></span>
+            <h2 class="domain-name"></h2>
+        </div>
+        <div class="subfolders"></div>
+    </div>
+</template>
+<template id="subfolder-template">
+    <a href="#" class="subfolder">
+        <span class="material-icons">folder</span>
+        <span class="subfolder-name"></span>
+    </a>
+</template>
+<template id="error-message-template">
+    <div class="error-message">
+        <span class="material-icons">error_outline</span>
+        <p class="error-text"></p>
+        <a href="/" class="home-button">
+            <span class="material-icons">home</span>
+            Return to Home
+        </a>
+    </div>
+</template>
 <div class="domains-container">
     <div class="domains-content">
         <div class="glow-line top"></div>
