@@ -1,6 +1,9 @@
+header {
+    background-color: black;
+}
+
 .logo-container {
     background-color: black;
-    height: 15vh;
     max-height: 90px;
 }
 

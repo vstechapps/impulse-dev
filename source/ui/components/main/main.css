@@ -3,12 +3,10 @@ html, body {
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #050d05 0%, #001a0a 100%);
-    min-height: 100vh;
-    width: 100vw;
     box-sizing: border-box;
 }
 
-#home {
+#main {
     min-height: 100vh;
     width: 100vw;
     background: transparent;
