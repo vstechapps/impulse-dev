@@ -4,7 +4,9 @@ function handleGoogleLogin() {
             .then(user => {
                 // Optionally redirect or show a message
                 console.log('Google login successful:', user);
-                window.location.href = '/'; // Redirect to home or dashboard
+                if(user.role=="ADMIN"){
+                    window.location.href = '/admin';
+                }
             })
             .catch(err => {
                 alert('Google login failed.');

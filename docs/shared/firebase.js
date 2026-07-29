@@ -44,9 +44,10 @@ import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.7.
      */
     async function init() {
         try{
-            const config = await (await fetch("firebase-config.json")).json();
+            let config = await (await fetch("firebase.config.json")).json();
             // Initialize Firebase
             console.log('Loading Firebase: ',config);
+            config = await window.Crypto.decjson(config);
             this.app = initializeApp(config);
             this.db = getFirestore(this.app);
             this.auth = getAuth(this.app);

@@ -195,6 +195,10 @@ window.documentsManager = new DocumentsManager();
 
 // Attach update and modal close handlers after DOMContentLoaded
 load = function() {
+    const user = window.Firebase && typeof Firebase.getUser === 'function' ? Firebase.getUser() : null;
+    if(user==null || user.role!="ADMIN"){
+        goto("");
+    }
     const updateBtn = document.getElementById('updateDocumentBtn');
     const closeBtn = document.getElementById('closeEditModalBtn');
     const cancelBtn = document.getElementById('cancelEditModalBtn');

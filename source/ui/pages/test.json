@@ -1,9 +1,0 @@
-{
-  "name": "test",
-  "path": "test",
-  "components": [
-    "header",
-    "assessment",
-    "footer"
-  ]
-}

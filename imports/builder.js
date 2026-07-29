@@ -11,7 +11,7 @@ var include_files = [
     "404.html",
     "bundle.json",
     "CNAME",
-    "firebase-config.json"
+    "firebase.config.json"
 ];
 
 var include_folders = [

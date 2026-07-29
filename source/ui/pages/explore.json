@@ -1,9 +1,0 @@
-{
-  "name": "explore",
-  "path": "explore",
-  "components": [
-    "header",
-    "domains",
-    "footer"
-  ]
-}

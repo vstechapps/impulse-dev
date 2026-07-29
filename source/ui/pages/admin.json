@@ -1,6 +1,7 @@
 {
   "name": "admin",
   "path": "admin",
+  "title": "Admin",
   "components": [
     "header",
     "documents",
