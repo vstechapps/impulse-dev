@@ -18,15 +18,18 @@ function updateMenuForUser() {
         if (userName) userName.textContent = user.name || user.email;
         if (loginMenuItem) loginMenuItem.style.display = 'none';
         if (logoutMenuItem) logoutMenuItem.style.display = 'flex';
+        sessionStorage.setItem("user",JSON.stringify(user));
     } else {
         if (userInfo) userInfo.style.display = 'none';
         if (loginMenuItem) loginMenuItem.style.display = '';
         if (logoutMenuItem) logoutMenuItem.style.display = 'none';
+        sessionStorage.clear();
     }
 }
 
 // Logout handler
 function handleLogout() {
+    sessionStorage.clear();
     if (window.Firebase && Firebase.auth) {
         Firebase.auth.signOut().then(() => {
             updateMenuForUser();

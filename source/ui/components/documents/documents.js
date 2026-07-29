@@ -6,12 +6,15 @@ class DocumentsManager {
         this.documents = [];
         this.lastDoc = null;
         this.hasMore = false;
-
+        var user = sessionStorage.getItem("user");
+        if(user==null) {goto(""); return;}
+        user = JSON.parse(user);
+        if(user.role!="ADMIN"){goto(""); return;}
         this.initialize();
         this.listen();
     }
 
-    initialize() {
+    initialize() { 
         console.log("DocumentsManager:initialize");
         this.tableBody = document.getElementById('documentsTableBody');
         this.collectionInput = document.getElementById('collectionInput');
@@ -195,10 +198,6 @@ window.documentsManager = new DocumentsManager();
 
 // Attach update and modal close handlers after DOMContentLoaded
 load = function() {
-    const user = window.Firebase && typeof Firebase.getUser === 'function' ? Firebase.getUser() : null;
-    if(user==null || user.role!="ADMIN"){
-        goto("");
-    }
     const updateBtn = document.getElementById('updateDocumentBtn');
     const closeBtn = document.getElementById('closeEditModalBtn');
     const cancelBtn = document.getElementById('cancelEditModalBtn');

@@ -31,3 +31,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+// Listen for USER_REFRESH events from Firebase publish
+window.addEventListener('message', function(event) {
+    if (event && event.data && event.data.type === 'USER_REFRESH') {
+        if(event.data.role=="ADMIN"){
+            goto("admin");
+        }
+    }
+});
+
