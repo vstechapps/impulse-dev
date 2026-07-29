@@ -179,8 +179,9 @@ import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.7.
             if (!options.lastDoc) {
                 // First page
                 if (options.search?.key && options.search?.value !== null) {
-                    q = query(collectionRef, 
-                        where(options.search.key, '==', options.search.value),
+                    q = query(collectionRef,
+                        where(options.search.key, ">=", options.search.value),
+                        where(options.search.key, "<=", options.search.value + "\uf8ff"),
                         limit(pageSize + 1)
                     );
                 } else {
@@ -190,7 +191,8 @@ import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.7.
                 // Subsequent pages using the last document as cursor
                 if (options.search?.key && options.search?.value !== null) {
                     q = query(collectionRef, 
-                        where(options.search.key, '==', options.search.value),
+                        where(options.search.key, ">=", options.search.value),
+                        where(options.search.key, "<=", options.search.value + "\uf8ff"),
                         startAfter(options.lastDoc),
                         limit(pageSize + 1)
                     );

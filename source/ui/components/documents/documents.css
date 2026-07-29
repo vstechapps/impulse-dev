@@ -29,10 +29,33 @@
     text-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
 }
 
+.documents-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0 auto 1rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.search-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+}
+
 .search-container {
     position: relative;
-    max-width: 500px;
-    margin: 0 auto 1rem;
+    flex: 1;
+    min-width: 220px;
+}
+
+.filter-row {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .search-icon {
@@ -43,10 +66,13 @@
     color: #00ff99;
 }
 
-.search-input {
+.search-input,
+.filter-input,
+.modal-input,
+.modal-textarea {
     width: 100%;
-    padding: 1rem 1rem 1rem 3rem;
-    font-size: 1.1rem;
+    padding: 0.9rem 1rem;
+    font-size: 1rem;
     background: rgba(0, 0, 0, 0.8);
     border: 2px solid #00ff99;
     color: #00ff99;
@@ -56,12 +82,38 @@
     transition: all 0.3s ease;
 }
 
-.search-input::placeholder {
+.search-input {
+    padding-left: 3rem;
+}
+
+.search-input::placeholder,
+.filter-input::placeholder,
+.modal-input::placeholder,
+.modal-textarea::placeholder {
     color: rgba(0, 255, 153, 0.5);
 }
 
-.search-input:focus {
+.search-input:focus,
+.filter-input:focus,
+.modal-input:focus,
+.modal-textarea:focus {
     box-shadow: 0 0 15px rgba(0, 255, 153, 0.5);
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 2px solid #00ff99;
+    color: #00ff99;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Courier New', monospace;
+}
+
+.secondary-btn:hover {
+    background: rgba(0, 255, 153, 0.1);
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
 }
 
 .documents-table-container {
@@ -200,7 +252,8 @@
 .modal.show { display: block !important; }
 .modal-backdrop.show { display: block !important; }
 
-#editDocumentModal .modal-content {
+#editDocumentModal .modal-content,
+#addDocumentModal .modal-content {
   background: rgba(0, 0, 0, 0.95);
   border: 2px solid #00ff99;
   border-radius: 10px;
@@ -208,32 +261,38 @@
   color: #00ff99;
   font-family: 'Courier New', monospace;
 }
-#editDocumentModal .modal-header {
+#editDocumentModal .modal-header,
+#addDocumentModal .modal-header {
   border-bottom: 1px solid #00ff9944;
   background: rgba(0,0,0,0.8);
   box-shadow: 0 2px 10px 0 #00ff9933;
 }
-#editDocumentModal .modal-title {
+#editDocumentModal .modal-title,
+#addDocumentModal .modal-title {
   color: #00ff99;
   text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff9933;
   letter-spacing: 2px;
   font-size: 1.5rem;
   text-transform: uppercase;
 }
-#editDocumentModal .btn-close {
+#editDocumentModal .btn-close,
+#addDocumentModal .btn-close {
   filter: invert(70%) sepia(100%) saturate(1000%) hue-rotate(90deg);
   opacity: 0.8;
   transition: opacity 0.2s;
 }
-#editDocumentModal .btn-close:hover {
+#editDocumentModal .btn-close:hover,
+#addDocumentModal .btn-close:hover {
   opacity: 1;
 }
-#editDocumentModal .modal-footer {
+#editDocumentModal .modal-footer,
+#addDocumentModal .modal-footer {
   border-top: 1px solid #00ff9944;
   background: rgba(0,0,0,0.8);
   box-shadow: 0 -2px 10px 0 #00ff9933;
 }
-#editDocumentModal .btn-primary {
+#editDocumentModal .btn-primary,
+#addDocumentModal .btn-primary {
   background: transparent;
   border: 2px solid #00ff99;
   color: #00ff99;
@@ -241,23 +300,52 @@
   box-shadow: 0 0 10px #00ff9955;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
-#editDocumentModal .btn-primary:hover {
+#editDocumentModal .btn-primary:hover,
+#addDocumentModal .btn-primary:hover {
   background: #00ff9911;
   color: #00ff99;
   box-shadow: 0 0 20px #00ff99;
 }
-#editDocumentModal .btn-secondary {
+#editDocumentModal .btn-secondary,
+#addDocumentModal .btn-secondary {
   background: transparent;
   border: 2px solid #00ff9944;
   color: #00ff99;
   font-family: 'Courier New', monospace;
   transition: background 0.2s, color 0.2s;
 }
-#editDocumentModal .btn-secondary:hover {
+#editDocumentModal .btn-secondary:hover,
+#addDocumentModal .btn-secondary:hover {
   background: #00ff9911;
   color: #00ff99;
 }
-#editDocumentModal textarea {
+#editDocumentModal textarea,
+#addDocumentModal textarea {
+  min-height: 220px;
+}
+
+.add-document-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.add-document-form label {
+  color: #00ff99;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.add-document-form .modal-input,
+.add-document-form .modal-textarea {
+  margin-bottom: 0.25rem;
+}
+
+.add-document-form .modal-textarea {
+  min-height: 240px;
+  resize: vertical;
+}
+
   background: rgba(0,0,0,0.85);
   color: #00ff99;
   border: 2px solid #00ff99;

@@ -2,10 +2,22 @@
     <div class="documents-content">
         <div class="glow-line top"></div>
         <h1 class="title">ADMIN KBASE</h1>
-        
-        <div class="search-container">
-            <span class="material-icons search-icon">search</span>
-            <input type="text" class="search-input" placeholder="Collection Name" id="collectionInput">
+
+        <div class="documents-actions">
+            <button type="button" class="secondary-btn add-btn" id="addDocumentBtn">Add Document</button>
+            <div class="search-controls">
+                <div class="search-container">
+                    <span class="material-icons search-icon">search</span>
+                    <input type="text" class="search-input" placeholder="Collection Name" id="collectionInput">
+                </div>
+                <div class="filter-row">
+                    <input type="text" class="filter-input" id="searchKeyInput" placeholder="Field key">
+                </div>
+                <div class="filter-row">
+                    <input type="text" class="filter-input" id="searchValueInput" placeholder="Field value">
+                </div>
+                <button type="button" class="secondary-btn" id="searchBtn">Search</button>
+            </div>
         </div>
 
         <div class="documents-table-container">
@@ -60,3 +72,30 @@
   </div>
 </div>
 <div class="modal-backdrop" id="editModalBackdrop" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:1040;"></div>
+
+<!-- Add Document Modal -->
+<div id="addDocumentModal" class="modal" tabindex="-1" aria-labelledby="addDocumentModalLabel" style="display:none;">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addDocumentModalLabel">Add Document</h5>
+        <button type="button" class="btn-close" id="closeAddModalBtn" aria-label="Close"></button>
+      </div>
+      <div class="modal-body add-document-form">
+        <label for="addCollectionInput">Collection Name</label>
+        <input type="text" id="addCollectionInput" class="modal-input" placeholder="Collection Name">
+
+        <label for="addDocumentIdInput">Document ID</label>
+        <input type="text" id="addDocumentIdInput" class="modal-input" placeholder="Document ID">
+
+        <label for="addDocumentTextarea">JSON Document</label>
+        <textarea id="addDocumentTextarea" class="modal-textarea" spellcheck="false" placeholder="{\n  \"name\": \"example\"\n}"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="cancelAddModalBtn">Cancel</button>
+        <button type="button" class="btn btn-primary" id="saveAddDocumentBtn" style="min-width:100px;">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop" id="addModalBackdrop" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:1040;"></div>

@@ -18,6 +18,10 @@ class DocumentsManager {
         console.log("DocumentsManager:initialize");
         this.tableBody = document.getElementById('documentsTableBody');
         this.collectionInput = document.getElementById('collectionInput');
+        this.searchKeyInput = document.getElementById('searchKeyInput');
+        this.searchValueInput = document.getElementById('searchValueInput');
+        this.searchBtn = document.getElementById('searchBtn');
+        this.addDocumentBtn = document.getElementById('addDocumentBtn');
         this.prevPageBtn = document.getElementById('prevPage');
         this.nextPageBtn = document.getElementById('nextPage');
         this.currentPageSpan = document.getElementById('currentPage');
@@ -26,22 +30,55 @@ class DocumentsManager {
 
     listen() {
         console.log("DocumentsManager:listen");
-        this.collectionInput.addEventListener('change', () => this.loadCollection());
+        this.collectionInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') this.loadCollection();
+        });
+        this.searchKeyInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') this.loadCollection();
+        });
+        this.searchValueInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') this.loadCollection();
+        });
+        this.searchBtn.addEventListener('click', () => this.loadCollection());
+        this.addDocumentBtn.addEventListener('click', () => this.showAddModal());
         this.prevPageBtn.addEventListener('click', () => this.changePage(-1));
         this.nextPageBtn.addEventListener('click', () => this.changePage(1));
     }
 
+    getReadOptions(extra = {}) {
+        const options = { size: this.itemsPerPage, ...extra };
+        const searchKey = this.searchKeyInput?.value?.trim();
+        const searchValue = this.searchValueInput?.value?.trim();
+
+        if (searchKey && searchValue !== '') {
+            options.search = { key: searchKey, value: searchValue };
+        }
+
+        return options;
+    }
+
     async loadCollection() {
-        this.collection = this.collectionInput.value.toLowerCase();
+        this.collection = this.collectionInput.value.trim().toLowerCase();
+        if (!this.collection) {
+            this.showError('Please enter a collection name');
+            return;
+        }
+
         Loader.show();
-        const result = await Firebase.read(this.collection, { size: this.itemsPerPage });
-        this.documents = result.data;
-        this.lastDoc = result.lastDoc;
-        this.hasMore = result.hasMore;
-        this.currentPage = 1;
-        this.updatePagination();
-        this.renderDocuments();
-        Loader.hide();
+        try {
+            const result = await Firebase.read(this.collection, this.getReadOptions());
+            this.documents = result.data;
+            this.lastDoc = result.lastDoc;
+            this.hasMore = result.hasMore;
+            this.currentPage = 1;
+            this.updatePagination();
+            this.renderDocuments();
+        } catch (error) {
+            console.error('Error loading collection:', error);
+            this.showError('Failed to load documents');
+        } finally {
+            Loader.hide();
+        }
     }
 
     async changePage(delta) {
@@ -51,19 +88,15 @@ class DocumentsManager {
         Loader.show();
         try {
             if (delta > 0) {
-                // Load next page
-                const result = await Firebase.read(this.collection, {
-                    size: this.itemsPerPage,
+                const result = await Firebase.read(this.collection, this.getReadOptions({
                     lastDoc: this.lastDoc
-                });
+                }));
                 this.documents = result.data;
                 this.lastDoc = result.lastDoc;
                 this.hasMore = result.hasMore;
                 this.currentPage++;
             } else {
-                // For previous page, we need to reload from start
-                // This is a limitation of cursor-based pagination
-                const result = await Firebase.read(this.collection, { size: this.itemsPerPage });
+                const result = await Firebase.read(this.collection, this.getReadOptions());
                 this.documents = result.data;
                 this.lastDoc = result.lastDoc;
                 this.hasMore = result.hasMore;
@@ -129,7 +162,6 @@ class DocumentsManager {
     async editDocument(docId) {
         try {
             Loader.show();
-            // Fetch the document data
             const result = await Firebase.read(this.collection, { docId });
             const doc = result.data && result.data[0];
             if (!doc) {
@@ -137,17 +169,12 @@ class DocumentsManager {
                 Loader.hide();
                 return;
             }
-            // Remove id from editable content
             const { id, ...docContent } = doc;
-            // Fill textarea with pretty JSON
             const textarea = document.getElementById('editDocumentTextarea');
             textarea.value = JSON.stringify(docContent, null, 2);
-            // Set modal title to EDIT {document id}
             const title = document.getElementById('editDocumentModalLabel');
             if (title) title.textContent = `EDIT ${docId}`;
-            // Store current docId for update
             this._editingDocId = docId;
-            // Show modal (custom JS)
             this.showEditModal();
         } catch (error) {
             console.error('Error loading document for edit:', error);
@@ -157,51 +184,119 @@ class DocumentsManager {
         }
     }
 
-    // Minimal modal show/hide logic
     showEditModal() {
+        this.hideAddModal();
         const modal = document.getElementById('editDocumentModal');
         const backdrop = document.getElementById('editModalBackdrop');
+        if (!modal || !backdrop) return;
         modal.classList.add('show');
         modal.style.display = 'block';
         modal.removeAttribute('inert');
         modal.removeAttribute('aria-hidden');
-        // Focus textarea for accessibility
         const textarea = document.getElementById('editDocumentTextarea');
         if (textarea) textarea.focus();
-        if (backdrop) {
-            backdrop.classList.add('show');
-            backdrop.style.display = 'block';
-        }
+        backdrop.classList.add('show');
+        backdrop.style.display = 'block';
     }
+
     hideEditModal() {
         const modal = document.getElementById('editDocumentModal');
         const backdrop = document.getElementById('editModalBackdrop');
+        if (!modal || !backdrop) return;
         modal.classList.remove('show');
         modal.style.display = 'none';
         modal.setAttribute('inert', '');
         modal.setAttribute('aria-hidden', 'true');
-        // Move focus to body to avoid focus on hidden element
         document.body.focus();
-        if (backdrop) {
-            backdrop.classList.remove('show');
-            backdrop.style.display = 'none';
+        backdrop.classList.remove('show');
+        backdrop.style.display = 'none';
+    }
+
+    showAddModal() {
+        this.hideEditModal();
+        const modal = document.getElementById('addDocumentModal');
+        const backdrop = document.getElementById('addModalBackdrop');
+        if (!modal || !backdrop) return;
+        const collectionInput = document.getElementById('addCollectionInput');
+        const docIdInput = document.getElementById('addDocumentIdInput');
+        const textarea = document.getElementById('addDocumentTextarea');
+        if (collectionInput) collectionInput.value = this.collection || '';
+        if (docIdInput) docIdInput.value = '';
+        if (textarea) textarea.value = '{\n  \"name\": \"example\"\n}';
+        modal.classList.add('show');
+        modal.style.display = 'block';
+        modal.removeAttribute('inert');
+        modal.removeAttribute('aria-hidden');
+        if (collectionInput) collectionInput.focus();
+        backdrop.classList.add('show');
+        backdrop.style.display = 'block';
+    }
+
+    hideAddModal() {
+        const modal = document.getElementById('addDocumentModal');
+        const backdrop = document.getElementById('addModalBackdrop');
+        if (!modal || !backdrop) return;
+        modal.classList.remove('show');
+        modal.style.display = 'none';
+        modal.setAttribute('inert', '');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.focus();
+        backdrop.classList.remove('show');
+        backdrop.style.display = 'none';
+    }
+
+    async saveNewDocument() {
+        const collectionInput = document.getElementById('addCollectionInput');
+        const docIdInput = document.getElementById('addDocumentIdInput');
+        const textarea = document.getElementById('addDocumentTextarea');
+
+        const collection = collectionInput?.value?.trim().toLowerCase();
+        const docId = docIdInput?.value?.trim();
+        let json;
+
+        if (!collection || !docId) {
+            alert('Please provide a collection name and document ID.');
+            return;
+        }
+
+        try {
+            json = JSON.parse(textarea.value);
+        } catch (error) {
+            alert('Invalid JSON!');
+            return;
+        }
+
+        Loader.show();
+        try {
+            await Firebase.write(collection, docId, json);
+            this.collectionInput.value = collection;
+            this.hideAddModal();
+            await this.loadCollection();
+        } catch (error) {
+            console.error('Error creating document:', error);
+            alert('Failed to save document.');
+        } finally {
+            Loader.hide();
         }
     }
 
     showError(message) {
-        // Implement error notification
         console.error(message);
     }
 }
 
 window.documentsManager = new DocumentsManager();
 
-// Attach update and modal close handlers after DOMContentLoaded
 load = function() {
     const updateBtn = document.getElementById('updateDocumentBtn');
-    const closeBtn = document.getElementById('closeEditModalBtn');
-    const cancelBtn = document.getElementById('cancelEditModalBtn');
-    const backdrop = document.getElementById('editModalBackdrop');
+    const closeEditBtn = document.getElementById('closeEditModalBtn');
+    const cancelEditBtn = document.getElementById('cancelEditModalBtn');
+    const editBackdrop = document.getElementById('editModalBackdrop');
+    const saveAddBtn = document.getElementById('saveAddDocumentBtn');
+    const closeAddBtn = document.getElementById('closeAddModalBtn');
+    const cancelAddBtn = document.getElementById('cancelAddModalBtn');
+    const addBackdrop = document.getElementById('addModalBackdrop');
+
     if (updateBtn) {
         updateBtn.onclick = async () => {
             const textarea = document.getElementById('editDocumentTextarea');
@@ -219,9 +314,7 @@ load = function() {
             Loader.show();
             try {
                 await Firebase.write(documentsManager.collection, documentsManager._editingDocId, json);
-                // Hide modal
                 documentsManager.hideEditModal();
-                // Refresh documents list
                 await documentsManager.loadCollection();
             } catch (err) {
                 alert('Failed to update document.');
@@ -231,16 +324,27 @@ load = function() {
             }
         };
     }
-    // Close/cancel/backdrop click handlers
-    const closeModal = () => documentsManager.hideEditModal();
-    if (closeBtn) closeBtn.onclick = closeModal;
-    if (cancelBtn) cancelBtn.onclick = closeModal;
-    if (backdrop) backdrop.onclick = closeModal;
-    // Optional: ESC key closes modal
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') documentsManager.hideEditModal();
+
+    if (saveAddBtn) {
+        saveAddBtn.onclick = () => documentsManager.saveNewDocument();
+    }
+
+    const closeEditModal = () => documentsManager.hideEditModal();
+    const closeAddModal = () => documentsManager.hideAddModal();
+
+    if (closeEditBtn) closeEditBtn.onclick = closeEditModal;
+    if (cancelEditBtn) cancelEditBtn.onclick = closeEditModal;
+    if (editBackdrop) editBackdrop.onclick = closeEditModal;
+    if (closeAddBtn) closeAddBtn.onclick = closeAddModal;
+    if (cancelAddBtn) cancelAddBtn.onclick = closeAddModal;
+    if (addBackdrop) addBackdrop.onclick = closeAddModal;
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            documentsManager.hideEditModal();
+            documentsManager.hideAddModal();
+        }
     });
-    
 };
 
 load();
