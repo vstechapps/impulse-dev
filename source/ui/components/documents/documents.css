@@ -346,16 +346,6 @@
   resize: vertical;
 }
 
-  background: rgba(0,0,0,0.85);
-  color: #00ff99;
-  border: 2px solid #00ff99;
-  border-radius: 6px;
-  font-family: 'Courier New', monospace;
-  font-size: 1rem;
-  box-shadow: 0 0 10px #00ff9933;
-  transition: border 0.2s, box-shadow 0.2s;
-  outline: none;
-}
 #editDocumentModal textarea:focus {
   border: 2px solid #00ff99;
   box-shadow: 0 0 20px #00ff99;
