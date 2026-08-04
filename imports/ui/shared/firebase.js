@@ -1,6 +1,6 @@
 // Import Firebase modules from Google CDN
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getFirestore, doc, getDoc, setDoc, collection, getDocs, query, limit, startAfter, startAt, where } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+import { getFirestore, doc, getDoc, setDoc, deleteDoc, collection, getDocs, query, limit, startAfter, startAt, where } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
 
@@ -229,6 +229,17 @@ import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.7.
     }
 
     /**
+     * Delete a document from Firestore
+     * @param {string} collectionName - Firestore collection name
+     * @param {string} docId - Document ID
+     * @returns {Promise<void>}
+     */
+    async function remove(collectionName, docId) {
+        const docRef = doc(this.db, collectionName, docId);
+        await deleteDoc(docRef);
+    }
+
+    /**
      * Log an event to Firebase Analytics
      */
     function log(eventName, params) {
@@ -244,6 +255,7 @@ import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.7.
         init,
         read,
         write,
+        delete: remove,
         loginWithGoogle,
         logout,
         getUser,

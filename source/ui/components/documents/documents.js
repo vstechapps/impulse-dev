@@ -147,7 +147,7 @@ class DocumentsManager {
         if (confirm('Are you sure you want to delete this document?')) {
             try {
                 Loader.show();
-                await Firebase.write(this.collection, docId, { deleted: true });
+                await Firebase.delete(this.collection, docId);
                 this.documents = this.documents.filter(doc => doc.id !== docId);
                 this.renderDocuments();
             } catch (error) {
