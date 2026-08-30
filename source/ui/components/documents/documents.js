@@ -134,6 +134,9 @@ class DocumentsManager {
                         <button class="action-btn edit" onclick="documentsManager.editDocument('${doc.id}')">
                             <span class="material-icons">edit</span>
                         </button>
+                        <button class="action-btn advanced-edit" onclick="documentsManager.editDocumentAdvanced('${doc.id}')" title="Edit a field" aria-label="Edit a field">
+                            <span class="material-icons">tune</span>
+                        </button>
                         <button class="action-btn delete" onclick="documentsManager.deleteDocument('${doc.id}')">
                             <span class="material-icons">delete</span>
                         </button>
@@ -184,7 +187,166 @@ class DocumentsManager {
         }
     }
 
+    async editDocumentAdvanced(docId) {
+        try {
+            Loader.show();
+            const result = await Firebase.read(this.collection, { docId });
+            const doc = result.data && result.data[0];
+            if (!doc) {
+                this.showError('Document not found');
+                return;
+            }
+            const { id, ...docContent } = doc;
+            this._advancedEditingDoc = docContent;
+            this._advancedEditingDocId = docId;
+            this.resetAdvancedEditor();
+            const title = document.getElementById('editDocAdvancedModalLabel');
+            if (title) title.textContent = `EDIT FIELD ${docId}`;
+            this.showAdvancedEditModal();
+        } catch (error) {
+            console.error('Error loading document for advanced edit:', error);
+            this.showError('Failed to load document');
+        } finally {
+            Loader.hide();
+        }
+    }
+
+    resetAdvancedEditor() {
+        this._advancedPath = [];
+        const selectors = document.getElementById('advancedEditSelectors');
+        if (selectors) selectors.innerHTML = '';
+        this.updateAdvancedEditor();
+    }
+
+    updateAdvancedEditor() {
+        const selectors = document.getElementById('advancedEditSelectors');
+        const valueContainer = document.getElementById('advancedEditValueContainer');
+        const valueInput = document.getElementById('advancedEditValue');
+        const pathLabel = document.getElementById('advancedEditPath');
+        const saveButton = document.getElementById('saveAdvancedEditBtn');
+        if (!selectors || !this._advancedEditingDoc) return;
+
+        const selectedValue = this._advancedPath.reduce((value, key) => value?.[key], this._advancedEditingDoc);
+        const canEdit = ['string', 'number', 'boolean'].includes(typeof selectedValue);
+        pathLabel.textContent = this._advancedPath.length
+            ? this._advancedPath.map(key => typeof key === 'number' ? `[${key}]` : key).join('.')
+            : 'Select a field to edit';
+        if (valueContainer) valueContainer.style.display = canEdit ? 'flex' : 'none';
+        if (saveButton) saveButton.disabled = !canEdit;
+        if (canEdit && valueInput && document.activeElement !== valueInput) {
+            valueInput.type = typeof selectedValue === 'boolean' ? 'checkbox' : 'text';
+            if (valueInput.type === 'checkbox') valueInput.checked = selectedValue;
+            else valueInput.value = selectedValue;
+        }
+
+        while (selectors.children.length > this._advancedPath.length) selectors.lastElementChild.remove();
+        let currentValue = this._advancedEditingDoc;
+        for (let level = 0; level <= this._advancedPath.length; level++) {
+            if (level < this._advancedPath.length) {
+                currentValue = currentValue[this._advancedPath[level]];
+                continue;
+            }
+            if (currentValue === null || typeof currentValue !== 'object') break;
+            const select = document.createElement('select');
+            select.className = 'modal-input advanced-edit-select';
+            const entries = Array.isArray(currentValue)
+                ? currentValue.map((item, index) => [index, `Index ${index}`])
+                : Object.keys(currentValue).map(key => [key, key]);
+            const placeholder = document.createElement('option');
+            placeholder.value = '';
+            placeholder.textContent = 'Select a field';
+            select.appendChild(placeholder);
+            entries.forEach(([key, label]) => {
+                const option = document.createElement('option');
+                option.value = key;
+                option.textContent = label;
+                select.appendChild(option);
+            });
+            select.addEventListener('change', () => {
+                const selectedKey = select.value;
+                this._advancedPath = this._advancedPath.slice(0, level);
+                if (selectedKey !== '') this._advancedPath.push(Array.isArray(currentValue) ? Number(selectedKey) : selectedKey);
+                this.updateAdvancedEditor();
+            });
+            selectors.appendChild(select);
+            break;
+        }
+    }
+
+    showAdvancedEditModal() {
+        this.hideEditModal();
+        this.hideAddModal();
+        const modal = document.getElementById('editDocAdvancedModal');
+        const backdrop = document.getElementById('advancedEditModalBackdrop');
+        if (!modal || !backdrop) return;
+        modal.classList.add('show');
+        modal.style.display = 'block';
+        modal.removeAttribute('inert');
+        modal.removeAttribute('aria-hidden');
+        backdrop.classList.add('show');
+        backdrop.style.display = 'block';
+    }
+
+    hideAdvancedEditModal() {
+        const modal = document.getElementById('editDocAdvancedModal');
+        const backdrop = document.getElementById('advancedEditModalBackdrop');
+        if (!modal || !backdrop) return;
+        modal.classList.remove('show');
+        modal.style.display = 'none';
+        modal.setAttribute('inert', '');
+        modal.setAttribute('aria-hidden', 'true');
+        backdrop.classList.remove('show');
+        backdrop.style.display = 'none';
+    }
+
+    buildAdvancedPatch(value) {
+        if (!this._advancedPath.length) return {};
+
+        const clone = item => {
+            if (Array.isArray(item)) return item.map(clone);
+            if (item && typeof item === 'object' &&
+                (Object.getPrototypeOf(item) === Object.prototype || Object.getPrototypeOf(item) === null)) {
+                return Object.fromEntries(Object.entries(item).map(([key, child]) => [key, clone(child)]));
+            }
+            return item;
+        };
+
+        const documentCopy = clone(this._advancedEditingDoc);
+        let target = documentCopy;
+        for (let index = 0; index < this._advancedPath.length - 1; index++) {
+            target = target[this._advancedPath[index]];
+        }
+        target[this._advancedPath[this._advancedPath.length - 1]] = value;
+
+        return { [this._advancedPath[0]]: documentCopy[this._advancedPath[0]] };
+    }
+
+    async saveAdvancedEdit() {
+        const currentValue = this._advancedPath.reduce((value, key) => value?.[key], this._advancedEditingDoc);
+        const valueInput = document.getElementById('advancedEditValue');
+        let value;
+        if (typeof currentValue === 'boolean') value = valueInput.checked;
+        else if (typeof currentValue === 'number') value = Number(valueInput.value);
+        else value = valueInput.value;
+        if (typeof currentValue === 'number' && (valueInput.value.trim() === '' || Number.isNaN(value))) {
+            alert('Please enter a valid number.');
+            return;
+        }
+        Loader.show();
+        try {
+            await Firebase.write(this.collection, this._advancedEditingDocId, this.buildAdvancedPatch(value));
+            this.hideAdvancedEditModal();
+            await this.loadCollection();
+        } catch (error) {
+            console.error('Error updating document field:', error);
+            alert('Failed to update document field.');
+        } finally {
+            Loader.hide();
+        }
+    }
+
     showEditModal() {
+        this.hideAdvancedEditModal();
         this.hideAddModal();
         const modal = document.getElementById('editDocumentModal');
         const backdrop = document.getElementById('editModalBackdrop');
@@ -214,6 +376,7 @@ class DocumentsManager {
 
     showAddModal() {
         this.hideEditModal();
+        this.hideAdvancedEditModal();
         const modal = document.getElementById('addDocumentModal');
         const backdrop = document.getElementById('addModalBackdrop');
         if (!modal || !backdrop) return;
@@ -292,6 +455,10 @@ load = function() {
     const closeEditBtn = document.getElementById('closeEditModalBtn');
     const cancelEditBtn = document.getElementById('cancelEditModalBtn');
     const editBackdrop = document.getElementById('editModalBackdrop');
+    const saveAdvancedEditBtn = document.getElementById('saveAdvancedEditBtn');
+    const closeAdvancedEditBtn = document.getElementById('closeAdvancedEditModalBtn');
+    const cancelAdvancedEditBtn = document.getElementById('cancelAdvancedEditModalBtn');
+    const advancedEditBackdrop = document.getElementById('advancedEditModalBackdrop');
     const saveAddBtn = document.getElementById('saveAddDocumentBtn');
     const closeAddBtn = document.getElementById('closeAddModalBtn');
     const cancelAddBtn = document.getElementById('cancelAddModalBtn');
@@ -335,6 +502,10 @@ load = function() {
     if (closeEditBtn) closeEditBtn.onclick = closeEditModal;
     if (cancelEditBtn) cancelEditBtn.onclick = closeEditModal;
     if (editBackdrop) editBackdrop.onclick = closeEditModal;
+    if (saveAdvancedEditBtn) saveAdvancedEditBtn.onclick = () => documentsManager.saveAdvancedEdit();
+    if (closeAdvancedEditBtn) closeAdvancedEditBtn.onclick = () => documentsManager.hideAdvancedEditModal();
+    if (cancelAdvancedEditBtn) cancelAdvancedEditBtn.onclick = () => documentsManager.hideAdvancedEditModal();
+    if (advancedEditBackdrop) advancedEditBackdrop.onclick = () => documentsManager.hideAdvancedEditModal();
     if (closeAddBtn) closeAddBtn.onclick = closeAddModal;
     if (cancelAddBtn) cancelAddBtn.onclick = closeAddModal;
     if (addBackdrop) addBackdrop.onclick = closeAddModal;
@@ -342,6 +513,7 @@ load = function() {
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
             documentsManager.hideEditModal();
+            documentsManager.hideAdvancedEditModal();
             documentsManager.hideAddModal();
         }
     });

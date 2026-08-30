@@ -73,6 +73,31 @@
 </div>
 <div class="modal-backdrop" id="editModalBackdrop" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:1040;"></div>
 
+<!-- Advanced field editor modal -->
+<div id="editDocAdvancedModal" class="modal" tabindex="-1" aria-labelledby="editDocAdvancedModalLabel" style="display:none;">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editDocAdvancedModalLabel">Edit Field</h5>
+        <button type="button" class="btn-close" id="closeAdvancedEditModalBtn" aria-label="Close"></button>
+      </div>
+      <div class="modal-body advanced-edit-form">
+        <p class="advanced-edit-path" id="advancedEditPath">Select a field to edit</p>
+        <div id="advancedEditSelectors" class="advanced-edit-selectors"></div>
+        <div id="advancedEditValueContainer" class="advanced-edit-value" style="display:none;">
+          <label for="advancedEditValue">New value</label>
+          <input type="text" id="advancedEditValue" class="modal-input">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="cancelAdvancedEditModalBtn">Cancel</button>
+        <button type="button" class="btn btn-primary" id="saveAdvancedEditBtn" style="min-width:100px;" disabled>Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop" id="advancedEditModalBackdrop" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:1040;"></div>
+
 <!-- Add Document Modal -->
 <div id="addDocumentModal" class="modal" tabindex="-1" aria-labelledby="addDocumentModalLabel" style="display:none;">
   <div class="modal-dialog modal-dialog-centered modal-lg">

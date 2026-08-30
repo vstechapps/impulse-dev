@@ -253,7 +253,8 @@
 .modal-backdrop.show { display: block !important; }
 
 #editDocumentModal .modal-content,
-#addDocumentModal .modal-content {
+#addDocumentModal .modal-content,
+#editDocAdvancedModal .modal-content {
   background: rgba(0, 0, 0, 0.95);
   border: 2px solid #00ff99;
   border-radius: 10px;
@@ -262,13 +263,15 @@
   font-family: 'Courier New', monospace;
 }
 #editDocumentModal .modal-header,
-#addDocumentModal .modal-header {
+#addDocumentModal .modal-header,
+#editDocAdvancedModal .modal-header {
   border-bottom: 1px solid #00ff9944;
   background: rgba(0,0,0,0.8);
   box-shadow: 0 2px 10px 0 #00ff9933;
 }
 #editDocumentModal .modal-title,
-#addDocumentModal .modal-title {
+#addDocumentModal .modal-title,
+#editDocAdvancedModal .modal-title {
   color: #00ff99;
   text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff9933;
   letter-spacing: 2px;
@@ -276,23 +279,27 @@
   text-transform: uppercase;
 }
 #editDocumentModal .btn-close,
-#addDocumentModal .btn-close {
+#addDocumentModal .btn-close,
+#editDocAdvancedModal .btn-close {
   filter: invert(70%) sepia(100%) saturate(1000%) hue-rotate(90deg);
   opacity: 0.8;
   transition: opacity 0.2s;
 }
 #editDocumentModal .btn-close:hover,
-#addDocumentModal .btn-close:hover {
+#addDocumentModal .btn-close:hover,
+#editDocAdvancedModal .btn-close:hover {
   opacity: 1;
 }
 #editDocumentModal .modal-footer,
-#addDocumentModal .modal-footer {
+#addDocumentModal .modal-footer,
+#editDocAdvancedModal .modal-footer {
   border-top: 1px solid #00ff9944;
   background: rgba(0,0,0,0.8);
   box-shadow: 0 -2px 10px 0 #00ff9933;
 }
 #editDocumentModal .btn-primary,
-#addDocumentModal .btn-primary {
+#addDocumentModal .btn-primary,
+#editDocAdvancedModal .btn-primary {
   background: transparent;
   border: 2px solid #00ff99;
   color: #00ff99;
@@ -301,13 +308,15 @@
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 #editDocumentModal .btn-primary:hover,
-#addDocumentModal .btn-primary:hover {
+#addDocumentModal .btn-primary:hover,
+#editDocAdvancedModal .btn-primary:hover {
   background: #00ff9911;
   color: #00ff99;
   box-shadow: 0 0 20px #00ff99;
 }
 #editDocumentModal .btn-secondary,
-#addDocumentModal .btn-secondary {
+#addDocumentModal .btn-secondary,
+#editDocAdvancedModal .btn-secondary {
   background: transparent;
   border: 2px solid #00ff9944;
   color: #00ff99;
@@ -315,13 +324,54 @@
   transition: background 0.2s, color 0.2s;
 }
 #editDocumentModal .btn-secondary:hover,
-#addDocumentModal .btn-secondary:hover {
+#addDocumentModal .btn-secondary:hover,
+#editDocAdvancedModal .btn-secondary:hover {
   background: #00ff9911;
   color: #00ff99;
 }
 #editDocumentModal textarea,
 #addDocumentModal textarea {
   min-height: 220px;
+}
+
+.advanced-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: left;
+}
+
+.advanced-edit-path {
+    margin: 0;
+    color: rgba(0, 255, 153, 0.7);
+    word-break: break-word;
+}
+
+.advanced-edit-selectors,
+.advanced-edit-value {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.advanced-edit-value label {
+    color: #00ff99;
+}
+
+.advanced-edit-select {
+    appearance: auto;
+}
+
+#advancedEditValue[type="checkbox"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    accent-color: #00ff99;
+}
+
+#editDocAdvancedModal .btn-primary:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    box-shadow: none;
 }
 
 .add-document-form {
