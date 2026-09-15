@@ -254,7 +254,8 @@
 
 #editDocumentModal .modal-content,
 #addDocumentModal .modal-content,
-#editDocAdvancedModal .modal-content {
+#editDocAdvancedModal .modal-content,
+#aiEnrichModal .modal-content {
   background: rgba(0, 0, 0, 0.95);
   border: 2px solid #00ff99;
   border-radius: 10px;
@@ -264,14 +265,16 @@
 }
 #editDocumentModal .modal-header,
 #addDocumentModal .modal-header,
-#editDocAdvancedModal .modal-header {
+#editDocAdvancedModal .modal-header,
+#aiEnrichModal .modal-header {
   border-bottom: 1px solid #00ff9944;
   background: rgba(0,0,0,0.8);
   box-shadow: 0 2px 10px 0 #00ff9933;
 }
 #editDocumentModal .modal-title,
 #addDocumentModal .modal-title,
-#editDocAdvancedModal .modal-title {
+#editDocAdvancedModal .modal-title,
+#aiEnrichModal .modal-title {
   color: #00ff99;
   text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff9933;
   letter-spacing: 2px;
@@ -280,26 +283,30 @@
 }
 #editDocumentModal .btn-close,
 #addDocumentModal .btn-close,
-#editDocAdvancedModal .btn-close {
+#editDocAdvancedModal .btn-close,
+#aiEnrichModal .btn-close {
   filter: invert(70%) sepia(100%) saturate(1000%) hue-rotate(90deg);
   opacity: 0.8;
   transition: opacity 0.2s;
 }
 #editDocumentModal .btn-close:hover,
 #addDocumentModal .btn-close:hover,
-#editDocAdvancedModal .btn-close:hover {
+#editDocAdvancedModal .btn-close:hover,
+#aiEnrichModal .btn-close:hover {
   opacity: 1;
 }
 #editDocumentModal .modal-footer,
 #addDocumentModal .modal-footer,
-#editDocAdvancedModal .modal-footer {
+#editDocAdvancedModal .modal-footer,
+#aiEnrichModal .modal-footer {
   border-top: 1px solid #00ff9944;
   background: rgba(0,0,0,0.8);
   box-shadow: 0 -2px 10px 0 #00ff9933;
 }
 #editDocumentModal .btn-primary,
 #addDocumentModal .btn-primary,
-#editDocAdvancedModal .btn-primary {
+#editDocAdvancedModal .btn-primary,
+#aiEnrichModal .btn-primary {
   background: transparent;
   border: 2px solid #00ff99;
   color: #00ff99;
@@ -309,14 +316,16 @@
 }
 #editDocumentModal .btn-primary:hover,
 #addDocumentModal .btn-primary:hover,
-#editDocAdvancedModal .btn-primary:hover {
+#editDocAdvancedModal .btn-primary:hover,
+#aiEnrichModal .btn-primary:hover {
   background: #00ff9911;
   color: #00ff99;
   box-shadow: 0 0 20px #00ff99;
 }
 #editDocumentModal .btn-secondary,
 #addDocumentModal .btn-secondary,
-#editDocAdvancedModal .btn-secondary {
+#editDocAdvancedModal .btn-secondary,
+#aiEnrichModal .btn-secondary {
   background: transparent;
   border: 2px solid #00ff9944;
   color: #00ff99;
@@ -325,7 +334,8 @@
 }
 #editDocumentModal .btn-secondary:hover,
 #addDocumentModal .btn-secondary:hover,
-#editDocAdvancedModal .btn-secondary:hover {
+#editDocAdvancedModal .btn-secondary:hover,
+#aiEnrichModal .btn-secondary:hover {
   background: #00ff9911;
   color: #00ff99;
 }
@@ -394,6 +404,54 @@
 .add-document-form .modal-textarea {
   min-height: 240px;
   resize: vertical;
+}
+
+.ai-enrich-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: left;
+}
+
+.ai-enrich-form label {
+    color: #00ff99;
+    font-size: 0.95rem;
+}
+
+.ai-enrich-context {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.ai-enrich-content {
+    min-height: 300px;
+    resize: vertical;
+}
+
+.ai-enrich-details {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    color: rgba(0, 255, 153, 0.7);
+    font-size: 0.9rem;
+}
+
+.ai-enrich-details strong {
+    color: #00ff99;
+    font-weight: normal;
+}
+
+.ai-enrich-status {
+    min-height: 1.25rem;
+    margin: 0;
+    color: rgba(0, 255, 153, 0.75);
+}
+
+#aiEnrichModal .btn-primary:disabled,
+#aiEnrichModal .btn-secondary:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    box-shadow: none;
 }
 
 #editDocumentModal textarea:focus {

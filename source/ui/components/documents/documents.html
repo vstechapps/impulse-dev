@@ -66,12 +66,45 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" id="cancelEditModalBtn">Cancel</button>
+        <button type="button" class="btn btn-secondary" id="openAiEnrichModalBtn">AI Enrich</button>
         <button type="button" class="btn btn-primary" id="updateDocumentBtn" style="min-width:100px;">Update</button>
       </div>
     </div>
   </div>
 </div>
 <div class="modal-backdrop" id="editModalBackdrop" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:1040;"></div>
+
+<!-- AI Enrich Modal -->
+<div id="aiEnrichModal" class="modal" tabindex="-1" aria-labelledby="aiEnrichModalLabel" style="display:none;">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="aiEnrichModalLabel">AI Enrich Modal</h5>
+        <button type="button" class="btn-close" id="closeAiEnrichModalBtn" aria-label="Close"></button>
+      </div>
+      <div class="modal-body ai-enrich-form">
+        <label for="aiEnrichContextInput">Enrichment request</label>
+        <textarea id="aiEnrichContextInput" class="modal-textarea ai-enrich-context" placeholder="Describe how this JSON should be enriched"></textarea>
+
+        <div class="ai-enrich-details">
+          <span>Model: <strong id="aiEnrichModel">Not generated</strong></span>
+          <span>Tokens used: <strong id="aiEnrichTokens">Not generated</strong></span>
+          <span>Tokens left: <strong id="aiEnrichTokensLeft">Not generated</strong></span>
+        </div>
+
+        <label for="aiEnrichTextarea">Enriched JSON</label>
+        <textarea id="aiEnrichTextarea" class="modal-textarea ai-enrich-content" spellcheck="false" placeholder="Generate enriched JSON to review it here"></textarea>
+        <p id="aiEnrichStatus" class="ai-enrich-status" role="status"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="cancelAiEnrichModalBtn">Cancel</button>
+        <button type="button" class="btn btn-secondary" id="generateAiEnrichBtn">Generate</button>
+        <button type="button" class="btn btn-primary" id="updateAiEnrichBtn" style="min-width:100px;" disabled>Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop" id="aiEnrichModalBackdrop" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:1040;"></div>
 
 <!-- Advanced field editor modal -->
 <div id="editDocAdvancedModal" class="modal" tabindex="-1" aria-labelledby="editDocAdvancedModalLabel" style="display:none;">

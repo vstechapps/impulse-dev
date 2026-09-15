@@ -374,6 +374,140 @@ class DocumentsManager {
         backdrop.style.display = 'none';
     }
 
+    showAiEnrichModal() {
+        const editTextarea = document.getElementById('editDocumentTextarea');
+        const modal = document.getElementById('aiEnrichModal');
+        const backdrop = document.getElementById('aiEnrichModalBackdrop');
+        const contentTextarea = document.getElementById('aiEnrichTextarea');
+        const contextInput = document.getElementById('aiEnrichContextInput');
+        const updateButton = document.getElementById('updateAiEnrichBtn');
+        const status = document.getElementById('aiEnrichStatus');
+        if (!editTextarea || !modal || !backdrop) return;
+
+        try {
+            JSON.parse(editTextarea.value);
+        } catch (error) {
+            alert('Please enter valid JSON before enriching the document.');
+            return;
+        }
+
+        this.hideEditModal();
+        if (contentTextarea) contentTextarea.value = '';
+        if (contextInput && !contextInput.value) contextInput.value = 'Enrich this JSON with useful, complete content.';
+        if (updateButton) updateButton.disabled = true;
+        if (status) status.textContent = 'Add an enrichment request and generate a draft.';
+        document.getElementById('aiEnrichModel').textContent = 'Not generated';
+        document.getElementById('aiEnrichTokens').textContent = 'Not generated';
+        document.getElementById('aiEnrichTokensLeft').textContent = 'Not generated';
+        modal.classList.add('show');
+        modal.style.display = 'block';
+        modal.removeAttribute('inert');
+        modal.removeAttribute('aria-hidden');
+        backdrop.classList.add('show');
+        backdrop.style.display = 'block';
+        if (contextInput) contextInput.focus();
+    }
+
+    hideAiEnrichModal() {
+        const modal = document.getElementById('aiEnrichModal');
+        const backdrop = document.getElementById('aiEnrichModalBackdrop');
+        if (!modal || !backdrop) return;
+        modal.classList.remove('show');
+        modal.style.display = 'none';
+        modal.setAttribute('inert', '');
+        modal.setAttribute('aria-hidden', 'true');
+        backdrop.classList.remove('show');
+        backdrop.style.display = 'none';
+    }
+
+    async generateAiEnrichment() {
+        const editTextarea = document.getElementById('editDocumentTextarea');
+        const contextInput = document.getElementById('aiEnrichContextInput');
+        const contentTextarea = document.getElementById('aiEnrichTextarea');
+        const updateButton = document.getElementById('updateAiEnrichBtn');
+        const status = document.getElementById('aiEnrichStatus');
+        let content;
+
+        try {
+            content = JSON.parse(editTextarea.value);
+        } catch (error) {
+            alert('Invalid JSON!');
+            return;
+        }
+
+        const context = contextInput.value.trim();
+        if (!context) {
+            alert('Please describe how the JSON should be enriched.');
+            contextInput.focus();
+            return;
+        }
+
+        if (updateButton) updateButton.disabled = true;
+        if (status) status.textContent = 'Generating enriched JSON...';
+        Loader.show();
+        try {
+            const response = await fetch('https://api.openlib.in/json/enrich', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ context, content })
+            });
+            const result = await response.json();
+            if (!response.ok || result.success !== true) {
+                throw new Error(result.error || 'Enrichment request failed.');
+            }
+
+            const enrichedContent = result.content;
+            if (enrichedContent === undefined || enrichedContent === null) {
+                throw new Error('The enrichment API returned no updated content.');
+            }
+
+            let parsedContent = enrichedContent;
+            if (typeof parsedContent === 'string') {
+                parsedContent = parsedContent.replace(/^```(?:json)?\s*|\s*```$/g, '').trim();
+                parsedContent = JSON.parse(parsedContent);
+            }
+            contentTextarea.value = JSON.stringify(parsedContent, null, 2);
+            document.getElementById('aiEnrichModel').textContent = result.model;
+            document.getElementById('aiEnrichTokens').textContent = result.tokensUsed;
+            document.getElementById('aiEnrichTokensLeft').textContent = result.tokensLeft;
+            if (status) status.textContent = 'Review the enriched JSON, then update the document.';
+            if (updateButton) updateButton.disabled = false;
+        } catch (error) {
+            console.error('Error enriching document:', error);
+            if (status) status.textContent = error.message || 'Failed to enrich document.';
+            alert(error.message || 'Failed to enrich document.');
+        } finally {
+            Loader.hide();
+        }
+    }
+
+    async updateEnrichedDocument() {
+        const contentTextarea = document.getElementById('aiEnrichTextarea');
+        let json;
+        try {
+            json = JSON.parse(contentTextarea.value);
+        } catch (error) {
+            alert('Invalid enriched JSON!');
+            return;
+        }
+        if (!this._editingDocId || !this.collection) {
+            alert('Missing document or collection info.');
+            return;
+        }
+
+        Loader.show();
+        try {
+            await Firebase.write(this.collection, this._editingDocId, json);
+            this.hideAiEnrichModal();
+            await this.loadCollection();
+        } catch (error) {
+            console.error('Error updating enriched document:', error);
+            alert('Failed to update document.');
+        } finally {
+            Loader.hide();
+        }
+    }
+
     showAddModal() {
         this.hideEditModal();
         this.hideAdvancedEditModal();
@@ -463,6 +597,12 @@ load = function() {
     const closeAddBtn = document.getElementById('closeAddModalBtn');
     const cancelAddBtn = document.getElementById('cancelAddModalBtn');
     const addBackdrop = document.getElementById('addModalBackdrop');
+    const openAiEnrichBtn = document.getElementById('openAiEnrichModalBtn');
+    const closeAiEnrichBtn = document.getElementById('closeAiEnrichModalBtn');
+    const cancelAiEnrichBtn = document.getElementById('cancelAiEnrichModalBtn');
+    const generateAiEnrichBtn = document.getElementById('generateAiEnrichBtn');
+    const updateAiEnrichBtn = document.getElementById('updateAiEnrichBtn');
+    const aiEnrichBackdrop = document.getElementById('aiEnrichModalBackdrop');
 
     if (updateBtn) {
         updateBtn.onclick = async () => {
@@ -509,10 +649,26 @@ load = function() {
     if (closeAddBtn) closeAddBtn.onclick = closeAddModal;
     if (cancelAddBtn) cancelAddBtn.onclick = closeAddModal;
     if (addBackdrop) addBackdrop.onclick = closeAddModal;
+    if (openAiEnrichBtn) openAiEnrichBtn.onclick = () => documentsManager.showAiEnrichModal();
+    if (closeAiEnrichBtn) closeAiEnrichBtn.onclick = () => {
+        documentsManager.hideAiEnrichModal();
+        documentsManager.showEditModal();
+    };
+    if (cancelAiEnrichBtn) cancelAiEnrichBtn.onclick = () => {
+        documentsManager.hideAiEnrichModal();
+        documentsManager.showEditModal();
+    };
+    if (generateAiEnrichBtn) generateAiEnrichBtn.onclick = () => documentsManager.generateAiEnrichment();
+    if (updateAiEnrichBtn) updateAiEnrichBtn.onclick = () => documentsManager.updateEnrichedDocument();
+    if (aiEnrichBackdrop) aiEnrichBackdrop.onclick = () => {
+        documentsManager.hideAiEnrichModal();
+        documentsManager.showEditModal();
+    };
 
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
             documentsManager.hideEditModal();
+            documentsManager.hideAiEnrichModal();
             documentsManager.hideAdvancedEditModal();
             documentsManager.hideAddModal();
         }
