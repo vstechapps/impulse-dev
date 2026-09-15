@@ -1,3 +1,21 @@
+:root {
+  --color-page: #f4f6f8;
+  --color-surface: #ffffff;
+  --color-surface-muted: #eef2f5;
+  --color-border: #d6dee5;
+  --color-border-strong: #b8c7d1;
+  --color-text: #24303b;
+  --color-text-muted: #61717d;
+  --color-accent: #176b87;
+  --color-accent-hover: #0f5269;
+  --color-accent-soft: #e2f0f4;
+  --color-focus: rgba(23, 107, 135, 0.25);
+  --shadow-sm: 0 2px 8px rgba(36, 48, 59, 0.08);
+  --shadow-md: 0 8px 24px rgba(36, 48, 59, 0.12);
+  --font-ui: "Segoe UI", Tahoma, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
 /* Reset some default browser styles */
 
 .hidden {
